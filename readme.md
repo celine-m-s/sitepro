@@ -13,6 +13,15 @@ activate :blog do |blog|
 end
 ```
 
-- Then add files running 'middleman init --template=blog'
+- Then add files running `middleman init --template=blog
 
 That's it!
+
+##Initialize a new Github repo
+```git
+git init
+git add .
+git commit -m first commit
+git add remote origin myremotebranch
+git push -u origin master
+```
