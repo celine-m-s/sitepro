@@ -1,7 +1,15 @@
-url:
-  french: '/fr'
-  english: '/'
+# url:
+#   french: '/fr'
+#   english: '/'
 twitter:
   name: '@CelineMartinetS'
-# picture: somepicture.png
+  picture: 'somepicture.png'
 imagepath: 'http://0.0.0.0:4567/images/'
+french:
+  title: 'un titre ici pour mon site'
+  description: 'une description pour mon site'
+  url: 'http://0.0.0.0:4567/fr'
+english:
+  title: 'some blog title here'
+  description: 'some blog description here'
+  url: 'http://0.0.0.0:4567/'
