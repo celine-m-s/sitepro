@@ -7,3 +7,12 @@ gem "middleman-blog", "~> 3.5.3"
 
 # For feed.xml.builder
 gem "builder", "~> 3.0"
+
+# Deploy
+gem "middleman-deploy"
+
+# Live-reloading plugin
+gem "middleman-livereload", "~> 3.1.0"
+
+# For summaries
+gem "nokogiri"

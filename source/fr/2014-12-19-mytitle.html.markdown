@@ -1,0 +1,13 @@
+---
+title: MYTITLE
+description: MY DESCRIPTION
+picture: somepicture.png
+twitterpicture: somebigpicture.png
+date: 2014-12-19 16:11 UTC
+tags: sometag
+summary: some excerpt here
+category: acategory
+---
+
+
+du text en français

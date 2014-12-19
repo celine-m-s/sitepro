@@ -1,0 +1,13 @@
+---
+title: MYTITLE
+description: MYDESCRIPTION
+picture: somepicture.png
+twitterpicture: somepicturebig.png
+date: 2014-12-19 16:11 UTC
+tags: atag
+summary: a wonderful summary
+layout: article
+category: acategory
+---
+
+et du texte en anglais

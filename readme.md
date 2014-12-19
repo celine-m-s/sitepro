@@ -1,8 +1,8 @@
-##Creating a new project with Middleman:
+##Creating a new project with Middleman
 `gem install middleman`
 `middleman init MYPROJECTNAME`
 
-##Blogging with Middleman:
+##Blogging with Middleman
 
 - Insert `gem "middleman-blog"` in the Gemfile
 
@@ -25,3 +25,6 @@ git commit -m first commit
 git add remote origin myremotebranch
 git push -u origin master
 ```
+
+##Creating a new post
+run `middleman article --lang <locale> TITLE`

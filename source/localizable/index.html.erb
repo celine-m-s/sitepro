@@ -1,0 +1,9 @@
+
+<p><a href="<%= data.site.url.english %>"><%= t :english %></a>  ||  <a href="<%= data.site.url.french %>"><%= t :french %></a></p>
+<% blog.local_articles.each do |article| %>
+  <article>
+    <%= link_to article.title, article.path, :relative => true %> <%# Note `article.path` in the second argument %>
+    <%= article.summary %>
+    <%= link_to I18n.t(:readmore), article %>
+  </article>
+<% end %>
