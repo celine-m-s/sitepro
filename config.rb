@@ -30,11 +30,18 @@ activate :blog do |blog|
   blog.paginate = true
   blog.per_page = 10
   blog.page_link = "page/{num}"
+
+  # Categories
+  blog.custom_collections = {
+    category: {
+      link: '/{category}.html',
+      template: 'category.html'
+    }
+  }
 end
 
-page "/feed.xml", layout: false
+page "en/feed.xml", layout: false
 page "fr/feed.xml", layout: false
-
 
 # Reload the browser automatically whenever files change
 configure :development do

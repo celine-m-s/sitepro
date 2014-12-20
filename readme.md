@@ -25,6 +25,9 @@ git commit -m first commit
 git add remote origin myremotebranch
 git push -u origin master
 ```
+To delete a remote branch:
+`git push origin :remote-branch`
 
 ##Creating a new post
 run `middleman article --lang <locale> TITLE`
+

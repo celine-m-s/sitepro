@@ -1,0 +1,29 @@
+#widget, #widget .toggle, nav ul li a:hover,
+nav ul li.active a, #widget button:hover, 
+.testimonials .carousel-indicators li.active {
+    background-color: #7DAABF !important;
+}
+
+figure .text-overlay {
+    background: rgba(125, 170, 191, 0.8);
+}
+
+header, .contact input:hover, .contact select:hover, .contact textarea:hover,
+.contact label.required:hover input, .contact label.required:hover textarea, 
+.contact label.required input:focus, .contact label.required textarea:focus {
+    border-color: #7DAABF;
+}
+
+#widget input, #widget button {
+    border-color: #6b95a8;
+}
+
+.spinner {
+    border-color: rgba(125, 170, 191, 0.2);
+    border-top-color: #7DAABF;
+}
+
+a, .social-wrapper:hover>.show-more span, .contact label.required:after, 
+.services .col-sm-4:hover h2, .social-wrapper:hover>.show-less span {
+    color: #7DAABF;
+}
