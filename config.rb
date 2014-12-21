@@ -34,7 +34,7 @@ activate :blog do |blog|
   # Categories
   blog.custom_collections = {
     category: {
-      link: '/{category}.html',
+      link: '/articles/{category}.html',
       template: 'category.html'
     }
   }
@@ -92,11 +92,11 @@ end
 # activate :livereload
 
 # Methods defined in the helpers block are available in templates
-# helpers do
-#   def some_helper
-#     "Helping"
-#   end
-# end
+helpers do
+  def language
+    I18n.locale.to_s
+  end
+end
 
 activate :deploy do |deploy|
   deploy.method = :git

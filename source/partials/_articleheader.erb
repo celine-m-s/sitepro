@@ -1,8 +1,16 @@
 <header>
     <div class="overlay">
         <article>
-            <h1>Simply.Me</h1>
-            <h2>Artist &middot; Photographer &middot; Robot</h2>
+        <% if current_page.url == "/" || current_page.url == "/fr" %>
+            <h1><%= image_tag 'logo-cms-s-w.png', alt: 'Logo Céline Martinet Sanchez' %></h1>
+        <% elsif  I18n.locale.to_s == 'fr' %>
+            <a href="<%= data.site.french.url %>"><h2>
+            <%= image_tag 'logo-cms-s-w.png', alt: 'Logo Céline Martinet Sanchez'%></h2></a>
+        <% else %>
+            <a href="<%= data.site.english.url %>"><h2>
+            <%= image_tag 'logo-cms-s-w.png', alt: 'Logo Céline Martinet Sanchez' %></h2></a>
+        <% end %>
+            <h2> <%= t(:developer) %> &middot; <%= t(:teacher) %> &middot; <%= t(:entrepreneur) %></h2>
         </article>
     </div>
 </header>

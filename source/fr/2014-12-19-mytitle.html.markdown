@@ -6,7 +6,7 @@ twitterpicture: somebigpicture.png
 date: 19 décembre 2014
 tags: matt-cutts, another-tag
 summary: some excerpt here
-category: HTML5
+category: referencement-naturel
 layout: article
 ---
 

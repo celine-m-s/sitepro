@@ -7,7 +7,7 @@ date: 2014-12-19
 tags: matt-cutts, another-tag
 summary: a wonderful summary
 layout: article
-category: HTML5
+category: SEO
 ---
 
 ENGLISH
