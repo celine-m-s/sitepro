@@ -1,0 +1,110 @@
+---
+layout: mainsite
+---    
+<!-- How to Reach Me -->
+<section id="getintouch" class="fadeInRightBig">
+    <div class="container">
+        <h1 class="title">
+            Get In <span class="highlight orange">Touch</span>
+        </h1>
+    </div>
+    
+    <div class="gmap">  
+        <div class="map-overlay-container">
+            <div class="map-overlay" id="map-1042091">
+                <ul class="map-menu">
+                    <li class="nav-header map-nav-header">Favorite Hangouts</li>
+                    <li><a href="#">Texas BBQ <br /><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></a></li>
+                    <li><a href="#">Dallas Chicken <br /><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></a></li>
+                    <li><a href="#">Thali of India <br /><i class="fa fa-star"></i><i class="fa fa-star"></i></a></li>
+                    <li><a href="#">Chinese Food <br /><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></a></li>
+                    <li><a href="#">Asian Vegan Cuisine <br /><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></a></li>
+        
+                </ul>
+            </div>
+            <a class="map-show-hide" onclick="neighborhood_map('1042091');"><i class="fa fa-map-marker"></i></a>
+        </div>
+
+        <!--Google Maps APIv3 Background-->
+        <div id="canvas_holder">
+            <div id="map_canvas"></div>
+        </div><!-- End Google Maps Background -->
+    </div>
+    
+    <div class="container">        
+        <h2 class="sub-title">
+            Use the form below to get a quick quote on a project or to simply say hello. I try to be promt and answer any emails within 48 hours. If you send a spam email, I respond with a creative answer.
+        </h2>
+        
+        <div class="row">
+            <div class="col-sm-8">
+                <form class="contact">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <label class="required" for="name">
+                                Your Name
+                                <input type="text" name="name" id="name" placeholder="John Stuart" required>
+                            </label>
+                        </div>
+                        <div class="col-sm-6">
+                            <label class="required" for="email">
+                                Your Email
+                                <input type="email" name="email" id="email" placeholder="John@Stuart.com" required>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <label for="budget">
+                                Budget
+                                <select id="budget">
+                                    <option disabled="" selected="">~ Select One ~</option>
+                                    <option>Less than $500</option>
+                                    <option>$500 - $999</option>
+                                    <option>$1,000 - $1,999</option>
+                                    <option>$2,000 - $4,999</option>
+                                    <option>$5,000 - $9,999</option>
+                                    <option>$10,000 - $19,999</option>
+                                    <option>More than $20,000</option>
+                                </select>
+                            </label>
+                        </div>
+                        <div class="col-sm-6">
+                            <label for="time">
+                                Completion Time
+                                <select id="time">
+                                    <option disabled="" selected="">~ Select One ~</option>
+                                    <option>Less than One Week</option>
+                                    <option>Three Weeks</option>
+                                    <option>One Month</option>
+                                    <option>Three Months</option>
+                                    <option>Six Months</option>
+                                    <option>One Year</option>
+                                    <option>Continuous</option>
+                                </select>
+                            </label>
+                        </div>
+                    </div>
+                    <label class="required">
+                        Message
+                        <textarea rows="7" placeholder="I have an idea for a project..." required></textarea>
+                    </label>
+                    <div class="add-sm-top text-center">
+                        <button class="btn btn-danger" type="submit"><i class="fa fa-envelope"></i> &nbsp; SEND E-MAIL</button>
+                    </div>
+                </form>
+            </div>
+            <div class="col-sm-4 contact-address">
+                <h3 class="heading turquoise add-xs-top">Stay In Touch</h3>
+                <p>Katuski utade marido alifando. Lipsum dolor slo onsec tueraliquet Morbi nec In Curabitur lreaoreet nisl lorem in pellente pellente eget.</p>
+                
+                <h3 class="heading blue add-sm-top">Example addresses</h3>
+                <address><abbr title="Address"><i class="fa fa-thumb-tack"></i></abbr>Catharsis Media Group<br />
+                                                123 Some Street, New York, NY 12345</address>
+                <address><abbr title="Phone"><i class="fa fa-phone"></i></abbr>1.718.456.7890</address>
+                <address><abbr title="Fax"><i class="fa fa-print"></i></abbr>1.718.045.6789</address>
+                <address><abbr title="Email"><i class="fa fa-envelope"></i></abbr>support@catharsis.com</address>
+            </div>
+        </div>
+    </div>
+</section>

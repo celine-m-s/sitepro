@@ -1,11 +1,11 @@
 ---
-title: MYTITLE
-description: MY DESCRIPTION
+title: Lorem ipsum dolor sit amet, consectetur adipiscing elit viverra fusce.
+description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lobortis pellentesque neque, ac pretium urna finibus eget. Quisque id arcu varius, aliquet dui in nullam.
 picture: piano.jpg
 twitterpicture: somebigpicture.png
 date: 19 décembre 2014
 tags: matt-cutts, another-tag
-summary: some excerpt here
+summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lobortis pellentesque neque, ac pretium urna finibus eget. Quisque id arcu varius, aliquet dui in nullam.
 category: referencement-naturel
 layout: article
 ---

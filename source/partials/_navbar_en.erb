@@ -1,17 +1,26 @@
-<nav>
+<nav id="top-navbar" class="affix">
     <div class="container">
         <div class="row">
-            <ul id="top-menu navbar-fixed-top">
+            <ul id="navbar-fixed-top">
                 <li class="col-sm-1 active"><a href="#top"><i class="fa fa-chevron-up"></i><span class="hidden">Haut</span></a></li>
                 <li class="col-sm-2">
-                    <a href="<%= category_path('SEO') %>">SEO</a>
+                    <%= link_to 'Websites', '/development.html' %>
                 </li>
-                <li class="col-sm-2"><a href="<%= category_path('development') %>">Development</a></li>
-                <li class="col-sm-2"><a href="<%= category_path('web-design') %>">Web-Design</a></li>
-                <li class="col-sm-2"><a href="<%= category_path('projects') %>">Projects</a></li>
-                <li class="col-sm-2"><a href="<%= category_path('miscellaneous') %>">Miscellaneous</a></li>
+                <li class="col-sm-2">
+                    <%= link_to 'Training', '/training.html' %>
+                </li>
+                <li class="col-sm-2">
+                    <%= link_to 'Start-up', '/projects.html' %>
+                </li>
+                <li class="col-sm-2">
+                   <%= link_to 'Contact', '/contact.html' %>
+                </li>
+                <li class="col-sm-2">
+                    <%= link_to 'Blog', '/articles.html' %>
+                </li>
                 <li class="col-sm-1"><a href="#footer"><i class="fa fa-chevron-down"></i><span class="hidden">Get Connected</span></a></li>
             </ul>
         </div>
     </div>
 </nav>
+

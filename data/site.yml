@@ -3,7 +3,7 @@
 #   english: '/'
 twitter:
   name: '@CelineMartinetS'
-  picture: 'somepicture.png'
+  picture: 'logo-cms.png'
 imagepath: 'http://0.0.0.0:4567/images/'
 french:
   title: 'un titre ici pour mon site'
@@ -13,3 +13,6 @@ english:
   title: 'some blog title here'
   description: 'some blog description here'
   url: 'http://0.0.0.0:4567'
+picture: logo-cms.png
+title: a generic title
+description: a generic description

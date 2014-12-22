@@ -1,41 +1,45 @@
 <!-- Le Footer -->    
 <footer class="footer-wrapper hidden-xs" id="footer">
-    <div class="footer-slogan">
+<!--     <div class="footer-slogan">
         <div class="container">
             <div class="row">
-                <div class="col-sm-6">
-                    <h2>Download my <strong>kick-ass</strong> <a href="resume.html">resume</a></h2>
+                <div class="col-sm-2 col-sm-offset-1">
+                    Sign up to my newsletter!
                 </div>
-                <a class="ribbon">
-                </a>
-                <div class="col-sm-6">
-                    <h2 class="text-right">Visit my <a href="http://creativemarket.com/fwpolice?u=fwpolice">CreativeMarket</a> store</h2>
+                <div class="col-sm-4">
+                    
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <div class="footer-links container">
         <div class="row">
             <div class="col-sm-4">
-                <h4>Recent Tweets</h4>
-                <p>
-                    Wayfarers magna sunt, Austin organic brooklyn nesciunt exercitation you probably haven't heard of them est. Wayfarers 
-                    magna sunt, Austin organic brooklyn nesciunt exercitation you probably haven't heard of them est.
-                </p>
+                <h4><%= t(:recenttweets) %></h4>
+                   <a class="twitter-timeline" href="https://twitter.com/CelineMartinetS" data-widget-id="357912545899720706">Tweets de @CelineMartinetS</a>
+                   <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
             </div>
             <div class="col-sm-4">
-                <h4>Recent Articles</h4>
-                <p>
-                    Wayfarers magna sunt, Austin organic brooklyn nesciunt exercitation you probably haven't heard of them est. Wayfarers 
-                    magna sunt, Austin organic brooklyn nesciunt exercitation you probably haven't heard of them est.
-                </p>
+                <h4><%= t(:recentarticles) %></h4>
+                <ul class="footer-articles-list">
+                    <% blog.local_articles[0..2].each do |article|%>
+                        <li class="footer-article"><%= link_to article.title, article %> <span><%= article.date.strftime('%b %e') %></span>
+                                <p><%= article.data.description %></p>
+                        </li>
+                    <% end %>
+                </ul>
             </div>
             <div class="col-sm-4">
-                <h4>Business Hours</h4>
-                <p>
-                    Wayfarers magna sunt, Austin organic brooklyn nesciunt exercitation you probably haven't heard of them est. Wayfarers 
-                    magna sunt, Austin organic brooklyn nesciunt exercitation you probably haven't heard of them est.
-                </p>
+                <h4><%= t(:contactme) %></h4>
+                <form action="#" id="contactForm">
+                  <!-- the redirect_to is optional, the form will redirect to the referrer on submission -->
+                  <input type='hidden' name='redirect_to' value='<the complete return url e.g. http://fooey.com/thank-you.html>' />
+                  <!-- all your input fields here.... -->
+                  <input type='text' name='name' required placeholder="Cylia Chamade"/>
+                  <input type='mail' name='email' required placeholder="cylia.chamade@cats-eye.com"/>
+                  <textarea type='textarea' name='message' required placeholder="<%= t(:catsEyeMessage) %>"></textarea>
+                  <input type='submit' value='<%= t(:send) %>' class="sendButton"/>
+                </form>
             </div>
         </div>
     </div>
@@ -44,11 +48,15 @@
 <div class="footer-copyright">
     <div class="container">
         <div class="row">
-            <div class="col-sm-8">
-                &copy; Simply.Me. All Rights Reserved.
+            <div class="col-sm-4 text-right">
+                &copy; Céline Martinet Sanchez. <%= t(:allrightsreserved) %>
             </div>
+<!--             <div class="col-sm-4 mobile-center">
+                    <span><i class="fa fa-mobile"></i> +33(0)6 30 36 08 49</span>
+            </div> -->
             <div class="col-sm-4 text-right mobile-center">
-                <a href="#">Privacy</a> / <a href="#">Terms</a> / <a href="#">Jobs</a>
+                     <a href="mailto:celine.martinet.sanchez@gmail.com"><i class="fa fa-envelope"></i>  <%= t(:sendmail) %></a>
+                </p>
             </div>
         </div>
     </div>

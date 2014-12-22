@@ -28,12 +28,12 @@
     <![endif]-->
 
     <!-- For preloads -->
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js" async></script>
-    <script src="js/modernizr.custom.js" async></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <%= javascript_include_tag 'modernizr.custom.js' %>
 
     <!-- Fonts -->
     <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700' rel='stylesheet' type='text/css'>
-    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
   </head>
   <body id="top" class="single">
   <% current_locale = I18n.locale.to_s %>
@@ -44,7 +44,7 @@
   <%= partial 'partials/articleheader' %>
   <!-- end Article header -->
   <!-- Navbar -->
-  <%= partial 'partials/navbar_' + current_locale %>
+  <%= partial 'partials/blog_navbar_' + current_locale %>
   <!-- end navbar -->
 
 
@@ -59,7 +59,7 @@
                       <!-- <span><i class="fa fa-user"></i> <a href="#">Jonathan</a></span> -->
                       <span><i class="fa fa-calendar"></i><%= current_page.data.date %></span> 
                       <!-- strftime ('%b %e') -->
-                       <span><i class="fa fa-folder-open-o"></i> 
+                       <span><i class="fa fa-slack"></i> 
                        <a href="<%= category_path(current_page.data.category) %>"><%= current_page.data.category %>
                        </a>
                        </span>

@@ -1,13 +1,7 @@
 
-<html itemscope itemtype="http://schema.org/Article">
-<!-- Place this data between the <head> tags of your website -->
 <title><%= current_page.data.title ?  current_page.data.title : data.site.title %></title>
 <meta name="description" content="<%= current_page.data.description ? current_page.data.description : data.site.description %>">
 
-<!-- Google Authorship and Publisher Markup -->
-<!-- <link rel="author" href="https://plus.google.com/[Google+_Profile]/posts"/>
-<link rel="publisher" href="https://plus.google.com/[Google+_Page_Profile]"/> -->
-<!-- Schema.org markup for Google+ -->
 <meta itemprop="name" content="<%= current_page.data.title ?  current_page.data.title : data.site.title %>">
 <meta itemprop="description" content="<%= current_page.data.description ? current_page.data.description : data.site.description %>">
 <meta itemprop="image" content="<%= current_page.data.picture ? (data.site.imagepath+current_page.data.picture) : (data.site.imagepath+data.site.picture) %>">
@@ -21,13 +15,7 @@
 <meta name="twitter:image:src" content="<%= current_page.data.twitterpicture ? (data.site.imagepath+current_page.data.twitterpicture) : (data.site.twitter.picture) %>">
 <!-- Open Graph data -->
 <meta property="og:title" content="<%= current_page.data.title || data.site.title %>" />
-<meta property="og:type" content="article" />
 <meta property="og:url" content="<%= current_page.path %>" />
 <meta property="og:image" content="<%= current_page.data.picture ? (data.site.imagepath+current_page.data.picture) : (data.site.picture) %>" />
 <meta property="og:description" content="<%= current_page.data.description ? current_page.data.description : data.site.description %>" />
 <meta property="og:site_name" content="<%= t(:websitetitle) %>" />
-<meta property="article:published_time" content="<%= current_page.data.date %>" />
-<meta property="article:modified_time" content="<%= current_page.data.date %>" />
-<meta property="article:section" content="<%= current_page.data.category %>" />
-<meta property="article:tag" content="<%= current_page.data.tags.to_s %>" />
-<meta property="fb:admins" content="Facebook numberic ID" />

@@ -1,0 +1,15 @@
+---
+layout: blogindex
+---
+
+<% blog.local_articles.each do |article| %>
+  <article>
+    <%= link_to article.title, article.path%> <%# Note `article.path` in the second argument %>
+    <%= article.data.summary %>
+    <%= link_to I18n.t(:readmore), article %>
+  </article>
+<% end %>
+
+
+
+<%= partial 'partials/last_articles' %>

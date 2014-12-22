@@ -1,3 +1,112 @@
+$blue: #09A298;
+$orange: #EE4E44;
+
 nav {
   top:auto;
+}
+
+.footer-links {
+  h4 {
+    text-align: center;
+  }
+  .row {
+    margin-right: -12px;
+  }
+  .footer-articles-list {
+    padding-left: 0;
+    list-style-type: none;
+    .footer-article {
+    }
+  }
+}
+
+.single .meta span i.fa-slack {
+    -ms-transform: rotate(19deg);
+    -webkit-transform: rotate(19deg);
+    transform: rotate(19deg);
+    margin-right: 0px;
+}
+
+a {
+  transition: all ease-in-out .3s;
+  -o-transition: all ease-in-out .3s;
+  -ms-transition: all ease-in-out .3s;
+  -moz-transition: all ease-in-out .3s;
+  -webkit-transition: all ease-in-out .3s;
+}
+
+a:hover {
+  color: $blue;
+}
+
+#top-navbar {
+  li:nth-child(2), li:nth-child(4), li:nth-child(6) {
+    a:hover {
+        background-color: #09A298;
+    } 
+  } 
+}
+
+select:hover, input:hover, .input:hover input, textarea:hover, .textarea:hover textarea, .checkbox:hover i {
+  border-color: $blue;
+}
+
+footer {
+  height: auto;
+}
+
+.footer-links {
+  h4 {
+    margin-bottom: 50px;
+  }
+
+  #contactForm {
+    input, textarea {
+      margin: 10px 0;
+    }
+    .sendButton {
+      background-color: $orange;
+      border-color: transparent;
+      transition: all ease-in-out .3s;
+      -o-transition: all ease-in-out .3s;
+      -ms-transition: all ease-in-out .3s;
+      -moz-transition: all ease-in-out .3s;
+      -webkit-transition: all ease-in-out .3s;
+      &:focus, &:hover, &:active {
+        background-color: $blue;
+        color: #fff;
+      }
+    }
+  }
+}
+
+.slider {
+  .overlay {
+    #languages {
+      text-align: center;
+      margin-top: 20px;
+    }
+    article {
+      top: 36%;
+    .top-logo-wrapper {
+      .top-logo {
+        height: 100px;
+        opacity: 0.8;
+        }
+      }
+      .header-name {
+        color: #fff;
+        font-weight: 300;
+        text-transform: uppercase;
+        display: inline-block;
+        padding: 5px 15px;
+        font-size: 35px;
+        margin: 25px 0;
+        border: none;
+      }
+      h2 {
+        margin-top: 0;
+      }
+    }
+  }
 }

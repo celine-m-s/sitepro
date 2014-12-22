@@ -8,3 +8,14 @@ fr:
   developer: Développeuse
   teacher: Formatrice
   entrepreneur: Entrepreneure
+  recentarticles: Articles récents
+  recenttweets: Derniers tweets
+  contactme: Contactez-moi !
+  allrightsreserved: Tous droits réservés.
+  sendmail: Contactez-moi par mail
+  catsEyeMessage: "Bonjour, Nous aimerions un site pour vendre nos oeuvres d'art. Pourriez-vous le réaliser ? Merci, Signé Cat's Eye"
+  send: Envoyer
+  paths:
+    development: "developpement"
+    training: "formation"
+    projects: "projets"
