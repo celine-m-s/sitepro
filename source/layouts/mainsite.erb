@@ -98,5 +98,13 @@
         <%= javascript_include_tag 'bootstrap.min.js' %>
         <%= javascript_include_tag 'library.js' %>
         <%= javascript_include_tag 'scripts.js' %>
+        <script>
+        $(function() {
+            Grid.init();
+        });
+        // Init Google Map
+        GoogleMapInit();
+        ShowPins();  
+        </script>
       </body>
     </html>
