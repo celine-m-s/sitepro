@@ -28,8 +28,8 @@ activate :blog do |blog|
 
   # Enable pagination
   blog.paginate = true
-  blog.per_page = 10
-  blog.page_link = "page/{num}"
+  blog.page_link = "page:num"
+  blog.per_page = 5
 
   # Categories
   blog.custom_collections = {
@@ -122,7 +122,7 @@ configure :build do
   activate :asset_hash
 
   # Use relative URLs
-  activate :relative_assets
+ activate :relative_assets
 
   # Or use a different image path
   # set :http_prefix, "/Content/images/"

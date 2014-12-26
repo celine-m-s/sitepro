@@ -9,28 +9,6 @@ layout: mainsite
         </h1>
     </div>
     
-    <div class="gmap">  
-        <div class="map-overlay-container">
-            <div class="map-overlay" id="map-1042091">
-                <ul class="map-menu">
-                    <li class="nav-header map-nav-header">Favorite Hangouts</li>
-                    <li><a href="#">Texas BBQ <br /><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></a></li>
-                    <li><a href="#">Dallas Chicken <br /><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></a></li>
-                    <li><a href="#">Thali of India <br /><i class="fa fa-star"></i><i class="fa fa-star"></i></a></li>
-                    <li><a href="#">Chinese Food <br /><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></a></li>
-                    <li><a href="#">Asian Vegan Cuisine <br /><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></a></li>
-        
-                </ul>
-            </div>
-            <a class="map-show-hide" onclick="neighborhood_map('1042091');"><i class="fa fa-map-marker"></i></a>
-        </div>
-
-        <!--Google Maps APIv3 Background-->
-        <div id="canvas_holder">
-            <div id="map_canvas"></div>
-        </div><!-- End Google Maps Background -->
-    </div>
-    
     <div class="container">        
         <h2 class="sub-title">
             Use the form below to get a quick quote on a project or to simply say hello. I try to be promt and answer any emails within 48 hours. If you send a spam email, I respond with a creative answer.
@@ -38,18 +16,18 @@ layout: mainsite
         
         <div class="row">
             <div class="col-sm-8">
-                <form class="contact">
+                <form class="contact" id="contactForm">
                     <div class="row">
                         <div class="col-sm-6">
                             <label class="required" for="name">
                                 Your Name
-                                <input type="text" name="name" id="name" placeholder="John Stuart" required>
+                                <input type="text" name="name" id="name" placeholder="Cylia Chamade" required>
                             </label>
                         </div>
                         <div class="col-sm-6">
                             <label class="required" for="email">
                                 Your Email
-                                <input type="email" name="email" id="email" placeholder="John@Stuart.com" required>
+                                <input type="email" name="email" id="email" placeholder="cylia.chamade@cats-eye.com" required>
                             </label>
                         </div>
                     </div>
@@ -57,7 +35,7 @@ layout: mainsite
                         <div class="col-sm-6">
                             <label for="budget">
                                 Budget
-                                <select id="budget">
+                                <select id="budget" name="budget">
                                     <option disabled="" selected="">~ Select One ~</option>
                                     <option>Less than $500</option>
                                     <option>$500 - $999</option>
@@ -70,9 +48,9 @@ layout: mainsite
                             </label>
                         </div>
                         <div class="col-sm-6">
-                            <label for="time">
+                            <label for="time" >
                                 Completion Time
-                                <select id="time">
+                                <select id="time" name="time">
                                     <option disabled="" selected="">~ Select One ~</option>
                                     <option>Less than One Week</option>
                                     <option>Three Weeks</option>
@@ -87,23 +65,33 @@ layout: mainsite
                     </div>
                     <label class="required">
                         Message
-                        <textarea rows="7" placeholder="I have an idea for a project..." required></textarea>
+                        <textarea rows="7" placeholder="<%= t(:catsEyeMessage) %>" required type="textarea" name="message"></textarea>
                     </label>
                     <div class="add-sm-top text-center">
                         <button class="btn btn-danger" type="submit"><i class="fa fa-envelope"></i> &nbsp; SEND E-MAIL</button>
                     </div>
                 </form>
+                <div class="col-md-12" id="formSuccessMessage" style="display:none;">
+                    Votre message a bien été envoyé. Je vous répondrai sous les meilleurs délais.
+                </div>
+                <div class="col-md-12" id="formErrorMessage" style="display:none;">
+                    Votre message n'a pu être envoyé. Merci de recommencer dans quelques minutes.
+                </div>
             </div>
             <div class="col-sm-4 contact-address">
                 <h3 class="heading turquoise add-xs-top">Stay In Touch</h3>
-                <p>Katuski utade marido alifando. Lipsum dolor slo onsec tueraliquet Morbi nec In Curabitur lreaoreet nisl lorem in pellente pellente eget.</p>
+                <p>I work in Paris in different places but you can join me by sending an e-mail!</p>
                 
-                <h3 class="heading blue add-sm-top">Example addresses</h3>
-                <address><abbr title="Address"><i class="fa fa-thumb-tack"></i></abbr>Catharsis Media Group<br />
-                                                123 Some Street, New York, NY 12345</address>
-                <address><abbr title="Phone"><i class="fa fa-phone"></i></abbr>1.718.456.7890</address>
-                <address><abbr title="Fax"><i class="fa fa-print"></i></abbr>1.718.045.6789</address>
-                <address><abbr title="Email"><i class="fa fa-envelope"></i></abbr>support@catharsis.com</address>
+                <!-- <h3 class="heading blue add-sm-top">Social Networks</h3> -->
+                <address><abbr title="Address"><i class="fa fa-thumb-tack"></i></abbr>Anywhere in Paris, 
+                                                France</address>
+                <div class="social-networks">                
+                    <a href="http://fr.linkedin.com/in/celinemartinet1/" target="_blank"><i class="fa fa-linkedin-square"></i></a>
+                    <a href="https://github.com/celine-m-s" target="_blank"><i class="fa fa-github-square"></i></a>                     
+                    <a href="https://www.facebook.com/profile.php?id=100008250871769"><i class="fa fa-facebook-square"></i></a>
+                    <a href="https://twitter.com/CelineMartinetS" target="_blank" ><i class="fa fa-twitter-square"></i></a>
+                    <a href="https://plus.google.com/u/0/+CelineMartinetSanchez/posts" target="_blank" ><i class="fa fa-google-plus-square"></i></a>
+                </div>
             </div>
         </div>
     </div>

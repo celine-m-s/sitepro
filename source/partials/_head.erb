@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
     <!-- Social networks and SEO -->
-    <%= partial 'partials/social-networks' %>
+    <%= partial 'partials/social-networks-generic' %>
     <!-- END Social notworks and SEO -->
 
     <!-- if you're lost -->
@@ -40,28 +40,3 @@
     <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700' rel='stylesheet' type='text/css'>
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
   </head>
-  <body id="top" class="single">
-  <% current_locale = I18n.locale.to_s %>
-  <!-- Newsletter -->
-  <%= partial 'partials/newsletter_' + current_locale %>
-  <!-- end newsletter -->
-  <!-- Article header -->
-  <%= partial 'partials/articleheader' %>
-  <!-- end Article header -->
-  <!-- Navbar -->
-  <%= partial 'partials/blog_navbar_' + current_locale %>
-  <!-- end navbar -->
-
-  <%= yield %>
-
-
-  <%= partial "partials/footer.erb" %>
-
-      <!-- Scripts -->
-      <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
-      <%= javascript_include_tag 'library.js' %>
-      <%= javascript_include_tag 'bootstrap.min.js' %>
-      <%= javascript_include_tag 'scripts.js' %>
-
-    </body>
-  </html>

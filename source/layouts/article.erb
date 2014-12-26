@@ -10,6 +10,11 @@
     <!-- Social networks and SEO -->
     <%= partial 'partials/social-networks' %>
     <!-- END Social notworks and SEO -->
+    
+    <!-- if you're lost -->
+    <% if current_page.url == "/404.html" %>
+      <meta http-equiv="refresh" content="5; url=/">
+    <% end %>
 
     <!-- Favicon rocks! -->
     <%= favicon_tag 'images/favicon.png' %>

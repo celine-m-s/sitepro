@@ -1,9 +1,10 @@
 ---
 layout: mainsite
 ---
-
+<% current_locale = I18n.locale.to_s %>
     
 <%= partial 'partials/projects_grid', :locals => {
   :globalTitle => 'Stuff I <span class="highlight orange">Made</span>',
-  :globalSubtitle => 'du blabla en description'
+  :globalSubtitle => 'du blabla en description',
+  :projects => data.training.send(current_locale)
   } %>
