@@ -497,7 +497,7 @@ var Grid = (function() {
 			// create Preview structure:
 			this.$title = $( '<h3></h3>' );
 			this.$description = $( '<p></p>' );
-			this.$href = $( '<a href="#" class="btn btn-danger">Visit website</a>' );
+			this.$href = $( '<a href="#" class="btn btn-danger"></a>' );
 			this.$details = $( '<div class="og-details"></div>' ).append( this.$title, this.$description, this.$href );
 			this.$loading = $( '<div class="og-loading"></div>' );
 			this.$fullimage = $( '<div class="og-fullimg"></div>' ).append( this.$loading );
@@ -535,12 +535,15 @@ var Grid = (function() {
 					href : $itemEl.attr( 'href' ),
 					largesrc : $itemEl.data( 'largesrc' ),
 					title : $itemEl.data( 'title' ),
-					description : $itemEl.data( 'description' )
+					description : $itemEl.data( 'description' ),
+					link: $itemEl.data( 'link' ),
+					largesrcalt: $itemEl.data( 'largesrcalt' )
 				};
 
 			this.$title.html( eldata.title );
 			this.$description.html( eldata.description );
 			this.$href.attr( 'href', eldata.href );
+			this.$href.html( eldata.link );
 
 			var self = this;
 			
@@ -561,7 +564,7 @@ var Grid = (function() {
 						self.$largeImg = $img.fadeIn( 350 );
 						self.$fullimage.append( self.$largeImg );
 					}
-				} ).attr( 'src', eldata.largesrc );	
+				} ).attr({src: eldata.largesrc, alt: eldata.largesrcalt});	
 			}
 
 		},

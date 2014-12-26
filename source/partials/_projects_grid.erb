@@ -1,0 +1,40 @@
+<!-- Stuff I Made -->
+
+
+
+<section id="stuffimade" class="bounceIn">
+    <div class="container">
+        <div class="row">
+            <div class="span12">
+                <h1 class="title">
+                    <%= globalTitle %>
+                </h1>
+                <h2 class="sub-title">
+                    <%= globalSubtitle %>
+                </h2>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="portfolio clearfix">
+            <div class="main row">
+                <ul id="og-grid" class="og-grid">
+
+                <% data.training.en.each do |project| %>
+                  <li class="filter-web">
+                    <a href="<%= project.liveUrl %>" data-largesrc="<%= "images/" + project.bigPicture %>" data-title="<%= project.title %>" data-description="<%= project.description %>", data-link="plus sur le projet", data-largesrcalt="<%= project.bigPictureAlt %>" >
+                      <figure>
+                          <div class="text-overlay">
+                              <div class="info"><%= project.title %></div>
+                          </div>
+                          <img src="<%= "images/" + project.picture %>" alt="<%= project.pictureAlt %>">
+                      </figure>
+                    </a>
+                  </li>
+                <% end %>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,35 @@
+fr:
+  - webdesign: 
+    title: Web-Design Express en
+    description: Une description du Web-Design
+    picture: piano.jpg
+    pictureAlt: une description alternative
+    bigPicture: piano.jpg
+    bigPictureAlt: une description alternative
+    liveUrl: http://www.web-design-express.org
+  - elearningSEO: 
+    title: SEO
+    description: Une description du Web-Design
+    picture: piano.jpg
+    pictureAlt: une description alternative
+    bigPicture: piano.jpg
+    bigPictureAlt: une description alternative
+    liveUrl: http://www.web-design-express.org
+
+en:
+  - webdesign: 
+    title: Web-Design Express en
+    description: Une description du Web-Design
+    picture: piano.jpg
+    pictureAlt: une description alternative
+    bigPicture: piano.jpg
+    bigPictureAlt: une description alternative
+    liveUrl: http://www.web-design-express.org
+  - elearningSEO: 
+    title: SEO
+    description: Une description du Web-Design
+    picture: piano.jpg
+    pictureAlt: une description alternative
+    bigPicture: piano.jpg
+    bigPictureAlt: une description alternative
+    liveUrl: http://www.web-design-express.org

@@ -19,3 +19,7 @@ fr:
     development: "developpement"
     training: "formation"
     projects: "projets"
+  indexLastPosts: 'Derniers <span class="highlight blue">Articles</span>'
+  indexLastPostsSubtitle: 'Un sous-titre en français sur plusieurs lignes Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lobortis pellentesque neque, ac pretium urna finibus eget. Quisque id arcu varius, aliquet dui in nullam.'
+  time_short: '%d/%m/%Y'
+  time_expanded: '%d/%m/%Y'

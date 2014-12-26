@@ -2,7 +2,12 @@
 layout: mainsite
 ---
 
-<%= partial 'partials/last_articles' %>
+<%= partial 'partials/last_articles', :locals => { 
+    :title => t(:indexLastPosts),
+    :subtitle => t(:indexLastPostsSubtitle),
+    :articles => blog.local_articles
+    }
+%>
 
 <!-- Who I Am -->
 <section id="whoiam">

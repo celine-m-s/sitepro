@@ -92,11 +92,11 @@ end
 # activate :livereload
 
 # Methods defined in the helpers block are available in templates
-helpers do
-  def language
-    I18n.locale.to_s
-  end
-end
+# helpers do
+#   def language
+#     I18n.locale.to_s
+#   end
+# end
 
 activate :deploy do |deploy|
   deploy.method = :git

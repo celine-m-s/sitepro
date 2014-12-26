@@ -57,7 +57,7 @@
                   </h1>
                   <h2 class="meta">
                       <!-- <span><i class="fa fa-user"></i> <a href="#">Jonathan</a></span> -->
-                      <span><i class="fa fa-calendar"></i><%= current_page.data.date %></span> 
+                      <span><i class="fa fa-calendar"></i><%= current_page.data.date.strftime(t(:time_expanded)) %></span> 
                       <!-- strftime ('%b %e') -->
                        <span><i class="fa fa-slack"></i> 
                        <a href="<%= category_path(current_page.data.category) %>"><%= current_page.data.category %>
