@@ -1,21 +1,21 @@
+<!-- <title><%= @title ? current_page.data.title : data.site.title %></title> -->
+ <title><%= @title %></title>
+<meta name="description" content="<%= @description %>">
 
-<title><%= current_page.data.title ?  current_page.data.title : data.site.title %></title>
-<meta name="description" content="<%= current_page.data.description ? current_page.data.description : data.site.description %>">
-
-<meta itemprop="name" content="<%= current_page.data.title ?  current_page.data.title : data.site.title %>">
-<meta itemprop="description" content="<%= current_page.data.description ? current_page.data.description : data.site.description %>">
-<meta itemprop="image" content="<%= current_page.data.picture ? (data.site.imagepath+current_page.data.picture) : (data.site.imagepath+data.site.picture) %>">
+<meta itemprop="name" content="<%= @title %>">
+<meta itemprop="description" content="<%= @description %>">
+<meta itemprop="image" content="<%= yield_content :page_picture %>">
 <!-- Twitter Card data -->
-<meta name="twitter:card" content="<%= current_page.data.twitterpicture ? (data.site.imagepath+current_page.data.twitterpicture) : (data.site.twitter.picture) %>">
+<meta name="twitter:card" content="<%= yield_content :page_picture %>">
 <meta name="twitter:site" content="<%= data.site.twitter.name %>">
-<meta name="twitter:title" content="<%= current_page.data.title ? current_page.data.title : data.site.title %>">
-<meta name="twitter:description" content="<%= current_page.data.description ? current_page.data.description : data.site.description %>">
+<meta name="twitter:title" content="<%= @title %>">
+<meta name="twitter:description" content="<%= @description %>">
 <meta name="twitter:creator" content="<%= data.site.twitter.name %>">
 <!-- Twitter summary card with large image must be at least 280x150px -->
-<meta name="twitter:image:src" content="<%= current_page.data.twitterpicture ? (data.site.imagepath+current_page.data.twitterpicture) : (data.site.twitter.picture) %>">
+<meta name="twitter:image:src" content="<%= yield_content :page_picture %>">
 <!-- Open Graph data -->
-<meta property="og:title" content="<%= current_page.data.title || data.site.title %>" />
+<meta property="og:title" content="<%= @title %>" />
 <meta property="og:url" content="<%= current_page.path %>" />
-<meta property="og:image" content="<%= current_page.data.picture ? (data.site.imagepath+current_page.data.picture) : (data.site.picture) %>" />
-<meta property="og:description" content="<%= current_page.data.description ? current_page.data.description : data.site.description %>" />
+<meta property="og:image" content="<%= yield_content :page_picture %>" />
+<meta property="og:description" content="<%= @description %>" />
 <meta property="og:site_name" content="<%= t(:websitetitle) %>" />

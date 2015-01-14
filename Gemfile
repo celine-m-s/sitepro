@@ -16,3 +16,6 @@ gem "middleman-livereload", "~> 3.1.0"
 
 # For summaries
 gem "nokogiri"
+
+# For thumbnails
+gem 'middleman-simple-thumbnailer'

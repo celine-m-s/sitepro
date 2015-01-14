@@ -2,6 +2,13 @@
 layout: mainsite
 ---
 <% current_locale = I18n.locale.to_s %>
+
+<% @title = t(:projects_title) %>
+<% @description = t(:projects_description) %>
+
+<% content_for :page_picture do %>
+  <% image_path('piano.jpg') %>
+<% end %>
     
 <%= partial 'partials/projects_grid', :locals => {
   :globalTitle => 'Stuff I <span class="highlight orange">Made</span>',

@@ -6,16 +6,19 @@ layout: category
 <h1>Archive for
   <% case page_type
      when 'day' %>
-    <%= Date.new(year, month, day).strftime('%b %e %Y') %>
+    <% date = Date.new(year, month, day).strftime('%b %e %Y') %>
+    <%= date %>
   <% when 'month' %>
-    <%= Date.new(year, month, 1).strftime('%b %Y') %>
+    <% date = Date.new(year, month, 1).strftime('%b %Y') %>
+    <%= date %>
   <% when 'year' %>
+    <% date = "#{year}" %>
     <%= year %>
   <% end %>
 </h1>
 
 <%= partial 'partials/last_articles', :locals => { 
-    :title => "Articles tagged" + "`" + tagname + "`" ,
+    :title => "Articles tagged" + "`" + date + "`" ,
     :articles => page_articles
     }
 %>

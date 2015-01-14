@@ -2,6 +2,13 @@
 layout: mainsite
 ---
 
+<% @title = t(:index_title) %>
+<% @description = t(:index_description) %>
+
+<% content_for :page_picture do %>
+  <% image_path('piano.jpg') %>
+<% end %>
+
 <%= partial 'partials/last_articles', :locals => { 
     :title => t(:indexLastPosts),
     :subtitle => t(:indexLastPostsSubtitle),

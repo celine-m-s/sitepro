@@ -19,7 +19,7 @@
     <!-- Favicon rocks! -->
     <%= favicon_tag 'images/favicon.png' %>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <%= feed_tag :atom, "#{blog.options.prefix.to_s}/feed.xml", title: "Atom Feed" %>
+    <%= feed_tag :atom, "#{I18n.locale.to_s}/feed.xml", title: "Atom Feed" %>
     <!-- Stylesheets -->
     <%= stylesheet_link_tag "bootstrap.min.css" %>
     <%= stylesheet_link_tag "picons.css" %>

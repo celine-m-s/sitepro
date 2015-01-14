@@ -155,3 +155,72 @@ footer {
   }
 }
 
+/* ==========================================================================
+   Sections
+   ========================================================================== */
+
+#whatido,
+#thingsiwrite,
+#stuffimade,
+#getintouch {
+    padding: 165px 0;
+    min-height: 100%;
+    border-bottom: 1px solid #DDD;
+}
+
+#whoiam {
+  background: none repeat scroll 0% 0% #FFF;
+}
+
+/* ==========================================================================
+   Newsletter
+   ========================================================================== */
+
+#widget .toggle {
+  width: auto;
+  line-height: 20px;
+  padding: 5px 10px;
+}
+
+#widget {
+  .widget_container {
+    .text-group {
+      padding-bottom: 10px;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  #widget .toggle {
+    height: 34px;
+    width: 44px;
+    i {
+      font-size: 27px;
+    }
+     .text {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .slider .overlay #languages {
+    margin-top: 2px;
+  }
+}
+
+/* ==========================================================================
+   Slider
+   ========================================================================== */
+
+#slider {
+  .slider-photo-1 {
+    margin-top: -29%;
+  }
+  .slider-photo-2 {
+    margin-top: -11%;
+  }
+  .slider-photo-3 {
+    margin-top: -30%;
+  }
+}

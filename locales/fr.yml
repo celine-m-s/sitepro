@@ -21,6 +21,14 @@ fr:
     projects: "projets"
     training/web-design-express: "formation/web-design-express"
   indexLastPosts: 'Derniers <span class="highlight blue">Articles</span>'
-  indexLastPostsSubtitle: 'Un sous-titre en français sur plusieurs lignes Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lobortis pellentesque neque, ac pretium urna finibus eget. Quisque id arcu varius, aliquet dui in nullam.'
+  indexLastPostsSubtitle: "En tant que développeuse et entrepreneure, je passe le plus clair de mon temps à chercher des informations. Quel outil utiliser ? Comment optimiser telle ressource ? Mon blog est un peu ma boite à souvenirs. J'y partage ce qui me semble essentiel, mes coups de sang (rarement) et mes bons plans (souvent !)."
   time_short: '%d/%m/%Y'
   time_expanded: '%d/%m/%Y'
+  index_title: "Création de sites web, formation et entrepreneuriat"
+  index_description: 'Freelance web et multidisciplinaire à Paris, Céline Martinet Sanchez vous accompagne dans votre nouveau projet. Développement, référencement naturel, web-design et plus encore !'
+  development_title: 'Création de sites web - freelance développeur à Paris'
+  development_description: "Vous cherchez un développeur compétent et multidisciplinaire pour votre projet ? Parlons-en autour d'un café ! "
+  training_title: "Formation personnalisée pour comprendre le web à Paris - Céline MS"
+  training_description: "J'enseigne la création de sites web (HTML / Wordpress) à des groupes et en cours particulier. Ma pédagogie est axée sur la pratique. Découvrez-en plus !"
+  projects_title: "Entrepreneure - Céline MS"
+  projects_description: "Je travaille sur plusieurs projets de startups dans le numérique. Découvrez mes projets ici !"

@@ -49,7 +49,8 @@ configure :development do
   set :debug_assets, true
 end
 
-
+# Thumbnails
+activate :middleman_simple_thumbnailer
 
 ###
 # Compass

@@ -16,6 +16,14 @@ en:
   catsEyeMessage: "Hello, We'd like to create a website to sell our artworks. Could you do it? Thanks, Cat's Eye"
   send: Send
   indexLastPosts: 'Last <span class="highlight blue">Articles</span>'
-  indexLastPostsSubtitle: 'By combining the smallest of letters one can create a story to last a life time. I enjoy watching reading and participating. I like it so much that I have too much information in my brain closet. I release those thoughts and tricks for the world to read. Tell me what you think...or what you understood.'
+  indexLastPostsSubtitle: "As a developer and entrepreneur, I spend almost all my time looking for useful information. What tool? How can I optimize that resource? My blog is like a memory box. I share everything I think fundamental, my grunts (rarely) and my good deals (often!)."
   time_short: '%m/%d/%Y'
   time_expanded: '%B %d, %Y'
+  index_title: 'Website creation, personal training and entrepreneurship'
+  index_description: 'Multidisciplinary and Parisian web freelancer, Celine Martinet Sanchez helps you to bring life to your new project. Development, SEO, web-design and much more!'
+  development_title: "Website creation: freelance web developer in Paris"
+  development_description: "You want to create a website and you don't know where to begin with? Let's have a coffee to talk about it!"
+  training_title: 'Personal training to deal with the web - Celine MS'
+  training_description: "I teach website creation (HTML/Wordpress) to groups or in individual coachings. I focus on practical skills. Discover it now!"
+  projects_title: "Entrepreneur: discover my projects"
+  projects_description:  "I am working on many digital startup projects. Know more about them here!"
