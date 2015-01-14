@@ -20,29 +20,29 @@ layout: mainsite
 <section id="whoiam">
     <div class="container">
         <h1 class="title">
-            Who I <span>am</span>
+            <%= t(:whoiam) %>
         </h1>
         <h2 class="sub-title">
-            A creative thinker from the city that never sleeps, New York City. An influencial and passionate person in 
-            the Adobe Fireworks community working to bring it success. Lover of music of all genre, language, tempo and age.
+            <%= t(:whoIAmText) %>
         </h2>
         
-        <h3 class="heading turquoise"><i class="fa fa-camera-retro"></i> I am <strong>Creative</strong></h3>
+        <h3 class="heading turquoise"><i class="fa fa-camera-retro"></i><%= t(:iAmCreative) %></h3>
             
         <div class="row add-margin">
             <div class="col-sm-6">
                 <p>
-                    Assumenda neutra eiusmod keytar cosby sweater, narwhal gentrify elit mcsweeney's. Photo booth enim terry richardson, 
-                    beard neutra pickled incididunt cupidatat fap fugiat. Mollit fugiat eiusmod cray photo booth. Crafted beer fashion axe 
-                    elit disrupt est pour-over, gentrify minim.
+                    <%= image_tag("celine-martinet-sanchez.jpg", class: "img-responsive") %>
                 </p>
             </div>
             <div class="col-sm-6">
                 <p>
-                    Assumenda neutra eiusmod keytar cosby sweater, narwhal gentrify elit mcsweeney's. Photo booth enim terry richardson.
+                    <%= t(:iAmCreative1) %>
+                </p>
+                <p>
+                    <%= t(:iAmCreative2) %>
                 </p>
                 
-                <p><a href="resume.html" class="btn btn-danger btn-sm"><i class="fa fa-download"></i> Download My Resume</a></p>
+                <!-- <p><a href="resume.html" class="btn btn-danger btn-sm"><i class="fa fa-download"></i> Download My Resume</a></p> -->
             </div>
         </div>
         
