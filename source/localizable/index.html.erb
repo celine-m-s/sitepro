@@ -46,38 +46,46 @@ layout: mainsite
             </div>
         </div>
         
-        <h3 class="heading blue"><i class="fa fa-qrcode"></i> I am <strong>Innovative</strong></h3>
+        <h3 class="heading blue"><i class="fa fa-qrcode"></i> <%= t(:iAmStructured) %></h3>
         
         <div class="row add-margin">
-            <div class="col-sm-6">
+            <div class="col-sm-4">
                 <p>
-                    Assumenda neutra eiusmod keytar cosby sweater, narwhal gentrify elit mcsweeney's. Photo booth enim terry richardson, 
-                    beard neutra pickled incididunt cupidatat fap fugiat. Mollit fugiat eiusmod cray photo booth. Crafted beer fashion axe 
-                    elit disrupt est pour-over, gentrify minim.
+                    <%= t(:iAmStructured1)%>
                 </p>
             </div>
-            <div class="col-sm-6">
+            <div class="col-sm-4">
                 <p>
-                    Assumenda neutra eiusmod keytar cosby sweater, narwhal gentrify elit mcsweeney's. Photo booth enim terry richardson, 
-                    beard neutra pickled incididunt cupidatat fap fugiat. Mollit fugiat eiusmod cray photo booth. Crafted beer fashion axe 
-                    elit disrupt est pour-over, gentrify minim.
+                    <%= t(:iAmStructured2) %>
+                </p>
+            </div>
+            <div class="col-sm-4">
+                <p>
+                    <%= image_tag("people/bruce-boulanger.jpg", class: "people-picture pull-left") %>
+                    <%= t(:iAmStructured3)%>
+                    <em><a href="cn.linkedin.com/in/bruceboulanger" target="_blank">Bruce Boulanger, China General Manager, Viva Santé</a></em>
                 </p>
             </div>
         </div>
         
-        <h3 class="heading orange"><i class="fa fa-user"></i> I am <strong>Simply Me</strong></h3>
+        <h3 class="heading orange"><i class="fa fa-user"></i><%= t(:iAmListening) %></h3>
         
         <div class="add-md-top">
-            <p>
-                Assumenda neutra eiusmod keytar cosby sweater, narwhal gentrify elit mcsweeney's. Photo booth enim terry richardson, 
-                beard neutra pickled incididunt cupidatat fap fugiat. Mollit fugiat eiusmod cray photo booth. Crafted beer fashion axe 
-                elit disrupt est pour-over, gentrify minim.
-            </p>
-            <p>
-                Assumenda neutra eiusmod keytar cosby sweater, narwhal gentrify elit mcsweeney's. Photo booth enim terry richardson, 
-                beard neutra pickled incididunt cupidatat fap fugiat. Mollit fugiat eiusmod cray photo booth. Crafted beer fashion axe 
-                elit disrupt est pour-over, gentrify minim.
-            </p>
+            <div class="col-sm-4">
+                <p>
+                    <%= t(:iAmListening1) %>
+                </p>
+            </div>
+            <div class="col-sm-4">
+                <p>
+                    <%= t(:iAmListening2) %>
+                </p>
+            </div>
+            <div class="col-sm-4">
+                <%= image_tag("people/adeline-canquelain.jpg", class: "pull-left people-picture") %>
+                <p><%= t(:iAmListening3) %></p>
+                <p><em><a href="fr.linkedin.com/in/adelinecanquelain/en" target="_blank">Adeline Canquelain, Training Manager</a></em></p>
+            </div>
         </div>
     </div>
 </section>
@@ -88,31 +96,26 @@ layout: mainsite
 <!-- What I Do -->
 <section id="whatido" class="rotateInUpLeft">
     <div class="container">
-        <h1 class="title">
-            What I <span class="turquoise">do</span>
-        </h1>
+        <h1 class="title"><%= t(:whatIDo) %></h1>
         <h2 class="sub-title">
-            We are a full service digital agency from Earth. We design and build websites, applications, mobile solutions and other awesome digital media.
+            <%= t(:whatIDoSubtitle) %>
         </h2>
         
         <div class="row services">
             <div class="col-sm-4">
-                <h2><i class="icon-picons-heart"></i></h2>
-                <h5>Lovely Icons</h5>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In erat lorem, bibendum at dignissim.
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In erat lorem, bibendum at dignissim.</p>
+                <h2><i class="icon-picons-favorite"></i></h2>
+                <h5><%= t(:whatIDo1Title) %></h5>
+                <p><%= t(:whatIDo1Text) %></p>
             </div>
             <div class="col-sm-4">
-                <h2><i class="icon-picons-brush-2"></i></h2>
-                <h5>Artistic Life</h5>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In erat lorem, bibendum at dignissim.
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In erat lorem, bibendum at dignissim.</p>
+                <h2><i class="icon-picons-chat"></i></h2>
+                <h5><%= t(:whatIDo2Title) %></h5>
+                <p><%= t(:whatIDo2Text) %></p>
             </div>
             <div class="col-sm-4">
-                <h2><i class="icon-picons-hamburger"></i></h2>
-                <h5>Food Lover</h5>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In erat lorem, bibendum at dignissim.
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In erat lorem, bibendum at dignissim.</p>
+                <h2><i class="icon-picons-battery-5"></i></h2>
+                <h5><%= t(:whatIDo3Title) %></h5>
+                <p><%= t(:whatIDo3Text) %></p>
             </div>
         </div>
         
@@ -120,15 +123,13 @@ layout: mainsite
         
         <div class="row add-lg-top add-bottom">
             <div class="col-sm-4">
-                <h3>Progress &amp; Skill Bars</h3>
-                <p>Let's take a look at some progress bars to highlight your skills. We have two sets in addition to  
-                bootstraps default bars. Choose the one that best suits your needs.</p>
-                <p><a href="#" class="btn btn-primary">Read More</a></p>
+                <h3><%= t(:keySkillsTitle) %></h3>
+                <p><%= t(:keySkillsText) %></p>
             </div>
             <div class="col-sm-4">
                 <div id="skillbar-1" class="skillbar clearfix notinview" data-percent="90%">
                     <div class="skillbar-title">
-                        <span>Fireworks</span>
+                        <span>HTML / CSS / JS</span>
                     </div>
                     <div class="skillbar-bar">
                         <div class="skill-bar-percent" style="background: #f09b30;"></div>
@@ -138,33 +139,33 @@ layout: mainsite
                         </div>
                     </div>
                 </div>
-                <div id="skillbar-2" class="skillbar clearfix notinview" data-percent="85%">
+                <div id="skillbar-2" class="skillbar clearfix notinview" data-percent="70%">
                     <div class="skillbar-title">
-                        <span>Photoshop</span>
+                        <span>Ruby on Rails</span>
                     </div>
                     <div class="skillbar-bar">
                         <div class="skill-bar-percent" style="background: #2A67BF;"></div>
-                        <div class="pointerval">
-                            <span class="value">85%</span>
-                            <span class="pointer"></span>
-                        </div>
-                    </div>
-                </div>
-                <div id="skillbar-3" class="skillbar clearfix notinview" data-percent="70%">
-                    <div class="skillbar-title">
-                        <span>Illustrator</span>
-                    </div>
-                    <div class="skillbar-bar">
-                        <div class="skill-bar-percent" style="background: #E46B24;"></div>
                         <div class="pointerval">
                             <span class="value">70%</span>
                             <span class="pointer"></span>
                         </div>
                     </div>
                 </div>
-                <div id="skillbar-4" class="skillbar clearfix notinview" data-percent="95%">
+                <div id="skillbar-3" class="skillbar clearfix notinview" data-percent="80%">
                     <div class="skillbar-title">
-                        <span>Front-end Development</span>
+                        <span><%= t(:SEO) %></span>
+                    </div>
+                    <div class="skillbar-bar">
+                        <div class="skill-bar-percent" style="background: #E46B24;"></div>
+                        <div class="pointerval">
+                            <span class="value">80%</span>
+                            <span class="pointer"></span>
+                        </div>
+                    </div>
+                </div>
+                <div id="skillbar-4" class="skillbar clearfix notinview" data-percent="80%">
+                    <div class="skillbar-title">
+                        <span>Wordpress</span>
                     </div>
                     <div class="skillbar-bar">
                         <div class="skill-bar-percent" style="background: #738d00;"></div>
@@ -176,24 +177,24 @@ layout: mainsite
                 </div>
             </div>
             <div class="col-sm-4">
-                <div class="progress progress-danger border-radius" data-appear-progress-animation="70%">
-                <div class="bar" style="width: 70%; text-indent: 10px;">Web Design 80%</div>
+                <div class="progress progress-danger border-radius" data-appear-progress-animation="40%">
+                <div class="bar" style="width: 40%; text-indent: 10px;">Ruby 40%</div>
                 </div>
                 
                 <div class="progress progress-success border-radius" data-appear-progress-animation="70%">
-                <div class="bar" style="width: 70%; text-indent: 10px;">HTML/CSS 70%</div>
+                <div class="bar" style="width: 70%; text-indent: 10px;"><%= t(:UX) %> 70%</div>
                 </div>
                 
-                <div class="progress progress-info border-radius" data-appear-progress-animation="40%">
-                <div class="bar" style="width: 40%; text-indent: 10px;">Opencart 40%</div>
+                <div class="progress progress-info border-radius" data-appear-progress-animation="90%">
+                <div class="bar" style="width: 90%; text-indent: 10px;"><%= t(:digitalCommunication) %> 90%</div>
                 </div>
                 
-                <div class="progress progress-warning border-radius" data-appear-progress-animation="90%">
-                <div class="bar" style="width: 90%; text-indent: 10px;">Graphic Design 90%</div>
+                <div class="progress progress-warning border-radius" data-appear-progress-animation="40%">
+                <div class="bar" style="width: 40%; text-indent: 10px;">Lean startup 40%</div>
                 </div>
                 
-                <div class="progress border-radius" data-appear-progress-animation="58%">
-                <div class="bar" style="width: 58%; text-indent: 10px;">WordPress 58%</div>
+                <div class="progress border-radius" data-appear-progress-animation="80%">
+                <div class="bar" style="width: 80%; text-indent: 10px;"><%= t(:codeBestPractices) %> 80%</div>
                 </div>
             </div>
         </div>
@@ -201,39 +202,39 @@ layout: mainsite
         <hr />
         
         <h2 class="sub-title add-lg-top">
-            Here are some other services that I provide. I'm an all-around designer/developer/engineer.
+            <%= t(:notJob) %>
         </h2>
         
         <div class="row services2">
             <div class="col-sm-4"><div class="item">
-                <i class="icon-picons-coffee"></i>
-                <h4>Buy Me Some Coffee</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In erat lorem, bibendum at dignissim.</p>
+                <i class="icon-picons-bicycle"></i>
+                <h4><%= t(:perso1Title)%></h4>
+                <p><%= t(:perso1Text) %></p>
             </div></div>
             <div class="col-sm-4"><div class="item">
-                <i class="icon-picons-crown"></i>
-                <h4>I Won Awards</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In erat lorem, bibendum at dignissim.</p>
+                <i class="icon-picons-step"></i>
+                <h4><%= t(:perso2Title)%></h4>
+                <p><%= t(:perso2Text) %></p>
             </div></div>
             <div class="col-sm-4"><div class="item">
-                <i class="icon-picons-like"></i>
-                <h4>Clients Love Me</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In erat lorem, bibendum at dignissim.</p>
-            </div></div>
-            <div class="col-sm-4"><div class="item">
-                <i class="icon-picons-chart-8"></i>
-                <h4>I Give Speeches</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In erat lorem, bibendum at dignissim.</p>
-            </div></div>
-            <div class="col-sm-4"><div class="item">
-                <i class="icon-picons-url"></i>
-                <h4>I Build the Web</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In erat lorem, bibendum at dignissim.</p>
+                <i class="icon-picons-earth"></i>
+                <h4><%= t(:perso3Title)%></h4>
+                <p><%= t(:perso3Text) %></p>
             </div></div>
             <div class="col-sm-4"><div class="item">
                 <i class="icon-picons-ship"></i>
-                <h4>I Like to Travel</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In erat lorem, bibendum at dignissim.</p>
+                <h4><%= t(:perso4Title)%></h4>
+                <p><%= t(:perso4Text) %></p>
+            </div></div>
+            <div class="col-sm-4"><div class="item">
+                <i class="icon-picons-iphone"></i>
+                <h4><%= t(:perso5Title)%></h4>
+                <p><%= t(:perso5Text) %></p>
+            </div></div>
+            <div class="col-sm-4"><div class="item">
+                <i class="icon-picons-cloud"></i>
+                <h4><%= t(:perso6Title)%></h4>
+                <p><%= t(:perso6Text) %></p>
             </div></div>
         </div>
     </div>
