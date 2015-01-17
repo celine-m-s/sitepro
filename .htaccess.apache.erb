@@ -1,0 +1,42 @@
+RewriteEngine On
+
+RewriteCond %{HTTP:Accept-Language} ^en [NC]
+RewriteRule ^$ http://0.0.0.0:4567 [L,R=301]
+
+RewriteCond %{HTTP:Accept-Language} ^fr [NC]
+RewriteRule ^$ http://0.0.0.0:4567/fr/ [L,R=301]
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-l
+
+RewriteRule ^(en|de|nl|fr|es)/?$ index.php?lang=$1 [QSA,NC,L]
+
+
+
+# MOVE PERMANENTLY
+<% data.htaccess.redirect.each do |old, new| %>
+Redirect 301 <%= old %> <%= data.htaccess.web.url %><%= new %>
+<% end %>
+
+# REWRITE - redirect to www. page
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^<%= data.htaccess.web.domain %>$
+RewriteRule (.*) <%= data.htaccess.web.url %>/$1 [R=301,L]
+
+# ERROR DOCUMENTS
+<% data.htaccess.errors.each do |code, document| %>
+ErrorDocument <%= code %> <%= document %>
+<% end %>
+
+# GZIP, CACHE
+AddType image/x-icon .ico
+
+ExpiresActive on
+<% data.htaccess.cache.expire.each do |type, expire| %>
+ExpiresByType <%= type %> "<%= expire %>"
+<% end %>
+
+<FilesMatch "<%= data.htaccess.cache.deflate %>">
+    SetOutputFilter DEFLATE
+</FilesMatch>

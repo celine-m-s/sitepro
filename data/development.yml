@@ -1,39 +1,144 @@
 fr:
-  - webdesign: 
-    title: Web-Design Express fr
-    description: Une description du Web-Design
-    picture: piano.jpg
-    pictureAlt: une description alternative
-    bigPicture: piano.jpg
-    bigPictureAlt: une description alternative
-    subpageUrl: /fr/formation/web-design-express.html
-    more: Les avis des élèves
-  - elearningSEO: 
-    title: SEO
-    description: Une description du Web-Design
-    picture: piano.jpg
-    pictureAlt: une description alternative
-    bigPicture: piano.jpg
-    bigPictureAlt: une description alternative
-    subpageUrl: /fr/formation/web-design-express.html
-    more: Plus de détails sur la formation SEO
+  - galaix: 
+    title: Boutique G. Alaix
+    description: >
+      Grégoire Alaix est un créateur parisien. Ses sacs à main, décalés et chics, nécessitaient une boutique sobre et élégante. Nous avons travaillé ensemble sur une maquette, puis sur le développement. La boutique fonctionne sous Prestashop et la charte graphique est originale.
+    picture: websites/galaix.png
+    pictureAlt: Boutique réalisée sous Prestashop pour Grégoire Alaix. Capture d'écran de la page d'accueil.
+    bigPicture: websites/galaix-product-page.png
+    bigPictureAlt: Boutique réalisée sous Prestashop pour Grégoire Alaix. Grande capture d'écran de la page produit.
+    subpageUrl: http://www.g-alaix.com/fr/
+    more: Visitez la boutique
+  - villawaringin: 
+    title: Villa Waringin
+    description: >
+      La Villa Waringin est située à Bali. Vous pouvez la réserver pour vos vacances ou simplement pour vous ressourcer. Elle longe le bord de place et vous aurez accès à de nombreux services, notamment à un spa et à un personnel privé. Le site de la villa existait déjà mais n'attirait pas assez de trafic. Nous avons travaillé ensemble sur une stratégie de référencement naturel et sur un tout nouveau site web. Le site utilise Wordpress.
+    picture: websites/villa-waringin-home.png
+    pictureAlt: Site vitrine de la Villa Waringin à Bali. Capture d'écran de la page d'accueil.
+    bigPicture: websites/villa-waringin-room.png
+    bigPictureAlt: Site vitrine de la Villa Waringin à Bali. Capture d'écran de la page d'une des chambres.
+    subpageUrl: http://www.villawaringin.com/
+    more: Découvrez la villa
+  - preparerecoleart: 
+    title: Préparer une école d'art
+    description: >
+      Edwige Vitwoet est artiste-peintre. Elle donne des cours d'art et accompagne des étudiants dans la préparation de leurs concours. Préparer une école d'art explique les différentes activitées proposées par l'entreprise (accompagnement, stages, cours) et des quiz permettant de tester son niveau. Nous avons travaillé sur la création de ce site pour qu'il ressemble à un atelier : chaleureux, clair et professionnel à la fois. Site réalisé avec Squarespace.
+    picture: websites/preparer-ecole-art-home.png
+    pictureAlt: Préparer une école d'art - un site pour préparer les écoles et s'orienter. Capture de la page d'accueil.
+    bigPicture: websites/preparer-ecole-art-quiz.png
+    bigPictureAlt: Quiz pour tester ses connaissances artistiques. Capture de la page de quiz.
+    subpageUrl: http://www.preparer-une-ecole-dart.com/
+    more: Préparer une école d'art
+  - imothepproduction: 
+    title: Imothep Production
+    description: >
+      Imothep Production est une jeune maison de production basée à Paris. Elle photographie des mariages, des événements et des personnes en studio. La maison réalise également des court-métrages et a sa propre chaine Youtube. Elle voulait un site sombre comme une salle de cinéma, moderne et dynamique. L'accent devait être mis sur les photos avant tout. Le site est statique, réalisé avec Middleman et hébergé sur Github. Charte graphique entièrement personnelle.
+    picture: websites/imothep-production-home.png
+    pictureAlt: Imothep Production - photographe et vidéaste à Paris. Capture d'écran de la page d'accueil.
+    bigPicture: websites/imothep-production-photos.png
+    bigPictureAlt: Imothep Production - Screenshot d'une des page de photographies.
+    subpageUrl: http://www.imothep-production.com/
+    more: Visitez le site
+  - webdesignexpress: 
+    title: Web-Design Express
+    description: >
+      Le Web-Design Express est une formation de 12 jours pour apprendre à des novices à créer leur propre site web. Nous avons créé cette formation en juin et nous avons eu une trentaine d'apprenants heureux. Le site présente le programme et les formateurs.
+    picture: websites/web-design-home.png
+    pictureAlt: Formation en Web-Design. Capture d'écran de la page d'accueil.
+    bigPicture: websites/web-design-program.png
+    bigPictureAlt: Formation en web-design à Paris. Capture d'écran de la page du programme.
+    subpageUrl: http://www.web-design-express.org
+    more: Découvrez la formation
+  - bastidedastres: 
+    title: La Bastide d'Astres
+    description: >
+      La Bastide d'Astres est une propriété de 260 hectares au coeur de la Provence. Elle possède une salle de réception, une orangerie et cinq chambres de prestige. La Bastide a fait appel à moi suite à l'infection de leur site par un virus. J'ai réparé le site et ai amélioré sa sécurité.
+    picture: websites/bastide-astres-home.png
+    pictureAlt: La Bastide d'Astres en Provence. Capture d'écran de la page d'accueil.
+    bigPicture: websites/bastide-astres-room.png
+    bigPictureAlt: La Bastide d'Astres en Provence. Capture d'écran de la page des chambres.
+    subpageUrl: http://www.bastide-dastres.com/
+    more: Voir le site de la villa
+  - mariadolores: 
+    title: Maria-Dolorès Sanchez
+    description: >
+      Maria-Dolorès Sanchez est psychogénéalogiste et thérapeute depuis 15 ans. Elle reçoit à Paris et en Provence. Elle souhaitait un site internet plus moderne que l'ancien et plus facile à entretenir. Nous avons choisi une palette de couleurs pastels et chaleureuses pour recréer la convivialité de son cabinet. Nous avons aussi travaillé le référencement naturel du site et créé une boutique e-commerce pour la vente de ses livres.  
+    picture: websites/maria-dolores-sanchez-home.png
+    pictureAlt: Psychogénéalogiste à Paris et en Provence. Capture d'écran de la page d'accueil.
+    bigPicture: websites/maria-dolores-sanchez-books.png
+    bigPictureAlt: Psychogénéalogiste à Paris et en Provence. Capture d'écran de la page des livres.
+    subpageUrl: http://www.maria-dolores-sanchez.com
+    more: Découvrez la psychogénéalogie sur son site
+    # workInProgress: true
 
 en:
   - webdesign: 
-    title: Web-Design Express en
-    description: Une description du Web-Design
-    picture: piano.jpg
-    pictureAlt: une description alternative
-    bigPicture: piano.jpg
-    bigPictureAlt: une description alternative
-    subpageUrl: /training/web-design-express.html
-    more: Students testimony
-  - elearningSEO: 
-    title: SEO
-    description: Une description du Web-Design
-    picture: piano.jpg
-    pictureAlt: une description alternative
-    bigPicture: piano.jpg
-    bigPictureAlt: une description alternative
-    subpageUrl: /training/web-design-express.html
-    more: See the SEO training details
+    title: G. Alaix boutique
+    description: >
+      G. Alaix is a French creator. His chic handbags needed a sober and elegant online store. We worked together on a nice wireframe and then on the development. The store works with Prestashop. 
+    picture: websites/galaix.png
+    pictureAlt: Store made with Prestashop for Grégoire Alaix. Screenshot of the home page.
+    bigPicture: websites/galaix-product-page.png
+    bigPictureAlt: Store made with Prestashop for Grégoire Alaix. Screenshot of the product page.
+    subpageUrl: http://www.g-alaix.com/
+    more: Visit the G. Alaix store
+  - villawaringin: 
+    title: Villa Waringin
+    description: > 
+      The Villa Waringin is located in Bali. You can rent it for your holidays or just to have a rest. Its rooms have a nice frontbeach and you have access to many services, such as a spa or a private staff. The villa already had a website but the traffic was not very high. We worked together on a SEO strategy and on a new website. The website is using Wordpress.
+    picture: websites/villa-waringin-home.png
+    pictureAlt: Showcase website of Villa Waringin in Bali. This is a homepage screenshot.
+    bigPicture: websites/villa-waringin-room.png
+    bigPictureAlt: Showcase website of Villa Waringin in Bali. This is a room page screenshot.
+    subpageUrl: http://www.villawaringin.com/
+    more: Discover the villa
+  - preparerecoleart: 
+    title: Préparer une école d'art (Prepare for an Art School)
+    description: >
+      Edwige Vitwoet is a painter. She gives Art classes and coaches students in their preparation for Art Shool competitive exams. Préparer une école d'art shows what activities are proposed by the company (coaching, short trainings, classes). Users can also find quizs to test theirs skills. We worked on this website in order to make it look like an studio: warm, clear and professional at the same time. Website made with Squarespace. 
+    picture: websites/preparer-ecole-art-home.png
+    pictureAlt: Préparer une école d'art - a website to prepare Art Schools. Home page screenshot.
+    bigPicture: websites/preparer-ecole-art-quiz.png
+    bigPictureAlt: Quiz to test its own knowledges. Quiz page screenshot. 
+    subpageUrl: http://www.preparer-une-ecole-dart.com/
+    more: Préparer une école d'art
+  - imothepproduction: 
+    title: Imothep Production
+    description: >
+      Imothep Production is a young production company base in Paris. I shoots weddings, events and people in a studio. It also makes short-movies and has its own Youtube channel. The company wanted a dark website, like a projection room, moder and dynamic. It had to focus on pictures before anything else. The website is static, made with Middleman and hosted on Github. Original web-design made for Imothep Production.
+    picture: websites/imothep-production-home.png
+    pictureAlt: Imothep Production - photographer and director in Paris. Home Page screenshot.
+    bigPicture: websites/imothep-production-photos.png
+    bigPictureAlt: Imothep Production - Photographs page screenshot.
+    subpageUrl: http://www.imothep-production.com/
+    more: Visit Imothep Production website.
+  - webdesignexpress: 
+    title: Web-Design Express
+    description: >
+      Le Web-Design Express is a 12-day training to learn how to create a website when you don't know anything about internet. We created this training in june and we had about thirty happy learners. The website presents the program and its teachers.
+    picture: websites/web-design-home.png
+    pictureAlt: Web-Design training. Home page screenshot.
+    bigPicture: websites/web-design-program.png
+    bigPictureAlt: Web-design training in Paris. Programm page screenshot.
+    subpageUrl: http://www.web-design-express.org
+    more: Discover the training
+  - bastidedastres: 
+    title: La Bastide d'Astres
+    description: >
+      La bastide d'Astres is a property of 260 hectares in Provence (south of France). It has a reception room, an orangery and five prestige rooms. La Bastide called me because their website had been infected by a virus. I repaired the website and improved its security.
+    picture: websites/bastide-astres-home.png
+    pictureAlt: La Bastide d'astres. Home page screenshot.
+    bigPicture: websites/bastide-astres-room.png
+    bigPictureAlt: La Bastide d'Astres. Room page screenshot.
+    subpageUrl: http://www.bastide-dastres.com/
+    more: Discover the domain
+  - mariadolores: 
+    title: Maria-Dolorès Sanchez
+    description: >
+      Maria-Dolorès Sanchez has been a psychogenealogist and therapist for 15 years. She sees her patients in Paris and in Provence (south of France). She wanted a more modern and easier to maintain website. We chose a pastel color scheme to recreate the friendliness of her consulting room. We also worked on a SEO strategy and created an online store to sell her books. 
+    picture: websites/maria-dolores-sanchez-home.png
+    pictureAlt: Psychogénéalogist in Paris and in Provence. Home page screenshot.
+    bigPicture: websites/maria-dolores-sanchez-books.png
+    bigPictureAlt: Psychogénéalogist in Paris and in Provence. Books page screenshot.
+    subpageUrl: http://www.maria-dolores-sanchez.com
+    more: Discover the psychogenealogy on her website

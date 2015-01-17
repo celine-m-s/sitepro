@@ -24,7 +24,7 @@ fr:
   indexLastPostsSubtitle: "En tant que développeuse et entrepreneure, je passe le plus clair de mon temps à chercher des informations. Quel outil utiliser ? Comment optimiser telle ressource ? Mon blog est un peu ma boite à souvenirs. J'y partage ce qui me semble essentiel, mes coups de sang (rarement) et mes bons plans (souvent !)."
   time_short: '%d/%m/%Y'
   time_expanded: '%d/%m/%Y'
-  index_title: "Création de sites web, formation et entrepreneuriat"
+  index_title: "Freelance web : création de sites, formation et entrepreneuriat"
   index_description: 'Freelance web et multidisciplinaire à Paris, Céline Martinet Sanchez vous accompagne dans votre nouveau projet. Développement, référencement naturel, web-design et plus encore !'
   development_title: 'Création de sites web - freelance développeur à Paris'
   development_description: "Vous cherchez un développeur compétent et multidisciplinaire pour votre projet ? Parlons-en autour d'un café ! "
@@ -74,3 +74,19 @@ fr:
   perso5Text: "Dans mes rêves, mon appart vaut 100 000 euros en équipements technologiques (et moi aussi)"
   perso6Title: "Résolument optimiste"
   perso6Text: "J'avance pour réaliser mes rêves et partager ceux des autres."
+  presentationTitle: "Freelance web à Paris"
+  presentationText: >
+    <p>Vous êtes un particulier, une startup ou une agence et vous souhaitez créer un site web ? Je peux vous aider !
+    <ul>
+    <li>Création d'un site internet vitrine, d'un blog ou d'une application web,</li>
+    <li>Intégration,</li>
+    <li>Optimisation pour les moteurs de recherche (référencement naturel),</li>
+    <li>Configuration de Google Analytics,</li>
+    <li>Amélioration de l'expérience utilisateur.</li>
+    </ul>
+    </p>
+    <p>Découvrez-en plus ci-dessous ou en naviguant sur le site !</p>
+  developmentH1: Création de <span class="highlight orange">sites web</span>
+  developmentH2: >
+    Je crée des sites web pour des particuliers, des startups et des agences. J'utilise, en fonction de la demande, des CMS ou des frameworks tels que Ruby on Rails. Voici des sites que j'ai créés !
+  workInProgress: "En construction"

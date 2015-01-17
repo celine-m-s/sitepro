@@ -23,6 +23,11 @@
                   <li class="filter-web">
                     <a href="<%= project.subpageUrl %>" data-largesrc="<%= data.site.imagepath + project.bigPicture %>" data-title="<%= project.title %>" data-description="<%= project.description %>", data-link="<%= project.more %>", data-largesrcalt="<%= project.bigPictureAlt %>" >
                       <figure>
+                      <% if project.workInProgress == true %>
+                          <p class="work_in_progress">
+                          <span><%= t(:workInProgress) %></span>
+                          </p>
+                      <%end%>
                           <div class="text-overlay">
                               <div class="info"><%= project.title %></div>
                           </div>
