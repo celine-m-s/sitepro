@@ -33,13 +33,12 @@ run `middleman article --lang <locale> TITLE`
 
 ##Left to do
 - Images path!!
-- better distinction between articles / who I am on the home page.
 - [Fix categories metadata](https://github.com/middleman/middleman/issues/1110) + categories description
 - [Blog search](https://github.com/slashdotdash/jekyll-lunr-js-search) and [another link](http://forum.middlemanapp.com/t/site-search-e-g-via-lunr/1334). I could use [Google](https://www.google.com/cse/create/new)
 - in the `<head>`, add links to language options for articles (rel="alternate" hreflang="x")
 - newsletter more obvious (footer)
 - About categories part 
 - dates translation
-- 404 => check if working
-- pictures
-- content
+- 404 to pimp
+- make the blog public
+- redirection according to languages + customize htaccess
