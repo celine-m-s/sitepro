@@ -1,39 +1,51 @@
 fr:
-  - webdesign: 
-    title: Web-Design Express fr
-    description: Une description du Web-Design
-    picture: piano.jpg
-    pictureAlt: une description alternative
-    bigPicture: piano.jpg
-    bigPictureAlt: une description alternative
-    subpageUrl: /fr/formation/web-design-express.html
-    more: Les avis des élèves
-  - elearningSEO: 
-    title: SEO
-    description: Une description du Web-Design
-    picture: piano.jpg
-    pictureAlt: une description alternative
-    bigPicture: piano.jpg
-    bigPictureAlt: une description alternative
-    subpageUrl: /fr/formation/web-design-express.html
-    more: Plus de détails sur la formation SEO
+  - rideLocalSpot: 
+    title: RideLocalSpot
+    description: >
+      Ridelocalspot est une place de marché communautaire dédiée aux riders VTT et permettant de découvrir, réserver et partager des rides avec des guides locaux ou des associations sur une sélection des meilleurs spots autour du monde.
+    picture: startups/ride-local-spot-fr-accueil.png
+    pictureAlt: Plateforme RideLocalSpot. Capture d'écran de la page d'accueil.
+    bigPicture: startups/ride-local-spot-fr-fonctionnalites.png
+    bigPictureAlt: Plateforme RideLocalSpot. Capture d'écran de la page d'accueil.
+    subpageUrl: http://www.ridelocalspot.fr/
+    more: Le site Ridelocalspot
+    workInProgress: true
+    newTab: true
+  - coHome: 
+    title: CoHome
+    description: >
+      CoHome permet aux indépendants de travailler en collaboration les uns chez les autres. Projet en phase de test. Plus d'informations en mars !
+    picture: startups/facebook-cover.jpg
+    pictureAlt: Plateforme CoHome. Page facebook.
+    bigPicture: startups/facebook-cover.jpg
+    bigPictureAlt: Plateforme CoHome. Page facebook.
+    subpageUrl: https://www.facebook.com/groups/760907487298386/
+    more: Rejoindre le groupe Facebook
+    workInProgress: true
+    newTab: true
 
 en:
-  - webdesign: 
-    title: Web-Design Express en
-    description: Une description du Web-Design
-    picture: piano.jpg
-    pictureAlt: une description alternative
-    bigPicture: piano.jpg
-    bigPictureAlt: une description alternative
-    subpageUrl: /training/web-design-express.html
-    more: Students testimony
-  - elearningSEO: 
-    title: SEO
-    description: Une description du Web-Design
-    picture: piano.jpg
-    pictureAlt: une description alternative
-    bigPicture: piano.jpg
-    bigPictureAlt: une description alternative
-    subpageUrl: /training/web-design-express.html
-    more: See the SEO training details
+  - google: 
+    title: Google pour les indépendants
+    description: >
+      Ridelocalspot is a community marketplace for MTB riders to discover, book and share the ride with locals or associations in the best spots around the world.
+    picture: startups/ride-local-spot-en-home.png
+    pictureAlt: Ridelocalspot platform. Home screenshot.
+    bigPicture: startups/ride-local-spot-en-features.png
+    bigPictureAlt: Ridelocalspot platform. Features screenshot.
+    subpageUrl: http://www.ridelocalspot.com/
+    more: RideLocalSpot's website
+    workInProgress: true
+    newTab: true
+  - coHome: 
+    title: CoHome
+    description: >
+      CoHome lets independants work together in others' houses. Project being tested. Further information in March!
+    picture: startups/facebook-cover.jpg
+    pictureAlt: Plateforme CoHome. Page facebook.
+    bigPicture: startups/facebook-cover.jpg
+    bigPictureAlt: Plateforme CoHome. Page facebook.
+    subpageUrl: https://www.facebook.com/groups/760907487298386/
+    more: Join our Facebook group
+    workInProgress: true
+    newTab: true

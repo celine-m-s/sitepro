@@ -1,39 +1,75 @@
 fr:
-  - webdesign: 
-    title: Web-Design Express fr
-    description: Une description du Web-Design
-    picture: piano.jpg
-    pictureAlt: une description alternative
-    bigPicture: piano.jpg
-    bigPictureAlt: une description alternative
-    subpageUrl: /fr/formation/web-design-express.html
-    more: Les avis des élèves
-  - elearningSEO: 
-    title: SEO
-    description: Une description du Web-Design
-    picture: piano.jpg
-    pictureAlt: une description alternative
-    bigPicture: piano.jpg
-    bigPictureAlt: une description alternative
-    subpageUrl: /fr/formation/web-design-express.html
-    more: Plus de détails sur la formation SEO
+  - google: 
+    title: Google pour les indépendants
+    description: >
+      Ce cours en ligne vous donnera une méthode pour créer votre site de zéro et le positionner en première position sur Google. Il se compose de plus de trois heures de vidéos, de présentations et de démonstrations. Le but de ce cours est d'aider les indépendants, les blogueurs et les entrepreneurs à être trouvés autrement que par leur nom ! <br>Inscrivez-vous à ma newsletter pour obtenir un code de réduction !
+    picture: trainings/premier-sur-google-fr-video.png
+    pictureAlt: Formation en référencement naturel pour entrepreneurs. Page de cours.
+    bigPicture: trainings/premier-sur-google-fr-home.png
+    bigPictureAlt: Formation en référencement naturel pour entrepreneurs. Résumé du cours.
+    subpageUrl: https://www.udemy.com/premier-sur-google-entrepreneurs-freelances-et-blogueurs/
+    more: Apprendre le SEO
+    # workInProgress: true
+    newTab: true
+  - digitalInterfaces: 
+    title: Séminaire Interfaces Digitales
+    description: >
+      Formation en présentiel donnée en université. J'enseigne à une classe de 30 élèves environ comment créer leur propre site en 5 jours. Au programme : bonnes pratiques en matière de web-design, tour d'horizon des outils digitaux, HTML, CSS, Bootstrap, Github, ... A la fin de la semaine <strong>chaque élève a son propre site web et son blog</strong>. Je les conseille également dans la création de projects digitaux ou de startups. <br>Dernière intervention réalisée : Télécom Paris. Contactez-moi pour plus de détails ! 
+    picture: trainings/interfaces-digitales.jpg
+    pictureAlt: Séminaire sur les interfaces digitales. Illustration.
+    bigPicture: trainings/interfaces-digitales.jpg
+    bigPictureAlt: Séminaire sur les interfaces digitales. Illustration.
+    subpageUrl: http://anastasiads.github.io/site_deco/
+    more: >
+      Découvrir le projet d'Anastasia - Décorable
+    newTab: true 
+  - webDesignExpress: 
+    title: Web-Design Express
+    description: >
+      Le Web-Design Express est une formation de 12 jours pour apprendre à des débutants à créer leur propre site de zéro. <strong>Chaque étudiant travaille sur son propre projet.</strong> La première semaine est consacrée à la création de leur charte graphique et à l'apprentissage de HTML, CSS et de Bootstrap. La seconde semaine concerne Wordpress et la création de templates. Nous avons créé ce cours avec Niels Mayrargue et en partenariat avec Le Wagon, une école de code à Paris. Une trentaine d'étudiants, de tous âges et de tous profils, on déjà créé leur site web !
+    picture: trainings/web-design-express-home.png
+    pictureAlt: Formation pour apprendre à créer son site en 12 jours à Paris. Capture d'écran de la page d'accueil.
+    bigPicture: trainings/web-design-express-why.png
+    bigPictureAlt: Formation pour apprendre à créer son site en 12 jours à Paris. Capture d'écran de la section pourquoi.
+    subpageUrl: http://www.chhhut.com/
+    more: Exemple de site créé par Olivier Bertolotti pendant la formation
+    # workInProgress: true
+    newTab: true 
 
 en:
-  - webdesign: 
-    title: Web-Design Express en
-    description: Une description du Web-Design
-    picture: piano.jpg
-    pictureAlt: une description alternative
-    bigPicture: piano.jpg
-    bigPictureAlt: une description alternative
-    subpageUrl: /training/web-design-express.html
-    more: Students testimony
-  - elearningSEO: 
-    title: SEO
-    description: Une description du Web-Design
-    picture: piano.jpg
-    pictureAlt: une description alternative
-    bigPicture: piano.jpg
-    bigPictureAlt: une description alternative
-    subpageUrl: /training/web-design-express.html
-    more: See the SEO training details
+  - google: 
+    title: Google for independants
+    description: >
+      This online course will give you a method to create your website from scratch and to have it on top of Google's results pages. It is made of more of three hours of videos, presentations and demonstrations. This course aims to help independants, bloggers, freelancers and entrepreneurs not to be found only by their name! <br> Only available in French for the moment, sorry! Please tell me if you would like to have it translated in English.
+    picture: trainings/premier-sur-google-fr-video.png
+    pictureAlt: Learn search engine optimization. Course page screenshot.
+    bigPicture: trainings/premier-sur-google-fr-home.png
+    bigPictureAlt: Learn search engine optimization. Course overview screenshot.
+    subpageUrl: https://www.udemy.com/premier-sur-google-entrepreneurs-freelances-et-blogueurs/
+    more: Learn SEO for independants
+    workInProgress: true
+    newTab: true
+  - digitalInterfaces: 
+    title: Digital Interfaces Workshop
+    description: >
+      University class. I teach t oabout 30 students how to create their own website in five days. Program: web-design good practices, key digital tools, HTML, CSS, Bootstrap, Github, ... At the end of the week, <strong>each student has its own website and blog online</strong>. I also guide them on digital projects creation and on startup creation. <br>Last intervention: Telecom Paris. Contact me for further details!
+    picture: trainings/interfaces-digitales.jpg
+    pictureAlt: Digital interfaces workshop. Illustration.
+    bigPicture: trainings/interfaces-digitales.jpg
+    bigPictureAlt: Digital interfaces workshop. Illustration.
+    subpageUrl: http://anastasiads.github.io/site_deco/
+    more: >
+      Discover Anastasia's project : Décorable
+    newTab: true
+  - webDesignExpress: 
+    title: Web-Design Express
+    description: >
+      The Web-Design Express is a 12-day training for beginners. They learn who to create their website from scratch. <strong>Each student works on its own project.</strong>The first week is dedicated to design and code basics: wireframes, HTML, CSS, Bootstrap. The second week is about Wordpress and template creation. We made this couse with Niels Mayrargue for Le Wagon, a Code Bootcamp chool in Paris. About thirty learners, from every backgrounds and ages, have already created their website! 
+    picture: trainings/web-design-express-home.png
+    pictureAlt: Training to learn website creation in Paris. Home screenshot.
+    bigPicture: trainings/web-design-express-why.png
+    bigPictureAlt: Training to learn website creation in Paris. Why section screenshot.
+    subpageUrl: http://www.chhhut.com/
+    more: Example of website created by Olivier Bertolotti during our training
+    # workInProgress: true
+    newTab: true 

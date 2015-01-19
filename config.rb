@@ -136,6 +136,6 @@ end
 page ".htaccess.apache", :layout => false
 
 # rename file after build
-after_build do
-  File.rename 'build/.htaccess.apache', 'build/.htaccess'
-end
+# after_build do
+#   File.rename 'build/.htaccess.apache.erb', 'build/.htaccess'
+# end

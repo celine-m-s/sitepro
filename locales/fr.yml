@@ -40,7 +40,7 @@ fr:
   iAmStructured: "Je suis <strong>Structurée</strong>"
   iAmStructured1: "En tant que freelance, être discipliné est une nécessité. Nous avons plusieurs projets à gérer en même temps, beaucoup d'interlocuteurs et des demandes très diverses. J'ai toujours eu cette diversité d'activités, même lorsque je travaillais en tant que salariée. J'aime les projets menés proprement jusqu'à leur terme et les clients satisfaits !"
   iAmStructured2: "Par ailleurs, j'ai fait une grande école de commerce et me suis impliquée dans de nombreux projets depuis le plus jeune âge (j'avais 13 ans lorsque j'ai tourné pour la première fois). A l'école, je faisais partie de plusieurs projets à visées sociétales ou humanitaires. Ces expériences m'ont appris combien <strong>l'organisation et la gestion d'équipe </strong>sont fondamentaux pour réussir un projet."
-  iAmStructured3: "<em><strong>[Celine] is a very organized and driven person who works very well both in the team and autonomously.</strong> Celine is not reluctant to voice her opinion and always looks for the best route to make the projects effective and efficient. <br>It is without reluctance that I recommend her as an excellent addition to anyone's team in the EU or Internationally<br></em>."
+  iAmStructured3: "<em><strong>[Celine] is a very organized and driven person who works very well both in the team and autonomously.</strong> Celine is not reluctant to voice her opinion and always looks for the best route to make the projects effective and efficient. <br>It is without reluctance that I recommend her as an excellent addition to anyone's team in the EU or Internationally.<br></em>"
   iAmListening: "Je suis <strong>à l'écoute</strong>"
   iAmListening1: J'utilise les principes de <a href="http://fr.wikipedia.org/wiki/%C3%89coute_active" target="_blank">l'écoute active</a> au quotidien pour satisfaire mes clients et mes collaborateurs. En effet je pars du principe que <strong>tout problème a sa solution</strong>. Sans solution pas de problème ! Je vais donc chercher tous les moyens possibles pour apporter une solution rapidement et qu'elle convienne à mon interlocuteur.
   iAmListening2: "La résolution de ces problèmes passe par l'évolution constante de plusieurs compétences : référencement naturel, développement pour le web, web-design, techniques de gestion de projet, veille technologique... Je me forme continuellement pour apporter le meilleur de moi-même aux projets auxquels je participe. Et toujours dans la bonne humeur bien sûr !"
@@ -90,3 +90,27 @@ fr:
   developmentH2: >
     Je crée des sites web pour des particuliers, des startups et des agences. J'utilise, en fonction de la demande, des CMS ou des frameworks tels que Ruby on Rails. Voici des sites que j'ai créés !
   workInProgress: "En construction"
+  trainingH1: Formation
+  trainingH2: >
+    J'enseigne en université, dans des écoles de code et en e-learning. Mes thèmes de prédilection : la création de sites web et le référencement naturel.
+  startupH1: 'Création de <span class="highlight orange">start-ups</span>'
+  startupH2: "Je m'implique activement dans la création de deux startups. Je travaille actuellement au développement du prototype de RideLocalSpot dont le lancement est prévu pour mi-février ! Le projet CoHome est, quant à lui, en phase de test."
+  yourName: Votre nom
+  yourEmail: Votre mail
+  contact_title: "Freelance web à Paris - contact"
+  contact_description: "Développeuse, formatrice et entrepreneure, Céline Martinet Sanchez est basée à Paris et sera ravie de répondre à vos demandes !"
+  select: Sélectionner
+  completionTime: "Date butoir"
+  lessThanAWeek: Moins d'une semaine
+  threeWekks: Trois semaines
+  oneMonth: Un mois
+  threeMonths: Trois mois
+  sixMonths: Six mois
+  continuous: En continu
+  messageSent: Votre message a bien été envoyé. Je vous répondrai sous les meilleurs délais.
+  messageNotSent: Votre message n'a pu être envoyé. Merci de recommencer dans quelques minutes.
+  stayInTouch: Restons en contact
+  stayInTouchSubtitle: Je travaille à Paris dans différents endroits mais vous pouvez me joindre par e-mail !
+  contactLocation: "Paris, France"
+  getInTouch: Restons en <span class="highlight orange">contact</span>
+  getInTouchSubtitle: "Utilisez le formulaire ci-dessous pour me faire part de votre projet ou simplement pour dire bonjour ! J'essaie d'être aussi rapide que possible et de répondre dans les 48 heures. "

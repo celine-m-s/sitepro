@@ -11,7 +11,7 @@ layout: mainsite
 <% end %>
     
 <%= partial 'partials/projects_grid', :locals => {
-  :globalTitle => 'Stuff I <span class="highlight orange">Made</span>',
-  :globalSubtitle => 'du blabla en description',
+  :globalTitle => t(:startupH1),
+  :globalSubtitle => t(:startupH2),
   :projects => data.projects.send(current_locale)
   } %>

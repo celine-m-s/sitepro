@@ -37,7 +37,8 @@ en:
   iAmStructured2: "I graduated from a Management School and I got involved in many projects since I was a child (I was 13 when I shot a movie for the first time). At school, I was part of several projects aiming to change the world. These experiences taught me how organization and management are fundamentals to succeed in a project."
   iAmStructured3: "<em><strong>[Celine] is a very organized and driven person who works very well both in the team and autonomously.</strong> Celine is not reluctant to voice her opinion and always looks for the best route to make the projects effective and efficient. <br>It is without reluctance that I recommend her as an excellent addition to anyone's team in the EU or Internationally<br></em>."
   iAmListening: "I am <strong>Listening</strong"
-  iAmListening1: I use the <a href="http://fr.wikipedia.org/wiki/%C3%89coute_active" target="_blank">active listening method</a> everyday to please my clients and my collaborators. In fact I strongly believe that <strong>any problem has its own solution</strong>. No solution no problem! So I will find the best way to bring a quick and relevant answer to my interlocutor request. 
+  iAmListening1: >
+    I use the <a href="http://fr.wikipedia.org/wiki/%C3%89coute_active" target="_blank">active listening method</a> everyday to please my clients and my collaborators. In fact I strongly believe that <strong>any problem has its own solution</strong>. No solution no problem! So I will find the best way to bring a quick and relevant answer to my interlocutor request. 
   iAmListening2: "I continually train myself to be able to solve those problems with efficiency. The skills I develop everyday are : search engine optimization, web-development, web-design, project management techniques, technological watch, ... This lets me bring the best of myself to projects. And always with a smile on my face!"
   iAmListening3: "<em>Celine is a dynamic collaborator, strong-willed and self-started who gives all her professional (and personal) skills to its enterprise. (...) Really proactive, naturally positive and enthusiastic, Celine likes to push her limits, to learn everyday and to let her collaborators benefit from it.</em>"
   whatIDo: 'What I <span class="turquoise">do</span>'
@@ -85,3 +86,27 @@ en:
   developmentH2: >
     I create websites for independants, startups and agencies. I use, depending on the request, CMS or frameworks like Ruby on Rails. Here are some websites I created!
   workInProgress: "Work in progress"
+  trainingH1: Trainings
+  trainingH2: >
+    I teach in colleges, code schools and online. My favorite subjects: websites creation and search engine optimization.
+  startupH1: "Startups"
+  startupH2: "I am involved in two startup projects. I am currently working on RideLocalSpot's prototype which should be live on February! The CoHome project is in a test stage."
+  getInTouch: Get In <span class="highlight orange">Touch</span>
+  getInTouchSubtitle: "Use the form below to get a quick quote on a project or to simply say hello. I try to be promt and answer any emails within 48 hours. If you send a spam email, I respond with a creative answer."
+  yourName: Your name
+  yourEmail: Your e-mail
+  contact_title: "Web freelancer in Paris - contact"
+  contact_description: "Developer, teacher and startuper, Celine Martinet Sanchez is based in Paris and will be pleased to answer your e-mail! "
+  select: Select
+  completionTime: "Deadline"
+  lessThanAWeek: Less than One Week
+  threeWekks: Three Weeks
+  oneMonth: One Month
+  threeMonths: Three Months
+  sixMonths: Six Months
+  continuous: Continuous
+  messageSent: Your message has been sent. I will answer you as soon as possible.
+  messageNotSent: Your message cannot be sent. Please try again in a few minutes.
+  stayInTouch: Stay In Touch
+  stayInTouchSubtitle: I work in Paris in different places but you can join me by sending an e-mail!
+  contactLocation: "Anywhere in Paris, France"

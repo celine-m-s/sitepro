@@ -7,11 +7,11 @@ layout: mainsite
 <% @description = t(:training_description) %>
 
 <% content_for :page_picture do %>
-  <% image_path('piano.jpg') %>
+  <% image_path('trainings/interfaces-digitales.jpg') %>
 <% end %>
     
 <%= partial 'partials/projects_grid', :locals => {
-  :globalTitle => 'Stuff I <span class="highlight orange">Made</span>',
-  :globalSubtitle => 'du blabla en description',
+  :globalTitle => t(:trainingH1),
+  :globalSubtitle => t(:trainingH2),
   :projects => data.training.send(current_locale)
   } %>

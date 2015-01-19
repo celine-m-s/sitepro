@@ -23,8 +23,9 @@ layout: mainsite
     </div>    
 </section>
 
+<!-- uncomment to make the blog live -->
 
-<%= partial 'partials/last_articles', :locals => { 
+<% partial 'partials/last_articles', :locals => { 
     :title => t(:indexLastPosts),
     :subtitle => t(:indexLastPostsSubtitle),
     :articles => blog.local_articles
