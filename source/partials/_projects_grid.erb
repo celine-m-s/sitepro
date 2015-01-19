@@ -21,7 +21,7 @@
 
                 <% projects.each do |project| %>
                   <li class="filter-web">
-                    <a href="<%= project.subpageUrl %>" data-largesrc="<%= data.site.imagepath + project.bigPicture %>" data-title="<%= project.title %>" data-description="<%= project.description %>", data-link="<%= project.more %>", data-largesrcalt="<%= project.bigPictureAlt %>" >
+                    <a href="<%= project.subpageUrl %>" data-largesrc="<%= image_path(project.bigPicture) %>" data-title="<%= project.title %>" data-description="<%= project.description %>", data-link="<%= project.more %>", data-largesrcalt="<%= project.bigPictureAlt %>" >
                       <figure>
                       <% if project.workInProgress == true %>
                           <p class="work_in_progress">
@@ -31,7 +31,7 @@
                           <div class="text-overlay">
                               <div class="info"><%= project.title %></div>
                           </div>
-                          <img src="<%= data.site.imagepath + project.picture %>" alt="<%= project.pictureAlt %>">
+                          <img src="<%= image_path(project.picture) %>" alt="<%= project.pictureAlt %>">
                       </figure>
                     </a>
                   </li>
