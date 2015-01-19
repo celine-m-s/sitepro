@@ -39,6 +39,7 @@ fr:
     bigPictureAlt: Imothep Production - Screenshot d'une des page de photographies.
     subpageUrl: http://www.imothep-production.com/
     more: Visitez le site
+    workInProgress: true
   - webdesignexpress: 
     title: Web-Design Express
     description: >

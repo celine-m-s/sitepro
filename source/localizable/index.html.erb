@@ -2,6 +2,8 @@
 layout: mainsite
 ---
 
+<% current_locale = I18n.locale.to_s %>
+
 <% @title = t(:index_title) %>
 <% @description = t(:index_description) %>
 
@@ -119,21 +121,45 @@ layout: mainsite
         </h2>
         
         <div class="row services">
-            <div class="col-sm-4">
-                <h2><i class="icon-picons-favorite"></i></h2>
-                <h5><%= t(:whatIDo1Title) %></h5>
-                <p><%= t(:whatIDo1Text) %></p>
-            </div>
-            <div class="col-sm-4">
-                <h2><i class="icon-picons-chat"></i></h2>
-                <h5><%= t(:whatIDo2Title) %></h5>
-                <p><%= t(:whatIDo2Text) %></p>
-            </div>
-            <div class="col-sm-4">
-                <h2><i class="icon-picons-battery-5"></i></h2>
-                <h5><%= t(:whatIDo3Title) %></h5>
-                <p><%= t(:whatIDo3Text) %></p>
-            </div>
+            <a href="
+            <% if current_locale == "fr" %>
+                <%= data.site.french.url + "/" + "developpement.html"%>
+            <% else %>
+                <%= data.site.english.url + "/" + "development.html" %>
+            <% end %>
+            ">
+                <div class="col-sm-4">
+                    <h2><i class="icon-picons-favorite"></i></h2>
+                    <h5><%= t(:whatIDo1Title) %></h5>
+                    <p><%= t(:whatIDo1Text) %></p>
+                </div>
+            </a>
+            <a href="
+            <% if current_locale == "fr" %>
+                <%= data.site.french.url + "/" + "formation.html"%>
+            <% else %>
+                <%= data.site.english.url + "/" + "training.html" %>
+            <% end %>
+            ">
+                <div class="col-sm-4">
+                    <h2><i class="icon-picons-chat"></i></h2>
+                    <h5><%= t(:whatIDo2Title) %></h5>
+                    <p><%= t(:whatIDo2Text) %></p>
+                </div>
+            </a>
+            <a href="
+            <% if current_locale == "fr" %>
+                <%= data.site.french.url + "/" + "projets.html"%>
+            <% else %>
+                <%= data.site.english.url + "/" + "projects.html" %>
+            <% end %>
+            ">
+                <div class="col-sm-4">
+                    <h2><i class="icon-picons-battery-5"></i></h2>
+                    <h5><%= t(:whatIDo3Title) %></h5>
+                    <p><%= t(:whatIDo3Text) %></p>
+                </div>
+            </a>
         </div>
         
         <hr />

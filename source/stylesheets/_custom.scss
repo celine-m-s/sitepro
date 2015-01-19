@@ -281,3 +281,18 @@ section#presentation {
     display: inline-block;
   }
 }
+
+.services a {
+  color: inherit;
+  &:hover {
+    color: inherit;
+  }
+}
+
+.services2 {
+  .item:hover {
+    i {
+      color: $orange;
+    }
+  }
+}
