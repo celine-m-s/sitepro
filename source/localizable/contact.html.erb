@@ -76,7 +76,7 @@ layout: mainsite
                         <textarea rows="7" placeholder="<%= t(:catsEyeMessage) %>" required type="textarea" name="message"></textarea>
                     </label>
                     <div class="add-sm-top text-center">
-                        <button class="btn btn-danger" type="submit"><i class="fa fa-envelope"></i> &nbsp; <%= t(:send) %></button>
+                        <button class="btn btn-danger" type="submit" onClick="_gaq.push(['_trackEvent', 'Contact', 'Send', '<%= I18n.locale.to_s %>']);"><i class="fa fa-envelope"></i> &nbsp; <%= t(:send) %></button>
                     </div>
                 </form>
                 <div class="col-md-12" id="formSuccessMessage" style="display:none;">

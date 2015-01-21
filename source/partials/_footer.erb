@@ -38,7 +38,7 @@
                   <input type='text' name='name' required placeholder="Cylia Chamade"/>
                   <input type='mail' name='email' required placeholder="cylia.chamade@cats-eye.com"/>
                   <textarea type='textarea' name='message' required placeholder="<%= t(:catsEyeMessage) %>"></textarea>
-                  <input type='submit' value='<%= t(:send) %>' class="sendButton"/>
+                  <input type='submit' value='<%= t(:send) %>' class="sendButton" onClick="_gaq.push(['_trackEvent', 'Contact_footer', 'Send', '<%= I18n.locale.to_s %>']);"/>
                 </form>
             </div>
         </div>

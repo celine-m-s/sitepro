@@ -35,7 +35,7 @@ fr:
   whoiam: "<span>Qui</span> je suis"
   whoIAmText: "Je suis un peintre et sa palette ! Comme lui, j'aime créer, réaliser de nouveaux tableaux et concrétiser l'imaginaire. Mes couleurs vont de la communication au code, du référencement naturel à la photo. Développeuse, oui, et aussi communicante, souriante, à l'écoute, dynamique et un tantinet curieuse !"
   iAmCreative: "Je suis <strong>Créative</strong>"
-  iAmCreative1: "Toutes mes activités ont pour point commun la création. Je suis photographe amateure, j'ai réalisé des courts-métrages et je crée des sites web toute la journée ! <br> <p>Et, pour alimenter le cliché, je travaille avec un Mac, une tablette graphique et beaucoup de disques durs répartis un peu partout sur la planette.</p><p>L'Expérience Utilisateur, les bonnes pratiques en matière de web-design et la lisibilité de l'information sont pour moi des points capitaux dans un projet web. </p>"
+  iAmCreative1: "Toutes mes activités ont pour point commun la création. Je suis photographe amateure, j'ai réalisé des courts-métrages et je crée des sites web toute la journée ! <br> <p>Et, pour alimenter le cliché, je travaille avec un Mac, une tablette graphique et beaucoup de disques durs répartis un peu partout sur la planète.</p><p>L'Expérience Utilisateur, les bonnes pratiques en matière de web-design et la lisibilité de l'information sont pour moi des points capitaux dans un projet web. </p>"
   iAmCreative2: "Ayant suivi une prépa littéraire, je sais rédiger et organiser mes idées pour qu'elles soient pertinentes. Les grands mots ne m'intéressent pas trop. Je préfère que mon message soit compris par l'utilisateur et l'aide dans ses actions. Cette palette de compétences me permet de conseiller de nombreuses solutions pour créer ou améliorer l'apparence d'un site ou d'une application."
   iAmStructured: "Je suis <strong>Structurée</strong>"
   iAmStructured1: "En tant que freelance, être discipliné est une nécessité. Nous avons plusieurs projets à gérer en même temps, beaucoup d'interlocuteurs et des demandes très diverses. J'ai toujours eu cette diversité d'activités, même lorsque je travaillais en tant que salariée. J'aime les projets menés proprement jusqu'à leur terme et les clients satisfaits !"
@@ -102,7 +102,7 @@ fr:
   select: Sélectionner
   completionTime: "Date butoir"
   lessThanAWeek: Moins d'une semaine
-  threeWekks: Trois semaines
+  threeWeeks: Trois semaines
   oneMonth: Un mois
   threeMonths: Trois mois
   sixMonths: Six mois
