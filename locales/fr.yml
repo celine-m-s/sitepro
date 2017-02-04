@@ -13,7 +13,7 @@ fr:
   contactme: Contactez-moi !
   allrightsreserved: Tous droits réservés.
   sendmail: Contactez-moi par mail
-  catsEyeMessage: "Bonjour, Nous aimerions un site pour vendre nos oeuvres d'art. Pourriez-vous le réaliser ? Merci, Signé Cat's Eye"
+  catsEyeMessage: "Bonjour, Nous aimerions une application pour trouver des oeuvres d'art. Pourriez-vous le réaliser ? Merci, Signé Cat's Eye"
   send: Envoyer
   paths:
     development: "developpement"
@@ -27,9 +27,9 @@ fr:
   index_title: "Freelance web : création de sites, formation et entrepreneuriat"
   index_description: 'Freelance web et multidisciplinaire à Paris, Céline Martinet Sanchez vous accompagne dans votre nouveau projet. Développement, référencement naturel, web-design et plus encore !'
   development_title: 'Création de sites web - freelance développeur à Paris'
-  development_description: "Vous cherchez un développeur compétent et multidisciplinaire pour votre projet ? Parlons-en autour d'un café ! "
+  development_description: "Développement d'applications web en Ruby ou en Python. "
   training_title: "Formation personnalisée pour comprendre le web à Paris - Céline MS"
-  training_description: "J'enseigne la création de sites web (HTML / Wordpress) à des groupes et en cours particulier. Ma pédagogie est axée sur la pratique. Découvrez-en plus !"
+  training_description: ""
   projects_title: "Entrepreneure - Céline MS"
   projects_description: "Je travaille sur plusieurs projets de startups dans le numérique. Découvrez mes projets ici !"
   whoiam: "<span>Qui</span> je suis"
@@ -74,18 +74,12 @@ fr:
   perso5Text: "Dans mes rêves, mon appartement vaut 100 000 euros en équipements technologiques (et moi aussi)"
   perso6Title: "Résolument optimiste"
   perso6Text: "J'avance pour réaliser mes rêves et partager ceux des autres."
-  presentationTitle: "Freelance web à Paris"
+  presentationTitle: "Développeuse full stack"
   presentationText: >
-    <p>Vous êtes un particulier, une startup ou une agence et vous souhaitez créer un site web ? Je peux vous aider !
-    <ul>
-    <li>Création d'un site internet vitrine, d'un blog ou d'une application web,</li>
-    <li>Intégration,</li>
-    <li>Optimisation pour les moteurs de recherche (référencement naturel),</li>
-    <li>Configuration de Google Analytics,</li>
-    <li>Amélioration de l'expérience utilisateur.</li>
-    </ul>
-    </p>
-    <p>Découvrez-en plus ci-dessous ou en naviguant sur le site !</p>
+    <p>Freelance depuis 3 ans, je suis développeuse full stack Ruby et Python. </p>
+    <p>Je me suis consacrée à de nombreux projets passionnants, dont ma propre startup et des formations pour adultes. </p>
+    <p>Aujourd'hui je crée un parcours de formation de niveau Licence pour <a href="https://openclassrooms.com">OpenClassrooms</a>: Développeur·se Python !</p>
+    <p>Quand je ne code pas, j'aime faire rire en racontant des blagues stupides !</p> 
   developmentH1: Création de <span class="highlight orange">sites web</span>
   developmentH2: >
     Je crée des sites web pour des particuliers, des startups et des agences. J'utilise, en fonction de la demande, des CMS ou des frameworks tels que Ruby on Rails. Voici des sites que j'ai créés !

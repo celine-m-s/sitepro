@@ -20,7 +20,7 @@ en:
   time_short: '%m/%d/%Y'
   time_expanded: '%B %d, %Y'
   index_title: 'Website creation, personal training and entrepreneurship'
-  index_description: 'Multidisciplinary and Parisian web freelancer, Celine Martinet Sanchez helps you to bring life to your new project. Development, SEO, web-design and much more!'
+  index_description: 'Multidisciplinary and Parisian web freelancer, Celine Martinet Sanchez is a fullstack web developer.'
   development_title: "Website creation: freelance web developer in Paris"
   development_description: "You want to create a website and you don't know where to begin with? Let's have a coffee to talk about it!"
   training_title: 'Personal training to deal with the web - Celine MS'
@@ -70,21 +70,15 @@ en:
   perso5Text: "In my dreams, my flat is worth 100 000 euros in tech equipment (and so do I)."
   perso6Title: "Firmly optimistic"
   perso6Text: "I carry on to make my dreams come true and to share others dreams."
-  presentationTitle: "Parisian web freelancer"
+  presentationTitle: "Web developer"
   presentationText: >
-    <p>You are a private individual, a startup of an agency and you would like to create a website? I can help you!
-    <ul>
-    <li>Creation of a showcase website, a blog or a web-application, </li>
-    <li>Integration,</li>
-    <li>Search Engine Optimization,</li>
-    <li>Google Analytics setup,</li>
-    <li>User Experience improvements.</li>
-    </ul>
-    </p>
-    <p>Discover more about my skills hereunder or surfing on this website!</p>
+    <p>Freelancer for 3 years, I'm a full stack developer who codes mostly in Ruby and in Python. </p>
+    <p>I've been involved in many projects, including my own startup and trainings.</p>
+    <p>Right now I'm creating a brand new training path for <a href="https://openclassrooms.com" target="blank">OpenClassrooms</a> on how to become a successful Python developer.  </p>
+    <p>When I'm not coding, I enjoy making people laught telling silly jokes. Want to hear one? <a href="/contact.html">Let's meet!</a>  </p>
   developmentH1: <span class="highlight orange">Websites</span> creation
   developmentH2: >
-    I create websites for independants, startups and agencies. I use, depending on the request, CMS or frameworks like Ruby on Rails. Here are some websites I created!
+    I craft websites for independants, startups and agencies. I use, depending on the request, CMS or frameworks like Ruby on Rails. Here are some websites I created!
   workInProgress: "Work in progress"
   trainingH1: Trainings
   trainingH2: >

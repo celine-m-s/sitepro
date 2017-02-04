@@ -99,11 +99,11 @@ activate :middleman_simple_thumbnailer
 #   end
 # end
 
-activate :deploy do |deploy|
-  deploy.method = :git
-  deploy.branch = "gh-pages"
-  deploy.build_before = true
-end
+# activate :deploy do |deploy|
+#   deploy.method = :git
+#   deploy.branch = "gh-pages"
+#   deploy.build_before = true
+# end
 
 set :css_dir, 'stylesheets'
 

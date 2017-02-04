@@ -2,7 +2,7 @@
 #   french: '/fr'
 #   english: '/'
 twitter:
-  name: '@CelineMartinetS'
+  name: '@celine_m_s'
   picture: 'logo-cms.png'
 imagepath: 'http://www.c-m-s.co/images/'
 french:
@@ -16,5 +16,5 @@ english:
   #url: 'http://0.0.0.0:4567'
   url: 'http://www.c-m-s.co'
 picture: logo-cms.png
-title: generic title
-description: a generic description
+title: Développement Ruby
+description: Développement Ruby sur Paris et en itinérance
