@@ -72,6 +72,7 @@ footer {
       -ms-transition: all ease-in-out .3s;
       -moz-transition: all ease-in-out .3s;
       -webkit-transition: all ease-in-out .3s;
+      cursor: pointer;
       &:focus, &:hover, &:active {
         background-color: $blue;
         color: #fff;
@@ -112,12 +113,13 @@ footer {
 }
 
 .social-networks {
-  margin-top: 30px;
-  text-align: center;
-  .fa {
-    font-size: 2em;
-    margin-left: 1.2em;
-    display: inline-block;
+  margin-top: 2rem;
+  a {
+    font-size: 48px;
+  }
+
+  .list-inline-item:not(:last-child) {
+      margin-right: 2.5rem;
   }
 }
 
@@ -185,7 +187,7 @@ footer {
   border-radius: 50%;
 }
 
-section#presentation {
+section#projects {
   border-bottom: 1px solid #DDD;
   background: none repeat scroll 0% 0% #FFF;
 }
@@ -296,3 +298,52 @@ section#presentation {
     }
   }
 }
+
+#projects a {
+    cursor: pointer;
+}
+
+.filter-web figure {
+  border: 1px solid rgb(217, 217, 217);
+}
+
+.portfolio .button-group {
+  display: block;
+  margin: auto;
+}
+
+.filter-button-group button {
+
+  &:active {
+    color: white;
+  }
+}
+
+
+@media (min-width: 699px) {
+  .isotope-item, .isotope-sizer {
+    width: 33%;
+  }
+  .og-grid li.card {
+    width: 90%;
+    margin: 10px 0;
+    padding: 0;
+  }
+}
+
+@media (max-width: 700px) {
+  .isotope-item, .isotope-sizer {
+    width: 100%;
+  }
+  .og-grid li.card {
+    width: 100%;
+    margin: 10px 0;
+    padding: 0;
+  }
+}
+
+.og-grid li.list-group-item {
+  width: 100%;
+}
+
+

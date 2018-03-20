@@ -1,0 +1,162 @@
+<!doctype html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="fr"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="fr"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="fr"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="fr"> <!--<![endif]-->
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title><%= current_page.data.title || "Middleman" %></title>
+
+    <!-- if you're lost -->
+    <%# if current_page.url == "/404.html" %>
+      <!-- <meta http-equiv="refresh" content="5; url=/"> -->
+    <%# end %>
+
+    <!-- Favicon rocks! -->
+    <% favicon_tag 'favicon.png' %>
+
+    <%# feed_tag :atom, "#{I18n.locale.to_s}/feed.xml", title: "Atom Feed" %>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+    <%= stylesheet_link_tag "style" %>
+
+    <!-- Why are you still using IE ? -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- For preloads -->
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" integrity="sha256-0rguYS0qgS6L4qVzANq4kjxPLtvnp5nn2nB5G1lWRv4=" crossorigin="anonymous"></script>
+
+    <!-- Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700' rel='stylesheet' type='text/css'>
+
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/solid.js" integrity="sha384-+Ga2s7YBbhOD6nie0DzrZpJes+b2K1xkpKxTFFcx59QmVPaSA8c7pycsNaFwUK6l" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/brands.js" integrity="sha384-sCI3dTBIJuqT6AwL++zH7qL8ZdKaHpxU43dDt9SyOzimtQ9eyRhkG3B7KMl6AO19" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/fontawesome.js" integrity="sha384-7ox8Q2yzO/uWircfojVuCQOZl+ZZBg2D2J5nkpLqzH1HY0C1dHlTKIbpRz/LG23c" crossorigin="anonymous"></script>
+
+
+  </head>
+
+  <body id="top" class="<%= page_classes %>">
+    
+    <header class="slider">
+        <div class="carousel slide carousel-fade">
+            <!-- Le Carousel-->
+            <div id="slider">
+                <div class="active item">
+                    <%= image_tag("bg/cover/cover-1.jpg", class: "slider-photo-1", resize_to: "1500") %>
+                </div>
+                <div class="item">
+                <%= image_tag("bg/cover/cover-13.jpg", class: "slider-photo-2", resize_to: "1500") %>
+                </div>
+                <div class="item">
+                    <%= image_tag("bg/cover/cover-8.jpg", class: "slider-photo-3", resize_to: "1500") %>
+                </div>
+            </div>
+        </div>
+        <div class="overlay">
+<!--         <p id="languages"><a href="<%# data.site.english.url %>"><%# t :english %></a>  ||  <a href="<%# data.site.french.url %>"><%# t :french %></a></p> -->
+            <article>
+            <%# if current_locale == "fr" %>
+              <%# root = data.site.french.url %>
+            <%# else %>
+              <%# root = data.site.english.url %>
+            <%# end %>
+
+              <div class="top-logo-wrapper">
+                <a href="/"><%= image_tag 'logo-cms-white.svg', alt: 'Logo Céline Martinet Sanchez', class: 'top-logo' %></a>
+              </div>
+            <% if current_page.url == '/' || current_page.url == '/fr' %>
+                <h1 class="header-name">Céline MS</h1>
+            <% else %>
+                <h2 class="header-name">Céline MS</h2>
+
+            <% end %>
+                <h2>Développeuse full-stack et formatrice</h2>
+            </article>
+        </div>
+    </header>
+
+    <%= yield %>
+
+    <footer class="footer-wrapper hidden-xs" id="footer">
+        </div>
+        <div class="footer-links container">
+            <div class="row">
+                <div class="col-sm-4 offset-md-2">
+                    <h4>Suivez-moi !</h4>
+                       <a class="twitter-timeline" href="https://twitter.com/celine_m_s?ref_src=twsrc%5Etfw" data-height="220" data-theme="dark" data-link-color="#09A298">Tweets de @CelineMartinetS</a>
+                       <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                </div>
+
+                <div class="col-sm-4">
+                    <h4>Contactez-moi !</h4>
+                    <form action="#" id="contactForm">
+                      <!-- the redirect_to is optional, the form will redirect to the referrer on submission -->
+                      <input type='hidden' name='redirect_to' value='<the complete return url e.g. http://fooey.com/thank-you.html>' />
+                      <input type='text' name='name' required placeholder="Cylia Chamade"/>
+                      <input type='mail' name='email' required placeholder="cylia.chamade@cats-eye.com"/>
+                      <textarea type='textarea' name='message' required placeholder="Bonjour, Nous aimerions une application pour trouver des oeuvres d'art. Pourriez-vous la réaliser ? Merci, Signé Cat's Eye"></textarea>
+                      <input type='submit' value='Envoyer' class="sendButton" onClick="_gaq.push(['_trackEvent', 'Contact_footer', 'Send', 'fr']);"/>
+                    </form>
+                </div>
+            </div>
+            <ul class="social-networks list-inline text-center">
+              <li class="list-inline-item"><a href="http://fr.linkedin.com/in/celinemartinet1/" target="_blank"><i class="fab fa-linkedin"></i></a></li>                
+              <li class="list-inline-item"><a href="https://github.com/celine-m-s" target="_blank"><i class="fab fa-github-square"></i></a> </li>
+              <li class="list-inline-item"><a href="https://twitter.com/celine_m_s" target="_blank" ><i class="fab fa-twitter-square"></i></a></li>                    
+            </ul>
+        </div>
+    </footer>
+
+    <div class="footer-copyright">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 text-center">
+                    &copy; Céline Martinet Sanchez. Tous droits réservés
+                </div>
+                <div class="col-sm-6 text-center mobile-center">
+                         <a href="celine@hello-birds.com"><i class="fa fa-envelope" style="margin-right: 5px;"></i>Envoyez-moi un message !</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+        
+    <div id="preloader"><div id="status"><div class="spinner"></div></div></div>
+
+    <% if build? %>
+      <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-46442344-2', 'auto');
+        ga('send', 'pageview');
+
+      </script>
+    <% end %>
+
+
+        <!-- Scripts -->
+<!--         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> -->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+        <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+        <%= javascript_include_tag 'libraries' %>
+        <%= javascript_include_tag 'site' %>
+
+      </body>
+    </html>

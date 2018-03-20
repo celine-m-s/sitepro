@@ -1,141 +1,76 @@
-###
-# Blog settings
-###
+# Activate and configure extensions
+# https://middlemanapp.com/advanced/configuration/#configuring-extensions
 
-# Time.zone = "UTC"
-
-# Many languages
-activate :i18n
-
-activate :blog do |blog|
-  # This will add a prefix to all links, template references and source paths
- blog.prefix = "{lang}"
-
-  blog.permalink = "{year}-{month}-{day}-{title}.html"
-  # Matcher for blog source files
-  blog.sources = "{year}-{month}-{day}-{title}.html"
-  blog.taglink = "tags/{tag}.html"
-  # blog.layout = "layout"
-  blog.summary_separator = /(READMORE)/
-  # blog.summary_length = 250
-  # blog.year_link = "{year}.html"
-  # blog.month_link = "{year}/{month}.html"
-  # blog.day_link = "{year}/{month}/{day}.html"
-  blog.default_extension = ".markdown"
-
-  blog.tag_template = "tag.html"
-  blog.calendar_template = "calendar.html"
-
-  # Enable pagination
-  blog.paginate = true
-  blog.page_link = "page:num"
-  blog.per_page = 5
-
-  # Categories
-  blog.custom_collections = {
-    category: {
-      link: '/articles/{category}.html',
-      template: 'category.html'
-    }
-  }
+activate :autoprefixer do |prefix|
+  prefix.browsers = "last 2 versions"
 end
 
-page "en/feed.xml", layout: false
-page "fr/feed.xml", layout: false
+activate :directory_indexes
 
-# Reload the browser automatically whenever files change
-configure :development do
-  activate :livereload
-  set :debug_assets, true
-end
+# Layouts
+# https://middlemanapp.com/basics/layouts/
 
-# Thumbnails
-activate :middleman_simple_thumbnailer
+# Per-page layout changes
+page '/*.xml', layout: false
+page '/*.json', layout: false
+page '/*.txt', layout: false
 
-###
-# Compass
-###
-
-# Change Compass configuration
-# compass_config do |config|
-#   config.output_style = :compact
-# end
-
-###
-# Page options, layouts, aliases and proxies
-###
-
-# Per-page layout changes:
-#
-# With no layout
-# page "/path/to/file.html", layout: false
-#
 # With alternative layout
-# page "/path/to/file.html", layout: :otherlayout
-#
-# A path which all have the same layout
-# with_layout :admin do
-#   page "/admin/*"
-# end
+# page '/path/to/file.html', layout: 'other_layout'
 
-# Proxy pages (http://middlemanapp.com/basics/dynamic-pages/)
-# proxy "/this-page-has-no-template.html", "/template-file.html", locals: {
-#  which_fake_page: "Rendering a fake page with a local variable" }
+# Proxy pages
+# https://middlemanapp.com/advanced/dynamic-pages/
 
-###
+# proxy(
+#   '/this-page-has-no-template.html',
+#   '/template-file.html',
+#   locals: {
+#     which_fake_page: 'Rendering a fake page with a local variable'
+#   },
+# )
+
 # Helpers
-###
-
-# Automatic image dimensions on image_tag helper
-# activate :automatic_image_sizes
-
-# Reload the browser automatically whenever files change
-# activate :livereload
-
 # Methods defined in the helpers block are available in templates
+# https://middlemanapp.com/basics/helper-methods/
+
 # helpers do
-#   def language
-#     I18n.locale.to_s
+#   def some_helper
+#     'Helping'
 #   end
 # end
 
-# activate :deploy do |deploy|
-#   deploy.method = :git
-#   deploy.branch = "gh-pages"
-#   deploy.build_before = true
+# Build-specific configuration
+# https://middlemanapp.com/advanced/configuration/#environment-specific-settings
+
+# configure :build do
+#   activate :minify_css
+#   activate :minify_javascript
 # end
 
-set :css_dir, 'stylesheets'
-
-set :js_dir, 'javascripts'
-
-set :images_dir, 'images'
-
-# Build-specific configuration
-configure :build do
-  # For example, change the Compass output style for deployment
-  activate :minify_css
-
-  # Minify Javascript on build
-  activate :minify_javascript
-
-  # Enable cache buster
-  activate :asset_hash
-
-  # Use relative URLs
- activate :relative_assets
-
-  # Or use a different image path
-  # set :http_prefix, "/Content/images/"
+configure :development do
+  set :debug_assets, true
+  activate :livereload
 end
 
+configure :build do
+  activate :minify_css
+  activate :minify_javascript
+  activate :gzip
+  activate :minify_html
+end
 
+# https://middlemanapp.com/advanced/localization/
+# activate :i18n, :mount_at_root => :fr
 
-
-# disable layout
-page ".htaccess.apache", :layout => false
-
-# rename file after build
-# after_build do
-#   File.rename 'build/.htaccess.apache.erb', 'build/.htaccess'
+# Categories
+# https://middlemanapp.com/advanced/sitemap/#using-the-sitemap-in-config-rb
+# ready do
+#   sitemap.resources.group_by {|p| p.data["category"] }.each do |category, pages|
+#     proxy "/categories/#{category}.html", "category.html",
+#       :locals => { :category => category, :pages => pages }
+#   end
 # end
+
+# Cache
+activate :asset_hash
+

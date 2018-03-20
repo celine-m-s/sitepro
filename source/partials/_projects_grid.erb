@@ -1,31 +1,47 @@
-<!-- Stuff I Made -->
-
-<section id="stuffimade" class="bounceIn">
     <div class="container">
-        <div class="row">
-            <div class="span12">
-                <h1 class="title">
-                    <%= globalTitle %>
-                </h1>
-                <h2 class="sub-title">
-                    <%= globalSubtitle %>
-                </h2>
-            </div>
-        </div>
-    </div>
-    
-    <div class="container">
-        <div class="portfolio clearfix">
+      <h2 class="text-center">
+          <%= global_title %>
+      </h2>
+        <div class="portfolio clearfix add-margin">
             <div class="main row">
-                <ul id="og-grid" class="og-grid">
+              <div class="button-group filter-button-group list-inline" data-toggle="buttons"">
+                <button type="button" data-filter="*" class="btn btn-outline-info active" data-toggle="button" aria-pressed="true">Tout</button>
+                <% data.tags.each do |tag|%>
+                    <button type="button" data-filter=".<%= tag.id %>" class="btn btn-outline-info" data-toggle="button" aria-pressed="false" autocomplete="off"><%= tag.name %></button>
+                <% end %>
+              </div>
 
+                <ul id="isotope" class="og-grid add-margin">
+                  <div class="isotope-sizer"></div>
                 <% projects.each do |project| %>
-                  <li class="filter-web">
-                    <a href="<%= project.subpageUrl %>" data-largesrc="<%= image_path(project.bigPicture) %>" data-title="<%= project.title %>" data-description="<%= project.description %>", data-link="<%= project.more %>", data-largesrcalt="<%= project.bigPictureAlt %>" >
+                <div class="isotope-item <%= project.tags.join(' ') %>">
+                    <li class="card filter-web">
+                      <img class="card-img-top" src="<%= image_path(project.picture) %>" alt="<%= project.pictureAlt %>">
+                      <div class="card-body">
+                        <h5 class="card-title"><%= project.title %></h5>
+                        <p class="card-text"><%= project.description %></p>
+                        <!-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
+                        <ul class="list-group list-group-flush">
+                          <li class="list-group-item"><%= project.stack %></li>
+                        </ul>
+                        <% unless project.subpageUrl.nil? %>
+                        <div class="card-body" style="padding-bottom: 0;">
+                          <a href="<%= project.subpageUrl %>" class="card-link" target="_link"><%= project.more %></a>
+                        </div>
+                        <% end %>
+                        
+                      </div>
+                    </li>
+                </div>
+
+
+<!-- 
+                  <li class="filter-web isotope-item <%= project.tags.join(' ') %>">
+                    <a data-id="<%= project.id %>" data-href="<%= project.subpageUrl %>" data-title="<%= project.title %>" data-description="<%= project.description %>", data-link="<%= project.more %>">
                       <figure>
                       <% if project.workInProgress == true %>
                           <p class="work_in_progress">
-                          <span><%= t(:workInProgress) %></span>
+                          <span>En cours</span>
                           </p>
                       <%end%>
                           <div class="text-overlay">
@@ -34,10 +50,9 @@
                           <img src="<%= image_path(project.picture) %>" alt="<%= project.pictureAlt %>">
                       </figure>
                     </a>
-                  </li>
+                  </li> -->
                 <% end %>
                 </ul>
             </div>
         </div>
     </div>
-</section>

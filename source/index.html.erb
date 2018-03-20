@@ -1,0 +1,34 @@
+---
+title: Céline Martinet Sanchez, développeuse full stack à Paris
+layout: base
+---
+
+<section id="projects">
+  <!-- <section id="stuffimade" class="bounceIn"> -->
+    <%= partial 'partials/projects_grid', :locals => {
+      :global_title => 'Projets réalisés',
+      :projects => data.projects.fr
+      } %>
+</section>
+
+<section id="presentation">
+    <div class="container">
+        <h2 class="text-center">Qui suis-je ?</h2>
+        <div class="row add-margin">
+            <div class="col-sm-4 offset-sm-1 col-md-3">
+                <%= image_tag("celine-martinet-sanchez.jpg", class: "img-fluid") %>
+            </div>
+            <div class="col-sm-4 col-md-6">
+                <p>
+                  Freelance depuis quatre ans, je suis développeuse full stack Ruby et Python.
+                </p>
+                <p>Je me suis consacrée à de nombreux projets passionnants, dont ma propre startup et des formations pour adultes.</p>
+                  <p>J'ai notamment créé un parcours de formation de niveau Licence pour OpenClassrooms : <a href="https://openclassrooms.com/paths/developpeur-se-dapplication-python" target="_blank">Développeur·se Python</a> !</p>
+
+                  <p>Quand je ne code pas, j'aime rire et randonner !</p>
+
+                  
+            </div>
+        </div>
+    </div>    
+</section>
