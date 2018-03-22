@@ -8,3 +8,9 @@
   id: ruby
 - name: DevOps
   id: devops
+- name: Javascript
+  id: JS
+- name: Flask
+  id: flask
+- name: Formation
+  id: formation

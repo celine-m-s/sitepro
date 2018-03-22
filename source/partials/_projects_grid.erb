@@ -16,17 +16,23 @@
                 <% projects.each do |project| %>
                 <div class="isotope-item <%= project.tags.join(' ') %>">
                     <li class="card filter-web">
-                      <img class="card-img-top" src="<%= image_path(project.picture) %>" alt="<%= project.pictureAlt %>">
+                      <a href="<%= project.url %>" target="_blank"><img class="card-img-top" src="<%= image_path(project.picture) %>" alt="<%= project.pictureAlt %>"></a>
                       <div class="card-body">
                         <h5 class="card-title"><%= project.title %></h5>
                         <p class="card-text"><%= project.description %></p>
                         <!-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
                         <ul class="list-group list-group-flush">
-                          <li class="list-group-item"><%= project.stack %></li>
+                          <li class="list-group-item tags">
+                            <p><%= project.dev_description %></p>
+                            <p><% project.stack.each do |s| %>
+                              <span class="tag"><%= s %></span>
+                              <% end %>
+                            </p>
+                          </li>
                         </ul>
-                        <% unless project.subpageUrl.nil? %>
+                        <% unless project.url.nil? %>
                         <div class="card-body" style="padding-bottom: 0;">
-                          <a href="<%= project.subpageUrl %>" class="card-link" target="_link"><%= project.more %></a>
+                          <a href="<%= project.url %>" class="card-link" target="_link"><%= project.more %></a>
                         </div>
                         <% end %>
                         

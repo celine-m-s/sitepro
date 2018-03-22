@@ -322,7 +322,7 @@ section#projects {
 
 @media (min-width: 699px) {
   .isotope-item, .isotope-sizer {
-    width: 33%;
+    width: 50%;
   }
   .og-grid li.card {
     width: 90%;
@@ -346,4 +346,15 @@ section#projects {
   width: 100%;
 }
 
+// tags
 
+.tags {
+  .tag {
+    background-color: $orange;
+    border-radius: 4px;
+    padding: 3px 6px;
+    font-size: 12px;
+    color: white;
+    white-space:nowrap;
+  }
+}
