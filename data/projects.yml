@@ -11,18 +11,18 @@ fr:
     url: 'https://openclassrooms.com/paths/developpeur-se-dapplication-python'
     more: Voir la page du parcours
     stack: 
-      - python
-      - django
-      - flask
+      - Python
+      - Django
+      - Flask
       - TDD
-      - devops
-      - wordpress
-      - facebook ads
-      - digital ocean
-      - heroku
-      - algorithmes
+      - DevOps
+      - Wordpress
+      - Facebook ads
+      - Digital Ocean
+      - Heroku
+      - Algorithmes
     tags:
-      - formation
+      - training
       - python
       - django
       - flask
@@ -116,7 +116,7 @@ fr:
     title: RideLocalSpot (V1)
     description: >
         Place de marché connectant des guides et fans de VTT et moutain-bike.
-    dev_description: Application web dont l'interface utilisateur principale est une carte. Authentification (Devise) et rôles (Cancancan), réservation de sessions, messagerie intégrée, background jobs pour l'envoi de mails, recherche (sur la carte et par mot-clé), envoi de mails transactionnels, commentaires et notes, paiement. Interface bilingue anglais / français.
+    dev_description: Application web dont l'interface utilisateur principale est une carte. Authentification (Devise) et rôles (Cancancan), réservation de sessions, messagerie intégrée, background jobs, recherche (sur la carte et par mot-clé), envoi de mails transactionnels, commentaires et notes, paiement. Interface bilingue anglais / français.
     picture: 'projects/rls.png'
     pictureAlt: Page d'accueil
     url: 'https://ridelocalspot.com'
@@ -145,7 +145,7 @@ fr:
     title: Formation Telecom Paristech
     description: >
         <p>Animation d'un séminaire d'une semaine en présentiel pour la majeure Marketing Digital de Telecom Ecole de Management.</p> <p>Chaque étudiant réalise un site en une page sur le sujet de son choix. Bases du web-design, bonnes pratiques en UX et en développement pour le web.</p>
-        <p>Puis animation d'un atelier mensuel d'une demi-journée sur la gestion de projets informatiques. La classe est organisée en mini-agences qui doivent interagir.</p>
+        <p>Animation d'un atelier mensuel sur la gestion de projets informatiques. La classe est organisée en mini-agences qui doivent interagir autour d'un projet commun : leur site.</p>
     dev_description: Entre 20 et 30 étudiants depuis 2014. Présentation du fonctionnement d'internet (requêtes HTTP, serveurs, ...) et des langages front ainsi que de Bootstrap.
     picture: 'projects/telecom.png'
     pictureAlt: Page d'accueil des étudiants.
@@ -160,7 +160,7 @@ fr:
       - GitHub
       - Présentiel
     tags:
-      - formation
+      - training
       - JS
   - ocalumnis:
     id: ocalumnis
@@ -174,12 +174,12 @@ fr:
     url: 'https://github.com/OpenClassrooms-Student-Center/alumnis'
     more: Voir le dépôt GitHub
     stack: 
-      - pelican
+      - Pelican
       - GitHub
       - TravisCI
       - YAML
     tags:
-      - formation
+      - training
       - python
       - devops
   - testultime:
@@ -194,8 +194,8 @@ fr:
     url: 'http://le-test-ultime.hello-birds.com'
     more: Faire le test
     stack: 
-      - selenium
-      - flask
+      - Selenium
+      - Flask
       - Pytest
       - oAuth Facebook
       - Pillow
@@ -215,10 +215,10 @@ fr:
     url: 'https://github.com/celine-m-s/le_monde_est_petit/tree/master'
     more: Lire le code
     stack: 
-      - pytest
+      - Pytest
       - TDD
       - Python
-      - matplotlib
+      - Matplotlib
     tags:
       - python
   - pythonscrapper:
@@ -232,8 +232,8 @@ fr:
     url: 'https://github.com/celine-m-s/demarrez_votre_projet_avec_python'
     more: Lire le code
     stack: 
-      - python
-      - scrapy
+      - Python
+      - Scrapy
     tags:
       - python
   - jugementmajoritaire:
@@ -246,6 +246,261 @@ fr:
     pictureAlt: Capture d'écran du programme
     url: 'https://github.com/celine-m-s/majoritary-judgment'
     more: Lire le code
+    stack: 
+      - Python
+    tags:
+      - python
+
+# ENGLISH
+
+en:
+  - oc:
+    id: oc
+    title: Python training path for OpenClassrooms
+    description: >
+        <p>Creation of a training path leading to a French Bachelor diploma: Python Application Developper. Audit of soft and hard skills required by recruiters. Writing of 8 projects matching those skills.</p>
+        <p>Creation of <a href="https://openclassrooms.com/membres/celinemartinet" target="_blank">14 courses</a> about Python, development best practices and digital marketing tools: video shootings in studio, screencasts, exercises and writing.</p>
+    dev_description: More than <b>30 000 students</b> attended my free classes. More than <b>one hundred students</b> registered the Python path. Videos in Spanish and in French. English-speaking working environment.
+    picture: 'projects/oc-courses.png'
+    pictureAlt: Courses made for OpenClassrooms
+    url: 'https://openclassrooms.com/paths/developpeur-se-dapplication-python'
+    more: Watch the path page
+    stack: 
+      - Python
+      - Django
+      - Flask
+      - TDD
+      - Devops
+      - Wordpress
+      - Facebook ads
+      - Digital ocean
+      - Heroku
+      - Algorithms
+    tags:
+      - training
+      - python
+      - django
+      - flask
+  - cohome:
+    id: cohome
+    title: CoHome
+    description: >
+        Marketplace for freelancers willing to work at each other's places.
+    picture: 'projects/cohome.png'
+    pictureAlt: Cohome
+    url: 'https://cohome.hello-birds.com'
+    more: Use it!
+    dev_description: Web app with Omniauth (Google, LinkedIn, Facebook and Twitter), search, map, interactive calendar, payment, bookings, emails, reviews and images. Bilingual interface (French / English). Integration of third party tools like Mixpanel.
+    stack: 
+      - Ruby 2.2 
+      - RoR 4.2
+      - Postgresql
+      - Sass
+      - JS
+      - oAuth
+      - Algolia
+      - Google API
+      - Mangopay
+      - Sidekiq
+      - Paperclip
+      - ImageMagick
+      - AWS
+      - HTTPS
+      - Digital Ocean
+      - Passenger
+      - Nginx
+      - Mixpanel
+    tags: # only for filtering
+      - ror
+      - ruby
+      - devops
+      - JS
+  - bestguide:
+    id: bestguide
+    title: Best Guide in Paris
+    description: >
+        Website of Jonathan Jeanvoine, touristic guide in Paris for 10 years.
+    dev_description: Web app including a a WYSIWYG CMS for the guide (custom Django admin) and a CRM. Contact form and recommendations. Intagram feed. Hosted on Digital Ocean and coded in TDD.
+    picture: 'projects/bestguide.png'
+    pictureAlt: Best Guide in Paris
+    url: 'https://www.bestguide.paris'
+    more: Visit the website
+    stack:
+      - Python 3.6
+      - Django 1.11
+      - TDD
+      - Pillow
+      - Postgresql
+      - Digital Ocean
+      - HTTPS
+      - Instagram API
+    tags:
+      - django
+      - python
+      - devops
+  - disquaire:
+    id: disquaire
+    title: CRM for a record shop owner
+    description: >
+        CRM for a fictional record shop owner in Paris. Example project for courses <a href="https://openclassrooms.com/courses/introduction-au-framework-django" target="_blank">Discover Django framework</a> and <a href="https://openclassrooms.com/courses/deployez-une-application-django" target="_blank">Deploy a Django application</a>. 
+    dev_description: Django web application including an CRM and a CMS. Unit and functional tests. Script to automatically import records from a YAML file. Hosted on Heroku and on Digital Ocean. CI with GitHub and TravisCI. 
+    picture: 'projects/disquaire.png'
+    pictureAlt: Home page
+    url: 'https://disquaire.hello-birds.com'
+    more: Website
+    stack:
+      - Python 3.6
+      - Django 1.11
+      - Postgresql
+      - PyYAML
+      - UnitTest
+      - Heroku
+      - Digital Ocean
+      - Gunicorn
+      - Supervisor
+      - Nginx
+      - Sentry
+      - TravisCI
+      - GitHub
+    tags:
+      - django
+      - python
+      - devops
+  - ridelocalspot:
+    id: rls
+    title: RideLocalSpot (V1)
+    description: >
+        Marketplace connecting moutain-bike guides and fans.
+    dev_description: Web application whose user interface is a map. Authentification (Devise) and roles (CanCanCan), bookings, messaging, background jobs to send emails, search (on the map and by keyword), transactional emails, reviews, payment. Bilingual interface English / French. 
+    picture: 'projects/rls.png'
+    pictureAlt: Home page
+    url: 'https://ridelocalspot.com'
+    more: Visit current website
+    stack: 
+      - Ruby on Rails 4.2
+      - Ruby 2.2
+      - Sass
+      - JS
+      - Postgresql
+      - Heroku
+      - Sidekiq
+      - Algolia
+      - Mandrill
+      - Geocoder
+      - Google Maps API
+      - Paperclip
+      - AWS
+      - Mangopay
+      - Mixpanel
+    tags:
+      - ruby
+      - ror
+  - telecom:
+    id: telecom
+    title: Telecom Paristech Training
+    description: >
+        <p>One-week on-site training for the Digital Marketing specialization at Telecom School of Management.</p> <p>Each student had to design a one pager on the subject of his choice. Web-design fundamentals, UX and web development best practices.</p>
+        <p>Monthly training about project management. Class was organized in small agencies and had to interact on a shared project: their whebsite.</p>
+    dev_description: 20 to 30 students per yearsince 2014. Presentation of how the Internet works (HTTP requests, servers, ...), of front languages and Bootstrap.
+    picture: 'projects/telecom.png'
+    pictureAlt: Students home page
+    url: 'http://lesdigitaux.fr/'
+    more: Students blog
+    stack: 
+      - HTML
+      - CSS
+      - Bootstrap
+      - Javascript
+      - Responsive
+      - GitHub
+      - On-site
+    tags:
+      - training
+      - JS
+  - ocalumnis:
+    id: ocalumnis
+    title: OpenClassrooms alumnis
+    description: >
+        <p>Project for OpenClassrooms in which alumnis had to understand and contribute to a GitHub repository in an open source context. More than 16000 commits and more than 220 contributors.</p><p><a href="https://openclassrooms-student-center.github.io/alumnis/" target="_blank">See the website</a></p>
+    dev_description: >
+        Student has to edit a YAML file and then do a PR on our repository. TravisCI tests are run and the result shows up in the PR page. If a mentor merges the PR, Travis runs tests again. If they pass, a static website is generated and pushed to our gh-pages branches. If they fail, last commit is reverted.
+    picture: 'projects/oc-alumnis.png'
+    pictureAlt: Florian's profile, an OpenClassrooms student
+    url: 'https://github.com/OpenClassrooms-Student-Center/alumnis'
+    more: GitHub repository
+    stack: 
+      - Pelican
+      - GitHub
+      - TravisCI
+      - YAML
+    tags:
+      - training
+      - python
+      - devops
+  - testultime:
+    id: testultime
+    title: The ultimate test
+    description: >
+        <p>Do you want to know who you truly are? Do the test and find it out!</p>
+        <p>Example project for the course <a href="https://openclassrooms.com/courses/introduction-a-flask" target="_blank">Make a website with Flask</a>. The user authenticates with Facebook, our application gathers some data and shows a result page containing his profile picture, an image to share in Facebook and a unique URL.</p>
+    dev_description: Web application using Flask and generating pictures automatically. Functional testing with Selenium and unit testing with Pytest <a href="https://github.com/celine-m-s/concevez_un_site_avec_flask" target="_blank">GitHub repository</a>.
+    picture: 'projects/test-ultime.png'
+    pictureAlt: Test landing page.
+    url: 'http://le-test-ultime.hello-birds.com'
+    more: Do the test!
+    stack: 
+      - Selenium
+      - Flask
+      - Pytest
+      - oAuth Facebook
+      - Pillow
+      - FB share
+    tags:
+      - flask
+      - python
+  - lemondeestpetit:
+    id: lemondeestpetit
+    title: It's a small world
+    description: >
+        Simulation of a virtual world inhabited by 100 000 persons. We wonder: from which population density people are less nice than average, from which age people earn more money than average and if young people are nicer and old ones.
+    dev_description: >
+        Use of <a href="http://pplapi.com" target="_blank">pplAPI</a> to gather data. Script written in TDD with Pytest. Graphs done by Matplotlib.
+    picture: 'projects/lemondeestpetit.png'
+    pictureAlt: Screenshot of 3 graphs.
+    url: 'https://github.com/celine-m-s/le_monde_est_petit/tree/master'
+    more: Read the code
+    stack: 
+      - Pytest
+      - TDD
+      - Python
+      - Matplotlib
+    tags:
+      - python
+  - pythonscrapper:
+    id: pythonscrapper
+    title: San Antonio scrapper
+    description: >
+        What would happen if cartoon characters were able to quote San Antonio, a French and sarcastic famous author? You will know by running this script!
+    dev_description: Two scrappers and a script. The first one visits Babelio pages and gathers quotes in a JSON file. The second one goes through Wikipedia and lists cartoon characters. Then our program makes sentences by mapping both data.
+    picture: 'projects/python-scrapper.png'
+    pictureAlt: Program screenshot. 
+    url: 'https://github.com/celine-m-s/demarrez_votre_projet_avec_python'
+    more: Read the code.
+    stack: 
+      - Python
+      - Scrapy
+    tags:
+      - python
+  - jugementmajoritaire:
+    id: jugementmajoritaire
+    title: Majoritary judgment election method
+    description: >
+        The <a href="https://openclassrooms.com/courses/decouvrez-le-fonctionnement-des-algorithmes/tirez-pleinement-parti-de-ce-cours#/id/r-4384720" target="_blank">Majoritary judgment election method</a> has been tested for a couple of years. Use this script and find out who will win: Hermione Granger, Baloo, Chuck Norris, Elsa of Arendelle, Gandalf or Beyoncé?
+    dev_description: Python script for the course <a href="https://openclassrooms.com/courses/decouvrez-le-fonctionnement-des-algorithmes" target="_blank">Discover how algorithms work</a>.
+    picture: 'projects/majoritary-judgment.png'
+    pictureAlt: Program screenshot
+    url: 'https://github.com/celine-m-s/majoritary-judgment'
+    more: Read the code
     stack: 
       - Python
     tags:

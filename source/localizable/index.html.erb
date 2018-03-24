@@ -1,0 +1,27 @@
+---
+layout: base
+---
+
+<% content_for(:page_title, I18n.t(:index_title)) %>
+
+<section id="projects">
+  <!-- <section id="stuffimade" class="bounceIn"> -->
+    <%= partial 'partials/projects_grid', :locals => {
+      :global_title => t(:portfolio_title),
+      :projects => data.projects.send(I18n.locale)
+      } %>
+</section>
+
+<section id="presentation">
+    <div class="container">
+        <h2 class="text-center">Qui suis-je ?</h2>
+        <div class="row add-margin">
+            <div class="col-sm-4 offset-sm-1 col-md-3">
+                <%= image_tag("celine-martinet-sanchez.jpg", class: "img-fluid") %>
+            </div>
+            <div class="col-sm-4 col-md-6">
+              <%= t :footer_presentation %>
+            </div>
+        </div>
+    </div>    
+</section>

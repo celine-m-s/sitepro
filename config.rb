@@ -56,7 +56,7 @@ configure :build do
 end
 
 # https://middlemanapp.com/advanced/localization/
-# activate :i18n, :mount_at_root => :fr
+activate :i18n, :mount_at_root => :fr
 
 # Categories
 # https://middlemanapp.com/advanced/sitemap/#using-the-sitemap-in-config-rb

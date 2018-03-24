@@ -1,0 +1,18 @@
+fr:
+  follow_me: Suivez-moi !
+  tweets_from: Tweets de
+  contact_me: Contactez-moi !
+  form_placeholder: Bonjour, Nous aimerions une application pour trouver des oeuvres d'art. Pourriez-vous la réaliser ? Merci, Signé Cat's Eyes.
+  form_send: Envoyer
+  footer_copyright: Tous droits réservés
+  footer_send_message: Envoyez-moi un message !
+  index_title: Céline Martinet Sanchez, développeuse full stack à Paris
+  portfolio_title: Projets réalisés
+  index_subtitle: Développeuse full-stack et formatrice
+  footer_presentation: >
+    <p>
+      Freelance depuis quatre ans, je suis développeuse full stack Ruby et Python.
+    </p>
+    <p>Je me suis consacrée à de nombreux projets passionnants, dont ma propre startup (Cohome) et des formations pour adultes.</p>
+    <p>J'ai notamment créé un parcours de formation de niveau Licence pour OpenClassrooms : <a href="https://openclassrooms.com/paths/developpeur-se-dapplication-python" target="_blank">Développeur·se Python</a> !</p>
+    <p>Quand je ne code pas, j'aime rire et randonner !</p>

@@ -7,7 +7,7 @@
               <div class="button-group filter-button-group list-inline" data-toggle="buttons"">
                 <button type="button" data-filter="*" class="btn btn-outline-info active" data-toggle="button" aria-pressed="true">Tout</button>
                 <% data.tags.each do |tag|%>
-                    <button type="button" data-filter=".<%= tag.id %>" class="btn btn-outline-info" data-toggle="button" aria-pressed="false" autocomplete="off"><%= tag.name %></button>
+                    <button type="button" data-filter=".<%= tag.id %>" class="btn btn-outline-info" data-toggle="button" aria-pressed="false" autocomplete="off"><%= tag.send(I18n.locale).name %></button>
                 <% end %>
               </div>
 
