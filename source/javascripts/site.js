@@ -3,22 +3,26 @@
    ========================================================================== */
 
 $(window).on('load', function(){ // makes sure the whole site is loaded
-"use strict";
+    "use strict";
     $('#status').fadeOut(); // will first fade out the loading animation
     $('#preloader').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website.
     $('body').delay(350).css({'overflow':'visible'});
+})
+
+$(document).ready(function(){
+  $('#isotope').masonry()
 })
 
 /* ==========================================================================
    Widget Toggle
    ========================================================================== */
 
-$(function() {
-    $('#widget a.toggle').click(function(e){
-        e.preventDefault();
-        $(this).prev("div.widget_container").slideToggle(200);
-    });
-});
+// $(function() {
+//     $('#widget a.toggle').click(function(e){
+//         e.preventDefault();
+//         $(this).prev("div.widget_container").slideToggle(200);
+//     });
+// });
 
 /* ==========================================================================
    Parallax Header
@@ -57,79 +61,79 @@ scrollFade($('header article')
    Scroll To Navigation
    ========================================================================== */
 
-$(function() {
-    $('nav ul li a').bind('click',function(event){
-        var $anchor = $(this);
+// $(function() {
+//     $('nav ul li a').bind('click',function(event){
+//         var $anchor = $(this);
         
-        $('html, body').stop().animate({
-            scrollTop: $($anchor.attr('href')).offset().top
-        }, 2000,'easeInOutExpo');
-        event.preventDefault();
-    });
-});
+//         $('html, body').stop().animate({
+//             scrollTop: $($anchor.attr('href')).offset().top
+//         }, 2000,'easeInOutExpo');
+//         event.preventDefault();
+//     });
+// });
 
-$('.ribbon').click(function (e) {
-    //e.stopPropagation();
-    $('body,html').animate({ scrollTop: 0 });
-    //return false;
-});
+// $('.ribbon').click(function (e) {
+//     //e.stopPropagation();
+//     $('body,html').animate({ scrollTop: 0 });
+//     //return false;
+// });
 
-(function($) {
+// (function($) {
 
-  /**
-   * Copyright 2012, Digital Fusion
-   * Licensed under the MIT license.
-   * http://teamdf.com/jquery-plugins/license/
-   *
-   * @author Sam Sehnert
-   * @desc A small plugin that checks whether elements are within
-   *     the user visible viewport of a web browser.
-   *     only accounts for vertical position, not horizontal.
-   */
+//   *
+//    * Copyright 2012, Digital Fusion
+//    * Licensed under the MIT license.
+//    * http://teamdf.com/jquery-plugins/license/
+//    *
+//    * @author Sam Sehnert
+//    * @desc A small plugin that checks whether elements are within
+//    *     the user visible viewport of a web browser.
+//    *     only accounts for vertical position, not horizontal.
+   
 
-  $.fn.visible = function(partial) {
+//   $.fn.visible = function(partial) {
     
-      var $t            = $(this),
-          $w            = $(window),
-          viewTop       = $w.scrollTop(),
-          viewBottom    = viewTop + $w.height(),
-          _top          = $t.offset().top,
-          _bottom       = _top + $t.height(),
-          compareTop    = partial === true ? _bottom : _top,
-          compareBottom = partial === true ? _top : _bottom;
+//       var $t            = $(this),
+//           $w            = $(window),
+//           viewTop       = $w.scrollTop(),
+//           viewBottom    = viewTop + $w.height(),
+//           _top          = $t.offset().top,
+//           _bottom       = _top + $t.height(),
+//           compareTop    = partial === true ? _bottom : _top,
+//           compareBottom = partial === true ? _top : _bottom;
     
-    return ((compareBottom <= viewBottom) && (compareTop >= viewTop));
+//     return ((compareBottom <= viewBottom) && (compareTop >= viewTop));
 
-  };
+//   };
     
-})(jQuery);
+// })(jQuery);
 
-$(window).scroll(function(event) {
+// $(window).scroll(function(event) {
   
-  $("section").each(function(i, el) {
-    var el = $(el);
-    if (el.visible(true)) {
-      el.addClass("animated"); 
-    } 
-  });
+//   $("section").each(function(i, el) {
+//     var el = $(el);
+//     if (el.visible(true)) {
+//       el.addClass("animated"); 
+//     } 
+//   });
   
-});
+// });
 
 /* ==========================================================================
    Scroll To Navigation
    ========================================================================== */
 
 // Cache selectors
-var lastId,
-    topMenu = $("#top-menu"),
-    topMenuHeight = topMenu.outerHeight()+35,
-    // All list items
-    menuItems = topMenu.find("a"),
-    // Anchors corresponding to menu items
-    scrollItems = menuItems.map(function(){
-      var item = $($(this).attr("href"));
-      if (item.length) { return item; }
-    });
+// var lastId,
+//     topMenu = $("#top-menu"),
+//     topMenuHeight = topMenu.outerHeight()+35,
+//     // All list items
+//     menuItems = topMenu.find("a"),
+//     // Anchors corresponding to menu items
+//     scrollItems = menuItems.map(function(){
+//       var item = $($(this).attr("href"));
+//       if (item.length) { return item; }
+//     });
 
 // Bind click handler to menu items
 // so we can get a fancy scroll animation
@@ -169,177 +173,177 @@ var lastId,
    Mobile Navigation
    ========================================================================== */
 
-$("<select />").appendTo("nav");
+// $("<select />").appendTo("nav");
 
-// Create default option "Go to..."
-$("<option />", {
-   "selected": "selected",
-   "value"   : "",
-   "text"    : "Go to..."
-}).appendTo("nav select");
+// // Create default option "Go to..."
+// $("<option />", {
+//    "selected": "selected",
+//    "value"   : "",
+//    "text"    : "Go to..."
+// }).appendTo("nav select");
 
-// Populate dropdown with menu items
-$("nav ul li a").each(function() {
- var el = $(this);
- $("<option />", {
-     "value"   : el.attr("href"),
-     "text"    : el.text()
- }).appendTo("nav select");
-});
-$("nav select").change(function() {
-  window.location = $(this).find("option:selected").val();
-});
+// // Populate dropdown with menu items
+// $("nav ul li a").each(function() {
+//  var el = $(this);
+//  $("<option />", {
+//      "value"   : el.attr("href"),
+//      "text"    : el.text()
+//  }).appendTo("nav select");
+// });
+// $("nav select").change(function() {
+//   window.location = $(this).find("option:selected").val();
+// });
 
-(function ($) {
-  // hash change handler
-  function hashchange () {
-    var hash = window.location.hash
-      , el = $('ul.tabs [href*="' + hash + '"]')
-      , content = $(hash)
+// (function ($) {
+//   // hash change handler
+//   function hashchange () {
+//     var hash = window.location.hash
+//       , el = $('ul.tabs [href*="' + hash + '"]')
+//       , content = $(hash)
 
-    if (el.length && !el.hasClass('active') && content.length) {
-      el.closest('.tabs').find('.active').removeClass('active');
-      el.addClass('active');
-      content.show().addClass('active').siblings().hide().removeClass('active');
-    }
-  }
+//     if (el.length && !el.hasClass('active') && content.length) {
+//       el.closest('.tabs').find('.active').removeClass('active');
+//       el.addClass('active');
+//       content.show().addClass('active').siblings().hide().removeClass('active');
+//     }
+//   }
 
-  // listen on event and fire right away
-  $(window).on('hashchange.skeleton', hashchange);
-  hashchange();
-  $(hashchange);
-})(jQuery);
+//   // listen on event and fire right away
+//   $(window).on('hashchange.skeleton', hashchange);
+//   hashchange();
+//   $(hashchange);
+// })(jQuery);
 
 /* ==========================================================================
    Social Places / Brands
    ========================================================================== */
 
-if($('.social-wrapper .social').length == true) {
-    var brandsWrapper = $('.social-wrapper .social'),
-        brandsHeight = parseInt(brandsWrapper.css('height').replace('px', '')),
-        brandsWidth = brandsWrapper.width(),
-        brandNode = brandsWrapper.find('div'),
-        showMore = $('<a>', {
-                        'class': 'show-more',
-                        'href': '#',
-                        'html': '<span>Show more</span><i class="fa fa-angle-down"></i>'
-                    }),
-        showLess = $('<a>', {
-                        'class': 'show-less',
-                        'href': '#',
-                        'html': '<span>Show less</span><i class="fa fa-angle-up"></i>'
-                    }),
-        trueBrandsWidth = 0,
-        brandNodeMarginTop,
-        brandNodeMarginLeft,
-        trueBrandsHeight;
+// if($('.social-wrapper .social').length == true) {
+//     var brandsWrapper = $('.social-wrapper .social'),
+//         brandsHeight = parseInt(brandsWrapper.css('height').replace('px', '')),
+//         brandsWidth = brandsWrapper.width(),
+//         brandNode = brandsWrapper.find('div'),
+//         showMore = $('<a>', {
+//                         'class': 'show-more',
+//                         'href': '#',
+//                         'html': '<span>Show more</span><i class="fa fa-angle-down"></i>'
+//                     }),
+//         showLess = $('<a>', {
+//                         'class': 'show-less',
+//                         'href': '#',
+//                         'html': '<span>Show less</span><i class="fa fa-angle-up"></i>'
+//                     }),
+//         trueBrandsWidth = 0,
+//         brandNodeMarginTop,
+//         brandNodeMarginLeft,
+//         trueBrandsHeight;
 
-    // Waiting for images loaded
-    // and calculate true width brands wrapper
-    $(window).load(function(){
-        brandNode.each(function(i){
+//     // Waiting for images loaded
+//     // and calculate true width brands wrapper
+//     $(window).load(function(){
+//         brandNode.each(function(i){
 
-            // Margin top css value
-            brandNodeMarginTop = parseInt($(this).css('marginTop').replace('px', '') * 2);
-            // Margin left css value
-            brandNodeMarginLeft = parseInt($(this).css('marginLeft').replace('px', '') * 2);
+//             // Margin top css value
+//             brandNodeMarginTop = parseInt($(this).css('marginTop').replace('px', '') * 2);
+//             // Margin left css value
+//             brandNodeMarginLeft = parseInt($(this).css('marginLeft').replace('px', '') * 2);
 
-            // Calculate true width
-            trueBrandsWidth += ($(this).width() + brandNodeMarginLeft) + (brandNode.length * 5);
+//             // Calculate true width
+//             trueBrandsWidth += ($(this).width() + brandNodeMarginLeft) + (brandNode.length * 5);
 
-            // Calculate true height
-            trueBrandsHeight = Math.ceil(trueBrandsWidth / brandsWidth) * ($(this).height() + brandNodeMarginTop);
+//             // Calculate true height
+//             trueBrandsHeight = Math.ceil(trueBrandsWidth / brandsWidth) * ($(this).height() + brandNodeMarginTop);
 
-            // If brands wrapper width is outer container, add show more button
-            if((trueBrandsWidth) >= brandsWidth) {
-                brandsWrapper.after(showMore).after(showLess);
-                showLess.hide();
-            }
-        });
-    });
+//             // If brands wrapper width is outer container, add show more button
+//             if((trueBrandsWidth) >= brandsWidth) {
+//                 brandsWrapper.after(showMore).after(showLess);
+//                 showLess.hide();
+//             }
+//         });
+//     });
 
-    // Show more toggle button click
-    showMore.click(function(){
+//     // Show more toggle button click
+//     showMore.click(function(){
 
-        // Expand wrapper
-        brandsWrapper.css({height: trueBrandsHeight + 20});
-        showMore.hide();
-        showLess.show();
+//         // Expand wrapper
+//         brandsWrapper.css({height: trueBrandsHeight + 20});
+//         showMore.hide();
+//         showLess.show();
 
-        return false;
-    });
+//         return false;
+//     });
 
-    // Show less button
-    showLess.click(function(){
+//     // Show less button
+//     showLess.click(function(){
 
-        // Collapse wrapper
-        brandsWrapper.css({height: brandsHeight});
-        showLess.hide();
-        showMore.show();
+//         // Collapse wrapper
+//         brandsWrapper.css({height: brandsHeight});
+//         showLess.hide();
+//         showMore.show();
 
-        return false;
-    });
-}
+//         return false;
+//     });
+// }
 
 /* ==========================================================================
    Animated Skillbars
    ========================================================================== */
 
-function isScrolledIntoView(id){
-    var elem = "#" + id;
-    var docViewTop = $(window).scrollTop();
-    var docViewBottom = docViewTop + $(window).height();
+// function isScrolledIntoView(id){
+//     var elem = "#" + id;
+//     var docViewTop = $(window).scrollTop();
+//     var docViewBottom = docViewTop + $(window).height();
 
-    if ($(elem).length > 0){
-        var elemTop = $(elem).offset().top;
-        var elemBottom = elemTop + $(elem).height();
-    }
+//     if ($(elem).length > 0){
+//         var elemTop = $(elem).offset().top;
+//         var elemBottom = elemTop + $(elem).height();
+//     }
 
-    return ((elemBottom >= docViewTop) && (elemTop <= docViewBottom)
-      && (elemBottom <= docViewBottom) &&  (elemTop >= docViewTop) );
-}
+//     return ((elemBottom >= docViewTop) && (elemTop <= docViewBottom)
+//       && (elemBottom <= docViewBottom) &&  (elemTop >= docViewTop) );
+// }
 
-$(window).scroll(function(){
-    $('.skillbar').each(function(){
-        if ($(this).hasClass('notinview')){
-            $(this).find('.pointerval .value').html('0%');
-            if (isScrolledIntoView($(this).attr('id'))){
-                $(this).removeClass('notinview');
-                $(this).find('.skill-bar-percent').animate({
-                    width:jQuery(this).closest('.skillbar').attr('data-percent')
-                },{
-                    duration : 2000, //the duration in ms of the bar animation
-                    easing: 'easeInOutExpo', //the easing effect of the animation
-                    step: function(now, fx){
-                        $(this).siblings('.pointerval').css('left',parseFloat(now, 10)+'%').find('.value').text(parseInt(now, 10)+'%');
-                    }
-                });       
-            }
-        }
-    });
-});
+// $(window).scroll(function(){
+//     $('.skillbar').each(function(){
+//         if ($(this).hasClass('notinview')){
+//             $(this).find('.pointerval .value').html('0%');
+//             if (isScrolledIntoView($(this).attr('id'))){
+//                 $(this).removeClass('notinview');
+//                 $(this).find('.skill-bar-percent').animate({
+//                     width:jQuery(this).closest('.skillbar').attr('data-percent')
+//                 },{
+//                     duration : 2000, //the duration in ms of the bar animation
+//                     easing: 'easeInOutExpo', //the easing effect of the animation
+//                     step: function(now, fx){
+//                         $(this).siblings('.pointerval').css('left',parseFloat(now, 10)+'%').find('.value').text(parseInt(now, 10)+'%');
+//                     }
+//                 });       
+//             }
+//         }
+//     });
+// });
 
-function sliding_horizontal_graph(id, speed){
-    $("#" + id + " li span").each(function(i){                                  
-        var cur_li = $("#" + id + " li").eq(i).find("span");
-        var w = cur_li.attr("title");
-        cur_li.animate({width: w + "%"}, speed);
-    })
-}
-function graph_init(id, speed){
-    $(window).scroll(function(){
-        if ($('#'+id).hasClass('notinview')){       
-            if (isScrolledIntoView(id)){
-                $('#'+id).removeClass('notinview');
-                sliding_horizontal_graph(id, speed);
-            }
-        }
-    });
+// function sliding_horizontal_graph(id, speed){
+//     $("#" + id + " li span").each(function(i){                                  
+//         var cur_li = $("#" + id + " li").eq(i).find("span");
+//         var w = cur_li.attr("title");
+//         cur_li.animate({width: w + "%"}, speed);
+//     })
+// }
+// function graph_init(id, speed){
+//     $(window).scroll(function(){
+//         if ($('#'+id).hasClass('notinview')){       
+//             if (isScrolledIntoView(id)){
+//                 $('#'+id).removeClass('notinview');
+//                 sliding_horizontal_graph(id, speed);
+//             }
+//         }
+//     });
     
-    if (isScrolledIntoView(id)){
-        sliding_horizontal_graph(id, speed);
-    }
-}
+//     if (isScrolledIntoView(id)){
+//         sliding_horizontal_graph(id, speed);
+//     }
+// }
 
 
 
@@ -444,17 +448,17 @@ $('#slider').slick({
    Project details
    ========================================================================== */
 
-$('#projects a').on('click', function(){
-    var $data = $(this).data();
-    if ($(this).hasClass('openBox')) {
-      $('#openBox' + $data.id).remove();
-      $(this).removeClass('openBox');
-    } else {
-      $(this).addClass('openBox');
-      var $detailsBox = "<ul class='filter-web' id='openBox" + $data.id +"'>" + $data.link + "</ul>";
-      $(this).parent('.filter-web').append($detailsBox);
-    }
-});
+// $('#projects a').on('click', function(){
+//     var $data = $(this).data();
+//     if ($(this).hasClass('openBox')) {
+//       $('#openBox' + $data.id).remove();
+//       $(this).removeClass('openBox');
+//     } else {
+//       $(this).addClass('openBox');
+//       var $detailsBox = "<ul class='filter-web' id='openBox" + $data.id +"'>" + $data.link + "</ul>";
+//       $(this).parent('.filter-web').append($detailsBox);
+//     }
+// });
 
 var $filtered_grid = $('#isotope').isotope({
   // options
