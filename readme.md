@@ -1,18 +1,15 @@
-# Commands
+# [Portefolio](https://www.hello-birds.com) de Céline Martinet Sanchez
 
-- server: `middleman server`
-- build: `middleman build` => to build/
+Site statique montrant les projets réalisés en Python et en Ruby. Gentiment hébergé par Github Pages. [Voir le site](https://www.hello-birds.com)
 
-Install a new package in Package control: cmd+shift+p
-Puis taper `install` + entrée. Et entrer le nom du paquet à installer.
+# Stack
 
-# A ajouter ?
-- France Digitale
-- Wordpress ? => passworld
-- Prestashop ? => G.Alaix
-- Miimosa ?
-- La Bastide ?
-- Pass Art
-- Villa Waringin
-- Best Place To Stay
+- Docker
+- Middleman
+- Ruby
+- Masonry et Isotope en JS.
 
+# Développement
+
+Vous avez juste à lancer la commande `docker-compose up` et à laisser la magie opérer ! ✨
+Puis rendez-vous sur `localhost:4567` pour voir le site.
