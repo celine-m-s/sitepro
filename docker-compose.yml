@@ -1,0 +1,14 @@
+version: '2'
+
+services:
+  site:
+    build: 
+      context: .
+      dockerfile: ./Dockerfile
+    ports: 
+      - "4567:4567"
+    command: >
+      bash -c "middleman build --verbose && 
+               middleman server"
+    volumes:
+      - ./:/code
