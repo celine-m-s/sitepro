@@ -1,6 +1,11 @@
 FROM ruby:2.6
 ENV LANG C.UTF-8
 
+RUN apt-get update -y
+RUN apt-get install vim -y
+
+RUN mkdir ~/.ssh
+
 COPY ./Gemfile Gemfile
 COPY ./Gemfile.lock Gemfile.lock
 
