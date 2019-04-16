@@ -5,3 +5,4 @@
 build/
 1_old
 .keep
+secrets/*
