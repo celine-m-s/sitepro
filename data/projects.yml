@@ -1,4 +1,52 @@
 fr:
+  - effilab:
+    id: effilab
+    title: Mise en production pour Data Scientists
+    description: >
+        <p>Travail en collaboration avec des data-scientists dans la mise en place d'algorithmes en Python (phase de production).</p>
+    picture: 'projects/effilab.png'
+    pictureAlt: page d'accueil Effilab
+    stack:
+      - Python 3
+      - Flask
+      - Celery
+      - Flower
+      - Postgresql
+      - Jupyter
+      - Gitlab CI
+      - Docker
+      - Pytest
+    tags:
+      - python
+      - flask
+      - devops
+  - hammavisor:
+    id: hammavisor
+    title: Hammamvisor
+    description: >
+      <p>🚧 PROJET EN COURS DE REALISATION 🚧</p>
+      <p>Trouvez le spa qui vous correspond !</p>
+      <p>Notre plateforme réunit tous les spas d'Ile-de-France et vous aide à trouver celui de vos rêves. Hammam individuel ou collectif ? Où aller avec des enfants ? Quel spa a les meilleurs massages ?</p>
+      <p>Tous les spas sont répertoriés avec leurs commentaires pour vous aider à faire le meilleur choix.</p>
+    dev_description:
+      <p>Forum créé grâce à <a href="https://www.discourse.org" target="_blank">Discourse</a>. Merci ! 😉<p/>
+      <p>API utilisant Django Rest Framework et des données provenant de Google.</p> 
+      <p>Couverture de test supérieure à <b>90%</b>. Fait en TDD.</p>
+    picture: 'projects/hammamvisor.png'
+    pictureAlt: forum autour des hammams
+    stack:
+      - Python 3
+      - DRF
+      - Pytest
+      - Docker
+      - Celery
+      - RabbitMQ
+    tags:
+      - python
+      - django
+      - devops
+    url: 'https://forum.hammams.fr'
+    more: Rejoindre le forum
   - oc:
     id: oc
     title: Parcours en Python pour OpenClassrooms
@@ -11,7 +59,7 @@ fr:
     url: 'https://openclassrooms.com/paths/developpeur-se-dapplication-python'
     more: Voir la page du parcours
     stack: 
-      - Python
+      - Python 3
       - Django
       - Flask
       - TDD
@@ -254,6 +302,54 @@ fr:
 # ENGLISH
 
 en:
+  - effilab:
+    id: effilab
+    title: Putting Data Scientists algorithm into production 
+    description: >
+        <p>Working with data scientists in the release of their algorithms in Python.</p>
+    dev_description: ''
+    picture: 'projects/effilab.png'
+    pictureAlt: Effilab home page
+    stack:
+      - Python
+      - Flask
+      - Celery
+      - Flower
+      - Postgresql
+      - Jupyter
+      - Gitlab CI
+      - Docker
+      - Pytest
+    tags:
+      - python
+      - flask
+      - devops
+  - hammavisor:
+    id: hammavisor
+    title: Hammamvisor
+    description: >
+      <p>🚧 WORK IN PROGRESS 🚧</p>
+      <p>Find the spa made for you!</p>
+      <p>Our platform gathers all spas in Ile-de-France and helps you find the one that suits your needs. Individual hammam or collective one? Where can you go with children? Are their massages nice? All spas are listed with their reviews to help you do the best choice. 
+    dev_description:
+      <p>Forum created thanks to <a href="https://www.discourse.org" target="_blank">Discourse</a>. Thanks ! 😉<p/>
+      <p>API using Django Rest Framework and data coming from Google.</p> 
+      <p>Test coverage > <b>90%</b>. Done in ❤️ TDD.</p>
+    picture: 'projects/hammamvisor.png'
+    pictureAlt: forum autour des hammams 
+    stack:
+      - Python 3
+      - DRF
+      - Pytest
+      - Docker
+      - Celery
+      - RabbitMQ
+    tags:
+      - python
+      - django
+      - devops
+    url: 'https://forum.hammams.fr'
+    more: Join the forum
   - oc:
     id: oc
     title: Python training path for OpenClassrooms
