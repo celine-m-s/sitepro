@@ -1,15 +1,14 @@
 deploy:
-	# move ssh key to secrets
-# 	docker-compose run site bash -c "middleman build"
-	cp ~/.ssh/id_rsa.pub secrets/id_rsa.pub
-	cp ~/.ssh/id_rsa secrets/id_rsa
+	docker-compose run site bash -c "middleman build"
 
-	# add this key to container
-	docker-compose run site bash -c 'cp secrets/id_rsa.pub ~/.ssh/id_rsa.pub && \
-	cp secrets/id_rsa ~/.ssh/id_rsa && \
+	# move SSH configuration to secrets
+	rm -rf secrets/*
+	cp ~/.ssh/* secrets/
+
+	# change container SSH configuration
+	docker-compose run site bash -c 'cp secrets/* ~/.ssh/ && \
 	git config --global user.email "celine.martinet.sanchez@gmail.com" && \
 	git config --global user.name "Docker" && \
-	git checkout -b new_version && \
-	git push origin new_version'
+	middleman deploy'
 
-# 	docker-compose run site bash -c "middleman deploy"
+	rm -rf secrets/*

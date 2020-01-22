@@ -32,7 +32,7 @@
                         </ul>
                         <% unless project.url.nil? %>
                         <div class="card-body" style="padding-bottom: 0;">
-                          <a href="<%= project.url %>" class="card-link" target="_link"><%= project.more %></a>
+                          <a href="<%= project.url %>" class="card-link" target="_link" data-type="button"><%= project.more %></a>
                         </div>
                         <% end %>
 

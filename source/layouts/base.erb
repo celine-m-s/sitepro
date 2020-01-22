@@ -66,10 +66,10 @@
             </div>
         </div>
         <div class="overlay">
-<p id="languages"><a href="/en">English</a>  ||  <a href="/">Français</a></p>
+<p id="languages"><a href="/en" data-type="link">English</a>  ||  <a href="/" data-type="link">Français</a></p>
             <article>
               <div class="top-logo-wrapper">
-                <a href="/"><%= image_tag 'logo-cms-white.svg', alt: 'Logo Céline Martinet Sanchez', class: 'top-logo' %></a>
+                <a href="/" data-type="link"><%= image_tag 'logo-cms-white.svg', alt: 'Logo Céline Martinet Sanchez', class: 'top-logo' %></a>
               </div>
             <% if current_page.url == '/' || current_page.url == '/en' %>
                 <h1 class="header-name">Céline MS</h1>
@@ -107,9 +107,9 @@
                 </div>
             </div>
             <ul class="social-networks list-inline text-center">
-              <li class="list-inline-item"><a href="http://fr.linkedin.com/in/celinemartinet1/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
-              <li class="list-inline-item"><a href="https://github.com/celine-m-s" target="_blank"><i class="fab fa-github-square"></i></a> </li>
-              <li class="list-inline-item"><a href="https://twitter.com/celine_m_s" target="_blank" ><i class="fab fa-twitter-square"></i></a></li>
+              <li class="list-inline-item"><a href="http://fr.linkedin.com/in/celinemartinet1/" target="_blank" data-type="icon"><i class="fab fa-linkedin"></i></a></li>
+              <li class="list-inline-item"><a href="https://github.com/celine-m-s" target="_blank" data-type="icon"><i class="fab fa-github-square"></i></a> </li>
+              <li class="list-inline-item"><a href="https://twitter.com/celine_m_s" target="_blank" data-type="icon"><i class="fab fa-twitter-square"></i></a></li>
             </ul>
         </div>
     </footer>
@@ -121,7 +121,7 @@
                     &copy; Céline Martinet Sanchez. <%= t :footer_copyright %>
                 </div>
                 <div class="col-sm-6 text-center mobile-center">
-                         <a href="celine@hello-birds.com"><i class="fa fa-envelope" style="margin-right: 5px;"></i><%= t :footer_send_message %></a>
+                         <a href="celine@hello-birds.com" data-type="link"><i class="fa fa-envelope" style="margin-right: 5px;"></i><%= t :footer_send_message %></a>
                     </p>
                 </div>
             </div>
@@ -130,7 +130,7 @@
 
     <div id="preloader"><div id="status"><div class="spinner"></div></div></div>
 
-    <%# if build? %>
+    <% if build? %>
       <script>
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -156,7 +156,7 @@
 
 
       </script>
-    <%# end %>
+    <% end %>
 
 
         <!-- Scripts -->
