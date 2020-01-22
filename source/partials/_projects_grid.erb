@@ -16,7 +16,7 @@
                 <% projects.each do |project| %>
                 <div class="isotope-item <%= project.tags.join(' ') %>">
                     <li class="card filter-web">
-                      <a href="<%= project.url %>" target="_blank"><img class="card-img-top" src="<%= image_path(project.picture) %>" alt="<%= project.pictureAlt %>"></a>
+                      <a href="<%= project.url %>" target="_blank" data-type="image"><img class="card-img-top" src="<%= image_path(project.picture) %>" alt="<%= project.pictureAlt %>"></a>
                       <div class="card-body">
                         <h5 class="card-title"><%= project.title %></h5>
                         <p class="card-text"><%= project.description %></p>
@@ -35,13 +35,13 @@
                           <a href="<%= project.url %>" class="card-link" target="_link"><%= project.more %></a>
                         </div>
                         <% end %>
-                        
+
                       </div>
                     </li>
                 </div>
 
 
-<!-- 
+<!--
                   <li class="filter-web isotope-item <%= project.tags.join(' ') %>">
                     <a data-id="<%= project.id %>" data-href="<%= project.subpageUrl %>" data-title="<%= project.title %>" data-description="<%= project.description %>", data-link="<%= project.more %>">
                       <figure>
