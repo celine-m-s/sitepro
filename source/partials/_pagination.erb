@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="post-pagination">
+    <div class="row">
+      <% if paginate && num_pages > 1 %>
+        <p>Page <%= page_number %> of <%= num_pages %></p>
+
+        <% if prev_page %>
+          <p><%= link_to 'Previous page', prev_page %></p>
+        <% end %>
+
+        <% if next_page %>
+          <span class="paginateNext"><%= link_to 'Next page', next_page, class: "next" %></span>
+        <% end %>
+      <% end %>
+  </div>
+</div>

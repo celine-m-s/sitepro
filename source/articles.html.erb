@@ -1,0 +1,10 @@
+---
+layout: base
+---
+
+<%= partial 'partials/last_articles', :locals => { 
+    :title => "Derniers articles",
+    :subtitle => "Sous-titre",
+    :articles => blog.articles
+    }
+%> 

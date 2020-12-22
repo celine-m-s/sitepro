@@ -1,0 +1,19 @@
+---
+pageable: true
+layout: base
+---
+
+<ul>
+  <% blog.articles.group_by {|a| a.date.year }.each do |year, articles| %>
+    <li>
+      <h5><%= year %></h5>
+      <ul>
+        <% articles.each do |article| %>
+          <li><a href="<%= article.url %>"><%= article.title %></a></li>
+        <% end %>
+      </ul>
+    </li>
+  <% end %>
+</ul>
+
+<% partial 'partials/pagination' %>

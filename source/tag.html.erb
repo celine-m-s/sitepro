@@ -1,0 +1,26 @@
+---
+pageable: true
+per_page: 3
+layout: base
+---
+
+<%#  partial 'partials/last_articles', :locals => { 
+    :title => "Articles tagged" + "`" + tagname + "`" ,
+    :articles => page_articles
+    }
+%>
+
+<ul>
+  <% blog.tags.each do |tag, articles| %>
+    <li>
+      <h5><%= tag %></h5>
+      <ul>
+        <% articles.each do |article| %>
+          <li><a href="<%= article.url %>"><%= article.title %></a></li>
+        <% end %>
+      </ul>
+    </li>
+  <% end %>
+</ul>
+
+<% partial 'partials/pagination' %>

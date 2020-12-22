@@ -1,0 +1,77 @@
+---
+layout: base
+---  
+
+<% @title = "Contactez-moi" %>
+<% @description = "Description" %>
+
+<% content_for :page_picture do %>
+  <% image_path('bg/cover/cover-1.jpg') %>
+<% end %>
+
+
+<!-- How to Reach Me -->
+<section id="getintouch" class="fadeInRightBig">
+    <div class="container">
+        <h1 class="title">
+            Titre
+        </h1>
+    </div>
+
+    <div class="container">        
+        <h2 class="sub-title">
+            Sous-titre
+        </h2>
+
+        <div class="row">
+            <div class="col-sm-8">
+                <form class="contact" id="contactForm">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <label class="required" for="name">
+                                Nom
+                                <input type="text" name="name" id="name" placeholder="Cylia Chamade" required>
+                            </label>
+                        </div>
+                        <div class="col-sm-6">
+                            <label class="required" for="email">
+                                Prénom
+                                <input type="email" name="email" id="email" placeholder="cylia.chamade@cats-eye.com" required>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="row">
+
+                    </div>
+                    <label class="required">
+                        Message
+                        <textarea rows="7" placeholder="Placeholder" required type="textarea" name="message"></textarea>
+                    </label>
+                    <div class="add-sm-top text-center">
+                        <button class="btn btn-danger" type="submit" onClick="_gaq.push(['_trackEvent', 'Contact', 'Send', 'fr']);"><i class="fa fa-envelope"></i> &nbsp; Envoyer</button>
+                    </div>
+                </form>
+                <div class="col-md-12" id="formSuccessMessage" style="display:none;">
+                    Envoyer
+                </div>
+                <div class="col-md-12" id="formErrorMessage" style="display:none;">
+                    Erreur
+                </div>
+            </div>
+            <div class="col-sm-4 contact-address">
+                <h3 class="heading turquoise add-xs-top">Titre</h3>
+                <p>Sous-titre</p>
+
+                <!-- <h3 class="heading blue add-sm-top">Social Networks</h3> -->
+                <address><abbr title="Address"><i class="fa fa-thumb-tack"></i></abbr>Adresse</address>
+                <div class="social-networks">                
+                    <a href="http://fr.linkedin.com/in/celinemartinet1/" target="_blank"><i class="fa fa-linkedin-square"></i></a>
+                    <a href="https://github.com/celine-m-s" target="_blank"><i class="fa fa-github-square"></i></a>                     
+                    <a href="https://www.facebook.com/profile.php?id=100008250871769"><i class="fa fa-facebook-square"></i></a>
+                    <a href="https://twitter.com/celine_m_s" target="_blank" ><i class="fa fa-twitter-square"></i></a>
+                    <a href="https://plus.google.com/u/0/+CelineMartinetSanchez/posts" target="_blank" ><i class="fa fa-google-plus-square"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> 
