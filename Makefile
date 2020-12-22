@@ -3,6 +3,7 @@ deploy:
 
 	# move SSH configuration to secrets
 	rm -rf secrets/*
+	mkdir -p secrets
 	cp ~/.ssh/* secrets/
 
 	# change container SSH configuration
@@ -12,3 +13,6 @@ deploy:
 	middleman deploy'
 
 	rm -rf secrets/*
+
+run:
+	docker-compose up

@@ -14,5 +14,3 @@ RUN bundle install
 COPY . code
 WORKDIR code
 EXPOSE 4567
-
-# CMD middleman build
