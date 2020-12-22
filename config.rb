@@ -18,6 +18,10 @@ page '/*.txt', layout: false
 # With alternative layout
 # page '/path/to/file.html', layout: 'other_layout'
 
+activate :blog do |blog|
+  # set options on blog
+end
+
 # Proxy pages
 # https://middlemanapp.com/advanced/dynamic-pages/
 
@@ -56,7 +60,7 @@ configure :build do
 end
 
 # https://middlemanapp.com/advanced/localization/
-activate :i18n, :mount_at_root => :fr
+# activate :i18n, :mount_at_root => :fr
 
 # Categories
 # https://middlemanapp.com/advanced/sitemap/#using-the-sitemap-in-config-rb
