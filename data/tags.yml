@@ -1,40 +1,17 @@
 - id: ror
-  fr: 
-    name: Ruby on Rails
-  en:
-    name: Ruby on Rails
+  name: Ruby on Rails
 - id: django
-  fr:
-    name: Django
-  en:
-    name: Django
+  name: Django
 - id: python
-  fr: 
-    name: Python
-  en: 
-    name: Python
+  name: Python
 - id: ruby
-  fr: 
-    name: Ruby
-  en: 
-    name: Ruby
+  name: Ruby
 - id: devops
-  fr: 
-    name: DevOps
-  en: 
-    name: DevOps
+  name: DevOps
 - id: JS
-  fr: 
-    name: Javascript
-  en: 
-    name: Javascript
+  name: Javascript
 - id: flask
-  fr: 
-    name: Flask
-  en: 
-    name: Flask
+  name: Flask
 - id: training
-  fr: 
-    name: Formation
-  en: 
-    name: Training
+  name: Formation
+  

@@ -9,7 +9,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title><%= yield_content(:page_title) || t(:index_title) %></title>
+    <title><%= yield_content(:page_title) || "Céline Martinet Sanchez, développeuse full stack à Paris" %></title>
 
     <!-- if you're lost -->
     <%# if current_page.url == "/404.html" %>
@@ -77,7 +77,7 @@
                 <h2 class="header-name">Céline MS</h2>
 
             <% end %>
-                <h2><%= t :index_subtitle %></h2>
+                <h2>TITRE</h2>
             </article>
         </div>
     </header>
@@ -89,20 +89,20 @@
         <div class="footer-links container">
             <div class="row">
                 <div class="col-sm-4 offset-md-2">
-                    <h4><%= t :follow_me %></h4>
-                       <a class="twitter-timeline" href="https://twitter.com/celine_m_s?ref_src=twsrc%5Etfw" data-height="220" data-theme="dark" data-link-color="#09A298"><%= t :tweets_from %> @CelineMartinetS</a>
+                    <h4>Suivez-moi !</h4>
+                       <a class="twitter-timeline" href="https://twitter.com/celine_m_s?ref_src=twsrc%5Etfw" data-height="220" data-theme="dark" data-link-color="#09A298">Gazouillis de @CelineMartinetS</a>
                        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                 </div>
 
                 <div class="col-sm-4">
-                    <h4><%= t :contact_me %></h4>
+                    <h4>Contactez-moi !</h4>
                     <form action="#" id="contactForm">
                       <!-- the redirect_to is optional, the form will redirect to the referrer on submission -->
                       <input type='hidden' name='redirect_to' value='<the complete return url e.g. http://fooey.com/thank-you.html>' />
                       <input type='text' name='name' required placeholder="Cylia Chamade"/>
                       <input type='mail' name='email' required placeholder="cylia.chamade@cats-eye.com"/>
-                      <textarea type='textarea' name='message' required placeholder="<%= t :form_placeholder %>"></textarea>
-                      <input type='submit' value='<%= t :form_send %>' class="sendButton" onClick="_gaq.push(['_trackEvent', 'Contact_footer', 'Send', 'fr']);"/>
+                      <textarea type='textarea' name='message' required placeholder="Bonjour, Nous aimerions une application pour trouver des oeuvres d'art. Pourriez-vous la réaliser ? Merci, Signé Cat's Eyes."></textarea>
+                      <input type='submit' value='Envoyer' class="sendButton" onClick="_gaq.push(['_trackEvent', 'Contact_footer', 'Send', 'fr']);"/>
                     </form>
                 </div>
             </div>
@@ -118,10 +118,10 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-6 text-center">
-                    &copy; Céline Martinet Sanchez. <%= t :footer_copyright %>
+                    &copy; Céline Martinet Sanchez. Tous droits réservés
                 </div>
                 <div class="col-sm-6 text-center mobile-center">
-                         <a href="celine@hello-birds.com" data-type="link"><i class="fa fa-envelope" style="margin-right: 5px;"></i><%= t :footer_send_message %></a>
+                         <a href="celine@hello-birds.com" data-type="link"><i class="fa fa-envelope" style="margin-right: 5px;"></i>Envoyez-moi un message !</a>
                     </p>
                 </div>
             </div>
