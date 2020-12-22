@@ -19,7 +19,13 @@ page '/*.txt', layout: false
 # page '/path/to/file.html', layout: 'other_layout'
 
 activate :blog do |blog|
-  # set options on blog
+  # https://middlemanapp.com/basics/blogging/
+  # Put your article sources at cats/2013-11-12-best-cats.html and they will be written out to cats/2013/11/12/best-cats.html 
+  # without you having to specify a category in frontmatter. 
+  # You can also access the category extracted from the source
+  # path via current_article.metadata[:page]['category'].
+  blog.sources = "{category}/{year}-{month}-{day}-{title}.html"
+  blog.permalink = "{category}/{year}/{month}/{day}/{title}.html"
 end
 
 # Proxy pages

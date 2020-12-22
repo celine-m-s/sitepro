@@ -523,16 +523,17 @@ header.walking {
 /* ==========================================================================
    Slider
    ========================================================================== */
+$slider_size: 200px;
 
 .slider {
-    height: 400px;
+    height: $slider_size;
     margin: 0;
     overflow: hidden;
     width: 100%;
 }
 
 .slider .carousel {
-    height: 400px;
+    height: $slider_size;
     overflow: hidden;
     width: 100%;
     font-weight: normal;
