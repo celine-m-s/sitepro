@@ -1,0 +1,32 @@
+---
+layout: base
+---
+
+<% content_for(:page_title, "Céline Martinet Sanchez - Développeuse web et formatrice") %>
+
+<section id="projects">
+    <%= partial 'partials/projects_grid', :locals => {
+      :global_title => "Projets réalisés",
+      :projects => data.projects
+      } %>
+</section>
+
+<!-- <section id="presentation">
+    <div class="container">
+        <h2 class="text-center">Qui suis-je ?</h2>
+        <div class="row add-margin">
+            <div class="col-sm-4 offset-sm-1 col-md-3">
+                <%= image_tag("celine-martinet-sanchez.jpg", class: "img-fluid rounded-circle") %>
+            </div>
+            <div class="col-sm-4 col-md-6">
+              <p>
+                Freelance depuis 2014, je suis développeuse web et formatrice. Mon couple de prédilection : Python et HTML / CSS.
+              </p>
+              <p>Je me suis consacrée à de nombreux projets passionnants, dont ma propre startup (Cohome) et des formations pour adultes.</p>
+              <p>J'ai notamment créé un parcours de formation de niveau Licence pour OpenClassrooms : <a href="https://openclassrooms.com/fr/paths/68-developpeur-se-dapplication-python" target="_blank" data-type="link">Développeur Python</a> !</p>
+              <p>Quand je ne code pas, j'aime rire et randonner !</p>
+              <%= link_to 'En savoir plus', '/a-propos.html', class: "btn btn-info btn-sm" %>
+            </div>
+        </div>
+    </div>    
+</section> -->

@@ -1,3 +1,38 @@
+- itou:
+  id: itou
+  title: Les emplois de l'inclusion (Beta.gouv.fr)
+  description: >
+      <p>Développeuse Python / Django / front</p>
+  picture: 'projects/itou.png'
+  pictureAlt: page d'accueil Les emplois de l'inclusion
+  stack:
+    - Python 3
+    - Django
+    - Front (HTML / CSS / JS)
+    - Docker
+  tags:
+    - python
+    - django
+    - devops
+  url: 'http://emplois.inclusion.beta.gouv.fr'
+  more: Voir le site
+- lbb:
+  id: lbb
+  title: La Bonne Boite (Pôle emploi / Beta.gouv.fr)
+  description: >
+      <p>Développeuse Python</p>
+  picture: 'projects/lbb.png'
+  pictureAlt: page d'accueil La Bonne Boite, Pôle emploi
+  stack:
+    - Python 3
+    - Flask
+    - Docker
+    - Pytest
+  tags:
+    - python
+    - flask
+  url: 'http://labonneboite.pole-emploi.fr'
+  more: Voir le site
 - effilab:
   id: effilab
   title: Mise en production pour Data Scientists
@@ -23,10 +58,10 @@
   id: hammavisor
   title: Hammamvisor
   description: >
-    <p>🚧 PROJET EN COURS DE REALISATION 🚧</p>
     <p>Trouvez le spa qui vous correspond !</p>
     <p>Notre plateforme réunit tous les spas d'Ile-de-France et vous aide à trouver celui de vos rêves. Hammam individuel ou collectif ? Où aller avec des enfants ? Quel spa a les meilleurs massages ?</p>
     <p>Tous les spas sont répertoriés avec leurs commentaires pour vous aider à faire le meilleur choix.</p>
+    <p>🚧 Le site a fermé ses portes 🚧</p>
   dev_description:
     <p>Forum créé grâce à <a href="https://www.discourse.org" target="_blank">Discourse</a>. Merci ! 😉<p/>
     <p>API utilisant Django Rest Framework et des données provenant de Google.</p> 
@@ -44,8 +79,6 @@
     - python
     - django
     - devops
-  url: 'https://forum.hammams.fr'
-  more: Rejoindre le forum
 - oc:
   id: oc
   title: Parcours en Python pour OpenClassrooms
@@ -80,9 +113,9 @@
       Plateforme de mise en relation entre professionnels souhaitant travailler les uns chez les autres.
   picture: 'projects/cohome.png'
   pictureAlt: Cohome
-  url: 'https://cohome.hello-birds.com'
-  more: Voir le site
-  dev_description: Application web avec connexion en oAuth (Google / LinkedIn / FB), recherche, carte, calendrier interactif, paiement, réservations, mails, commentaires et images. Interface bilingue anglais / français. Intégration de divers outils d'analyse dont Mixpanel.
+  dev_description: >
+    <p>Application web avec connexion en oAuth (Google / LinkedIn / FB), recherche, carte, calendrier interactif, paiement, réservations, mails, commentaires et images. Interface bilingue anglais / français. Intégration de divers outils d'analyse dont Mixpanel.</p>
+    <p>🚧 Le site a fermé ses portes 🚧</p>
   stack: 
     - Ruby 2.2 
     - RoR 4.2
@@ -112,11 +145,11 @@
   title: Best Guide in Paris
   description: >
       Site de présentation de Jonathan Jeanvoine, guide à Paris depuis 10 ans.
-  dev_description: Site vitrine disposant d'un CMS pour le guide en WYSIWYG (Django admin personnalisé) et d'un CRM. Formulaire de contact et recommendations. Fil Instagram. Hébergé sur Digital Ocean et codé en TDD.
+  dev_description: >
+    <p>Site vitrine disposant d'un CMS pour le guide en WYSIWYG (Django admin personnalisé) et d'un CRM. Formulaire de contact et recommendations. Fil Instagram. Hébergé sur Digital Ocean et codé en TDD.</p>
+    <p>🚧 Le site a fermé ses portes 🚧</p>
   picture: 'projects/bestguide.png'
   pictureAlt: Best Guide in Paris
-  url: 'https://www.bestguide.paris'
-  more: Visiter le site
   stack:
     - Python 3.6
     - Django 1.11
@@ -135,11 +168,10 @@
   title: CRM pour disquaire
   description: >
       CRM pour un disquaire fictif à Paris. Projet exemple pour les cours <a href="https://openclassrooms.com/courses/introduction-au-framework-django" target="_blank">Découvrez le framework Django</a> et <a href="https://openclassrooms.com/courses/deployez-une-application-django" target="_blank">Déployez une application Django</a>. 
-  dev_description: Application web Django avec un CRM intégré et un CMS. Tests unitaires et fonctionnels. Script pour importer automatiquement des albums à partir d'un fichier YAML. Hébergée sur Heroku et sur Digital Ocean. CI avec GitHub et TravisCI.
+  dev_description: 
+    <p>Application web Django avec un CRM intégré et un CMS. Tests unitaires et fonctionnels. Script pour importer automatiquement des albums à partir d'un fichier YAML. Hébergée sur Heroku et sur Digital Ocean. CI avec GitHub et TravisCI.</p>
   picture: 'projects/disquaire.png'
   pictureAlt: Page d'accueil
-  url: 'https://disquaire.hello-birds.com'
-  more: Voir le site
   stack:
     - Python 3.6
     - Django 1.11
@@ -238,8 +270,6 @@
   dev_description: Application web utilisant Flask et faisant de la génération automatique d'image.  Tests fonctionnels avec Selenium et tests unitaires avec Pytest. <a href="https://github.com/celine-m-s/concevez_un_site_avec_flask" target="_blank">Voir le dépôt GitHub</a>.
   picture: 'projects/test-ultime.png'
   pictureAlt: Page d'accueil du test.
-  url: 'http://le-test-ultime.hello-birds.com'
-  more: Faire le test
   stack: 
     - Selenium
     - Flask

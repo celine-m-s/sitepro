@@ -46,86 +46,54 @@
     <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/fontawesome.js" integrity="sha384-7ox8Q2yzO/uWircfojVuCQOZl+ZZBg2D2J5nkpLqzH1HY0C1dHlTKIbpRz/LG23c" crossorigin="anonymous"></script>
 
 
-  </head>
+</head>
 
-  <body id="top" class="<%= page_classes %>">
+<body id="top" class="<%= page_classes %> single">
 
-    <header class="slider">
-        <div class="carousel slide carousel-fade">
-            <!-- Le Carousel-->
-            <div id="slider">
-                <div class="active item">
-                    <%= image_tag("bg/cover/cover-1.jpg", class: "slider-photo-1", resize_to: "1500") %>
-                </div>
-                <div class="item">
-                <%= image_tag("bg/cover/cover-13.jpg", class: "slider-photo-2", resize_to: "1500") %>
-                </div>
-                <div class="item">
-                    <%= image_tag("bg/cover/cover-8.jpg", class: "slider-photo-3", resize_to: "1500") %>
-                </div>
-            </div>
-        </div>
+    <%= partial "partials/navbar" %>
+
+    <header class="mt-5">
         <div class="overlay">
-            <article>
-              <div class="top-logo-wrapper">
-                <a href="/" data-type="link"><%= image_tag 'logo-cms-white.svg', alt: 'Logo Céline Martinet Sanchez', class: 'top-logo' %></a>
-              </div>
-            <% if current_page.url == '/' || current_page.url == '/en' %>
-                <h1 class="header-name">Céline MS</h1>
-            <% else %>
-                <h2 class="header-name">Céline MS</h2>
-
-            <% end %>
-                <h2>TITRE</h2>
+            <article style="transform: translate3d(0px, -27px, 0px); opacity: 1;">
+                <h1 class="border-0">Hello Birds</h1>
+                <h2>Développement web · Formation</h2>
             </article>
         </div>
     </header>
 
-    <%= yield %>
+    <section class="bg-white animated">
+      <%= yield %>
+    </section>
 
-    <footer class="footer-wrapper hidden-xs" id="footer">
-        </div>
-        <div class="footer-links container">
-            <div class="row">
-                <div class="col-sm-4 offset-md-2">
-                    <h4>Suivez-moi !</h4>
-                       <a class="twitter-timeline" href="https://twitter.com/celine_m_s?ref_src=twsrc%5Etfw" data-height="220" data-theme="dark" data-link-color="#09A298">Gazouillis de @CelineMartinetS</a>
-                       <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    <section class="p-5">
+        <div class="container">
+            <h2 class="text-center pb-3">Qui suis-je ?</h2>
+            <div class="row d-flex align-items-top">
+                <div class="col-sm-3 offset-sm-3 col-md-2">
+                    <%= image_tag("celine-martinet-sanchez.jpg", class: "img-fluid rounded-circle") %>
                 </div>
-
-                <div class="col-sm-4">
-                    <h4>Contactez-moi !</h4>
-                    <form action="#" id="contactForm">
-                      <!-- the redirect_to is optional, the form will redirect to the referrer on submission -->
-                      <input type='hidden' name='redirect_to' value='<the complete return url e.g. http://fooey.com/thank-you.html>' />
-                      <input type='text' name='name' required placeholder="Cylia Chamade"/>
-                      <input type='mail' name='email' required placeholder="cylia.chamade@cats-eye.com"/>
-                      <textarea type='textarea' name='message' required placeholder="Bonjour, Nous aimerions une application pour trouver des oeuvres d'art. Pourriez-vous la réaliser ? Merci, Signé Cat's Eyes."></textarea>
-                      <input type='submit' value='Envoyer' class="sendButton" onClick="_gaq.push(['_trackEvent', 'Contact_footer', 'Send', 'fr']);"/>
-                    </form>
+                <div class="col-sm-5 col-md-5">
+                  <p>
+                    Freelance depuis 2014, je suis développeuse web et formatrice. Ici je parle de Python, de startups et de code en général.
+                  </p>
+                  <%= link_to 'En savoir plus', '/a-propos.html', class: "btn btn-info btn-sm" %>
                 </div>
             </div>
-            <ul class="social-networks list-inline text-center">
-              <li class="list-inline-item"><a href="http://fr.linkedin.com/in/celinemartinet1/" target="_blank" data-type="icon"><i class="fab fa-linkedin"></i></a></li>
-              <li class="list-inline-item"><a href="https://github.com/celine-m-s" target="_blank" data-type="icon"><i class="fab fa-github-square"></i></a> </li>
-              <li class="list-inline-item"><a href="https://twitter.com/celine_m_s" target="_blank" data-type="icon"><i class="fab fa-twitter-square"></i></a></li>
-            </ul>
+        </div>    
+    </section>
+
+    <footer class="footer-copyright">
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <ul class="social-networks list-inline text-center">
+                  <li class="list-inline-item"><a href="http://fr.linkedin.com/in/celinemartinet1/" target="_blank" data-type="icon"><i class="fab fa-linkedin"></i></a></li>
+                  <li class="list-inline-item"><a href="https://github.com/celine-m-s" target="_blank" data-type="icon"><i class="fab fa-github-square"></i></a> </li>
+                  <li class="list-inline-item"><a href="https://twitter.com/celine_m_s" target="_blank" data-type="icon"><i class="fab fa-twitter-square"></i></a></li>
+                  <li class="list-inline-item"><a href="/contact" data-type="icon"><i class="fa fa-envelope-square"></i></a></li>
+                </ul>
+            </div>
         </div>
     </footer>
-
-    <div class="footer-copyright">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-6 text-center">
-                    &copy; Céline Martinet Sanchez. Tous droits réservés
-                </div>
-                <div class="col-sm-6 text-center mobile-center">
-                         <a href="celine@hello-birds.com" data-type="link"><i class="fa fa-envelope" style="margin-right: 5px;"></i>Envoyez-moi un message !</a>
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <div id="preloader"><div id="status"><div class="spinner"></div></div></div>
 

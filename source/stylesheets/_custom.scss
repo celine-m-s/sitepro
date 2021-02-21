@@ -113,9 +113,8 @@ footer {
 }
 
 .social-networks {
-  margin-top: 2rem;
   a {
-    font-size: 48px;
+    font-size: 35px;
   }
 
   .list-inline-item:not(:last-child) {
@@ -160,6 +159,7 @@ footer {
 .picture-copyright {
   font-size: 10px;
   font-style: italic;
+  text-shadow: none;
 }
 
 /* ==========================================================================
@@ -185,11 +185,6 @@ footer {
 .people-picture {
   margin: 7px 20px 5px 0;
   border-radius: 50%;
-}
-
-section#projects {
-  border-bottom: 1px solid #DDD;
-  background: none repeat scroll 0% 0% #FFF;
 }
 
 
