@@ -162,6 +162,11 @@ footer {
   text-shadow: none;
 }
 
+.page-item.active .page-link {
+    background-color: $orange;
+    border-color: $orange;
+}
+
 /* ==========================================================================
    Sections Home Page
    ========================================================================== */

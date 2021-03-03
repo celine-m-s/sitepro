@@ -10,3 +10,4 @@ gem 'oj' # faster JSON parser and object serializer
 gem "middleman-minify-html"
 gem 'middleman-livereload'
 gem 'middleman-deploy', '~> 2.0.0.pre.alpha'
+gem 'nokogiri'

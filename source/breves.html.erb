@@ -4,9 +4,8 @@ per_page: 3
 layout: base
 ---
 
-<%= link_to 'Bribes',  category_path('bribes'), class: "border-right" %>
-
-<% page_articles.each do |article| %>
+<!-- UNUSED FOR THE MOMENT -->
+<% blog.articles[0...5].each do |article| %>
   <article>
     <h1>
       <a href="<%= article.url %>"><%= article.title %></a>
@@ -18,5 +17,3 @@ layout: base
     <a href="<%= article.url %>">Read more</a>
   </article>
 <% end %>
-
-<%= partial 'partials/pagination' %> 

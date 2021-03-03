@@ -16,3 +16,8 @@ deploy:
 
 run:
 	docker-compose up
+
+article:
+	docker-compose run site bash -c 'middleman article "$(TITLE)"'
+	mkdir -p source/$(CATEGORY)
+	mv source/*.html.markdown source/$(CATEGORY)/

@@ -26,6 +26,16 @@ activate :blog do |blog|
   # path via current_article.metadata[:page]['category'].
   blog.sources = "{category}/{year}-{month}-{day}-{title}.html"
   blog.permalink = "{category}/{year}/{month}/{day}/{title}.html"
+  blog.taglink = "etiquettes/{tag}.html"
+  blog.paginate = true
+  blog.layout = "article"
+
+  blog.custom_collections = {
+    category: {
+      link: '/categories/{category}.html',
+      template: '/category.html'
+    }
+  }
 end
 
 # Proxy pages
