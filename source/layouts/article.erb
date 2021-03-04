@@ -1,4 +1,6 @@
 <% wrap_layout :base do %>
+  
+  <%= link_to current_article.data.category, category_path(current_article.data.category), class: "border-right" %>
   <article>
     <%= yield %>
   </article>
