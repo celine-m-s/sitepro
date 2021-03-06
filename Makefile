@@ -17,6 +17,9 @@ deploy:
 run:
 	docker-compose up
 
+bundle:
+	docker-compose run site bash -c "bundle install"
+
 article:
 	docker-compose run site bash -c 'middleman article "$(TITLE)"'
 	mkdir -p source/$(CATEGORY)

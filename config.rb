@@ -33,7 +33,8 @@ activate :blog do |blog|
   blog.custom_collections = {
     category: {
       link: '/categories/{category}.html',
-      template: '/category.html'
+      template: '/category.html',
+      description: "Description"
     }
   }
 end

@@ -1,6 +1,14 @@
 $blue: #09A298;
 $orange: #EE4E44;
 
+// COLORS
+.text-turquoise {
+  color: $blue;
+  &:hover {
+    color: $orange;
+  }
+}
+
 nav {
   top:auto;
 }
@@ -361,4 +369,11 @@ footer {
     color: white;
     white-space:nowrap;
   }
+}
+
+// Categories display
+
+li.categories:not(:last-child) {
+  border-bottom: 1px solid #dee2e6!important;
+  margin-bottom: 1rem;
 }

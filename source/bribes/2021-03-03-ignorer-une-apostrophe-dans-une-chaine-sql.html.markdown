@@ -7,6 +7,8 @@ date: 2021-03-03 20:48 UTC
 
 Il est possible d'échapper des apostrophes en les doublant ! Pas très intuitif mais efficace.
 
+READMORE
+
 ```sql
 DECLARE @my_table TABLE (
     [value] VARCHAR(200)
