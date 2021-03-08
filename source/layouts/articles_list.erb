@@ -1,0 +1,31 @@
+<% wrap_layout :base do %>
+    <section class="p-5 bg-<% if defined?category %><%= data.categories[category.to_sym].color %><% end %>">
+        <div class="container bg-transparent">
+            <h1 class="title moved-category-title bg-white p-4">
+                <% if defined?category %><%= category %><% end %>
+                <% if defined?tagname %><%= tagname %><% end %>
+            </h1>
+        </div>
+    </section>
+    
+    <section class="pt-5 bg-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-8 offset-2 category-description">
+                    <% if defined?category %>
+                        <%= data.categories[category.to_sym].description %>
+                    <% end %>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-white">
+        <div class="container">
+            <%= yield %>
+        </div>
+    </section>
+
+
+  <% partial 'partials/pagination' %>
+<% end %>

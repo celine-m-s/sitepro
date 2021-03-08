@@ -4,12 +4,11 @@
       <%= link_to '← Précédent', prev_page, class: "page-link" %>
     </li>
 
-    <% num_pages.times do |i| %>
+<!--     <% num_pages.times do |i| %>
         <li class="page-item <% if i+1 == page_number %>active<% end %>" aria-current="page">
-          <a class="page-link" href="#"><%= page_number %></a>
+          <a class="page-link" href="<%= current_page.url %>page/<%= i + 1 %>"><%= i + 1 %></a>
         </li>
-
-    <% end %>
+    <% end %> -->
     <li class="page-item <% unless next_page %>disabled<% end %>">
       <%= link_to 'Suivant →', next_page, class: "page-link" %>
     </li>

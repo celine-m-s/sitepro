@@ -2,6 +2,7 @@
 
 title: Supprimer les modifications apportées à un fichier déjà commité
 date: 2021-03-03 20:45 UTC
+tags: git
 
 ---
 

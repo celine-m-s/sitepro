@@ -9,6 +9,10 @@ $orange: #EE4E44;
   }
 }
 
+.bg-turquoise {
+  background-color: $blue;
+}
+
 nav {
   top:auto;
 }
@@ -373,7 +377,20 @@ footer {
 
 // Categories display
 
-li.categories:not(:last-child) {
+.moved-category-title {
+  margin-bottom: -50%;
+}
+
+.card-categories li.separator:not(:last-child) {
   border-bottom: 1px solid #dee2e6!important;
   margin-bottom: 1rem;
+}
+
+.category-description {
+  text-align: center;
+  font-weight: 300;
+  font-size: 17px;
+  color: #999;
+  line-height: 35px;
+  letter-spacing: 1px;
 }

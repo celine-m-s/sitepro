@@ -1,20 +1,32 @@
 ---
 pageable: true
-per_page: 3
-layout: base
+per_page: 12
+layout: articles_list
 ---
 
-<% page_articles.each do |article| %>
-  <article>
-    <h1>
-      <a href="<%= article.url %>"><%= article.title %></a>
-      <time><%= article.date.strftime('%b %e %Y') %></time>
-    </h1>
+<div class="row row-cols-1 row-cols-md-3">
+	<% page_articles.each do |article| %>
+		<div class="col mb-4">
+			<div class="card h-100 font-weight-light bg-white">
+				<div class="card-body">
+					<a href="<%= article.url %>">
+						<h5 class="card-title"><%= article.title %></h5>
+					</a>
+					<p class="card-text"><%= article.summary %></p>
+				</div>
+				<div class="card-footer">
+				  <span class="mr-3"><i class="fa fa-calendar mr-1"></i> <%= article.date.strftime('%d/%m/%Y') %></span>
+				  <span><i class="fa fa-tags mr-1"></i>
+				  <% article.tags.each do |tag| %><a href="<%= tag_path(tag) %>"><%= tag %></a> <% end %>
+				</div>
+			</div>
+		</div>
+	<% end %>
+</div>
 
-    <%= article.summary %>
 
-    <a href="<%= article.url %>">Read more</a>
-  </article>
-<% end %>
-
-<%= partial 'partials/pagination' %> 
+<%= partial 'partials/pagination', :locals => {
+      :prev_page => prev_page,
+      :page_number => page_number,
+      :next_page => next_page
+      } %> 
