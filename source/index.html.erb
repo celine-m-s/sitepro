@@ -11,7 +11,9 @@ layout: base
 			<div class="card card-categories mb-3 m-auto" style="max-width: 800px;">
 			  <div class="row no-gutters">
 			    <div class="col-md-4 p-4">
-			    	<h2 class="heading <%= data.categories[category.to_sym].color %> card-title"><%= category.capitalize %></h2>
+			    	<h2 class="heading <%= data.categories[category.to_sym].color %> card-title">
+			    		<%= link_to category.capitalize, category_path(category), class: "text-white" %>
+			    	</h2>
 			    		<%= data.categories[category.to_sym].description %>
 			    </div>
 			    <div class="col-md-8">
@@ -23,13 +25,11 @@ layout: base
 					        <ul class="list-unstyled">
 					            <li class="tags">
 							        <% article.tags.each do |tag| %>
-					                	<a href="<%= tag_path(tag) %>"><span class="badge badge-secondary"><%= tag %></span></a>
+					                	<a href="<%= tag_path(tag) %>" class="badge badge-secondary"><%= tag %></a>
 							        <% end %>
 						        </li>
 					        </ul>
 					        <p class="card-text"><%= article.summary %></p>
-					    	<!-- <a href="<%= article.url %>">Lire l'article</a> -->
-					    	<!-- <p class="card-text"><span class="text-muted"><%# article.date.strftime('%d/%m/%Y') %></span></p> -->
 					    </li>
 					    <% end %>	
 			      	</ul>

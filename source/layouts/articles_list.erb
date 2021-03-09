@@ -4,13 +4,18 @@
         <% title = tagname %>
         <% description = "" %>
         <% bg_color = "" %>
+        <% content_for(:category, tagname) %>
     <% end %>
 
     <% if defined?category %>
         <% title = category %>
         <% description = data.categories[category.to_sym].description %>
         <% bg_color = data.categories[category.to_sym].color %>
+        <% content_for(:category, category) %>
     <% end %>
+
+    <% content_for(:title, title) %>
+    <% content_for(:description, description ) %>
 
     <%= partial 'partials/blog_header', locals: {
         title: title,
