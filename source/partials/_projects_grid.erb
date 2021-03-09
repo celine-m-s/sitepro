@@ -4,7 +4,7 @@
       </h2>
         <div class="portfolio clearfix add-margin">
             <div class="main row">
-              <div class="button-group filter-button-group list-inline" data-toggle="buttons">
+              <div class="button-group filter-button-group list-inline">
                 <button type="button" data-filter="*" class="btn btn-outline-info active" data-toggle="button" aria-pressed="true">Tout</button>
                 <% data.tags.each do |tag| %>
                     <button type="button" data-filter=".<%= tag.id %>" class="btn btn-outline-info" data-toggle="button" aria-pressed="false" autocomplete="off"><%= tag.name %></button>
