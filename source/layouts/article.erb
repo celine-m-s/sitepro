@@ -1,7 +1,34 @@
 <% wrap_layout :base do %>
-  
-  <%= link_to current_article.data.category, category_path(current_article.data.category), class: "border-right" %>
-  <article>
-    <%= yield %>
-  </article>
+
+  <% bg_color = data.categories[current_article.data.category.to_sym].color %>
+  <% date = current_article.date.strftime('%d/%m/%Y') %>
+
+  <%= partial 'partials/blog_header', locals: {
+      title: current_article.title,
+      description: "",
+      bg_color: bg_color,
+      date: date,
+      category_name: current_article.data.category,
+      category_url: category_path(current_article.data.category),
+      display_meta: true
+  } %>
+
+  <section class="bg-white pt-5">
+      <div class="container">
+          <%= yield %>
+      </div>
+  </section>
+
+  <section class="bg-white pb-5 pt-0">
+      <div class="container">
+          <ul class="list-unstyled">
+            <span><i class="fa fa-tags mr-2"></i></span>
+            <% current_article.tags.each do |tag| %>
+                  <span class="h4"><a href="<%= tag_path(tag) %>" class="badge badge-secondary"><%= tag %></a></span>
+            <% end %>
+          </ul>
+      </div>
+  </section>
+
+
 <% end %>

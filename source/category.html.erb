@@ -4,7 +4,7 @@ per_page: 12
 layout: articles_list
 ---
 
-<div class="row row-cols-1 row-cols-md-3">
+<div class="row row-cols-1 row-cols-md-3 justify-content-center">
 	<% page_articles.each do |article| %>
 		<div class="col mb-4">
 			<div class="card h-100 font-weight-light bg-white">
@@ -25,8 +25,4 @@ layout: articles_list
 </div>
 
 
-<%= partial 'partials/pagination', :locals => {
-      :prev_page => prev_page,
-      :page_number => page_number,
-      :next_page => next_page
-      } %> 
+<%= partial 'partials/pagination' %> 

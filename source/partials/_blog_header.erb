@@ -1,0 +1,26 @@
+<section class="p-5 bg-<%= bg_color %>">
+    <div class="container bg-transparent">
+        <div class="moved-category-title ">
+            <h1 class="title bg-white <% if display_meta %>pt-4 pb-2<% else %>p-4<% end %>">
+                <%= title %>
+            </h1>
+            <% if display_meta %>
+                <h2 class="meta">
+                    <span><i class="fa fa-user mr-2"></i><%= link_to 'Céline Martinet Sanchez', '/a-propos.html' %></span>
+                    <span><i class="fa fa-calendar mr-2"></i><%= date %></span>
+                    <span><i class="fa fa-folder-open mr-2"></i><a href="<%= category_url %>"><%= category_name.capitalize %></a></span>
+                </h2>
+            <% end %>
+        </div>
+    </div>
+</section>
+
+<section class="pt-5 bg-white">
+    <div class="container">
+        <div class="row">
+            <div class="col-8 offset-2 category-description">
+                <%= description if description %>
+            </div>
+        </div>
+    </div>
+</section>

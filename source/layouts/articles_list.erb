@@ -1,24 +1,23 @@
 <% wrap_layout :base do %>
-    <section class="p-5 bg-<% if defined?category %><%= data.categories[category.to_sym].color %><% end %>">
-        <div class="container bg-transparent">
-            <h1 class="title moved-category-title bg-white p-4">
-                <% if defined?category %><%= category %><% end %>
-                <% if defined?tagname %><%= tagname %><% end %>
-            </h1>
-        </div>
-    </section>
-    
-    <section class="pt-5 bg-white">
-        <div class="container">
-            <div class="row">
-                <div class="col-8 offset-2 category-description">
-                    <% if defined?category %>
-                        <%= data.categories[category.to_sym].description %>
-                    <% end %>
-                </div>
-            </div>
-        </div>
-    </section>
+
+    <% if defined?tagname %>
+        <% title = tagname %>
+        <% description = "" %>
+        <% bg_color = "" %>
+    <% end %>
+
+    <% if defined?category %>
+        <% title = category %>
+        <% description = data.categories[category.to_sym].description %>
+        <% bg_color = data.categories[category.to_sym].color %>
+    <% end %>
+
+    <%= partial 'partials/blog_header', locals: {
+        title: title,
+        description: description,
+        bg_color: bg_color,
+        display_meta: false
+    } %>
 
     <section class="bg-white">
         <div class="container">
@@ -26,6 +25,6 @@
         </div>
     </section>
 
-
   <% partial 'partials/pagination' %>
+
 <% end %>

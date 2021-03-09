@@ -1,16 +1,13 @@
-<div class="display-block text-center add-top">
-  <ul class="pagination justify-content-center">
-    <li class="page-item <% unless prev_page %>disabled<% end %>"> <!-- disabled class if disabled -->
-      <%= link_to '← Précédent', prev_page, class: "page-link" %>
-    </li>
+<% if prev_page or next_page %>
+  <div class="display-block text-center add-top">
+    <ul class="pagination justify-content-center">
+      <li class="page-item <% unless prev_page %>disabled<% end %>">
+        <%= link_to '← Précédent', prev_page, class: "page-link" %>
+      </li>
 
-<!--     <% num_pages.times do |i| %>
-        <li class="page-item <% if i+1 == page_number %>active<% end %>" aria-current="page">
-          <a class="page-link" href="<%= current_page.url %>page/<%= i + 1 %>"><%= i + 1 %></a>
-        </li>
-    <% end %> -->
-    <li class="page-item <% unless next_page %>disabled<% end %>">
-      <%= link_to 'Suivant →', next_page, class: "page-link" %>
-    </li>
-  </ul>
-</nav>
+      <li class="page-item <% unless next_page %>disabled<% end %>">
+        <%= link_to 'Suivant →', next_page, class: "page-link" %>
+      </li>
+    </ul>
+  </div>
+<% end %>
