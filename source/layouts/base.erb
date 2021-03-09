@@ -5,18 +5,14 @@
 <!--[if (gte IE 9)|!(IE)]><!--><html lang="fr"> <!--<![endif]-->
 <html>
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title><%= yield_content(:page_title) || "Céline Martinet Sanchez, développeuse full stack à Paris" %></title>
+    <%= partial "partials/head_meta_tags", locals: {
+        title: yield_content(:title),
+        description: yield_content(:description),
+        category: yield_content(:category),
+        published_at: yield_content(:published_at),
+        tags: yield_content(:tags)
+    } %>
 
-    <!-- if you're lost -->
-    <%# if current_page.url == "/404.html" %>
-      <!-- <meta http-equiv="refresh" content="5; url=/"> -->
-    <%# end %>
-
-    <!-- Favicon rocks! -->
     <% favicon_tag 'favicon.png' %>
 
     <%# feed_tag :atom, "#{I18n.locale.to_s}/feed.xml", title: "Atom Feed" %>
@@ -26,17 +22,11 @@
     <%= stylesheet_link_tag "rouge" %>
     <%= stylesheet_link_tag "style" %>
 
-    <!-- Why are you still using IE ? -->
     <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
-    <!-- For preloads -->
-<script
-  src="https://code.jquery.com/jquery-3.3.1.min.js"
-  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-  crossorigin="anonymous"></script>
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" integrity="sha256-0rguYS0qgS6L4qVzANq4kjxPLtvnp5nn2nB5G1lWRv4=" crossorigin="anonymous"></script>
 
     <!-- Fonts -->

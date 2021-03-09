@@ -1,5 +1,11 @@
 <% wrap_layout :base do %>
 
+  <% content_for(:title, current_article.title) %>
+  <% content_for(:description, current_article.summary ) %>
+  <% content_for(:category, current_article.data.category) %>
+  <% content_for(:published_at, current_article.date.strftime('%F')) %>
+  <% content_for(:tags, current_article.tags.join(', ')) %>
+
   <% bg_color = data.categories[current_article.data.category.to_sym].color %>
   <% date = current_article.date.strftime('%d/%m/%Y') %>
 
