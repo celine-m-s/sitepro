@@ -1,5 +1,5 @@
 <!-- Main navbar -->
-<nav class="affix">
+<!-- <nav class="affix">
     <div class="container">
         <ul id="top-menu">
             <div class="row">
@@ -18,5 +18,30 @@
             </div>
         </ul>
     </div>
+</nav> -->
+
+<nav class="navbar sticky-top navbar-expand-sm navbar-light bg-white affix">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul id="top-menu" class="navbar-nav d-flex justify-content-center-sm align-content-between w-100">
+        <!-- <div class="row"> -->
+              <li class="nav-item flex-fill bg-white">
+                <%= link_to 'Accueil', '/', class: "border-right align-middle" %><span class="sr-only">(current)</span>
+              </li>
+              <li class="nav-item flex-fill bg-white">
+                <%= link_to 'Bribes',  category_path("bribes"), class: "border-right align-middle" %>
+              </li>
+              <li class="nav-item flex-fill bg-white">
+                <%= link_to 'A propos',  '/a-propos.html', class: "border-right align-middle" %>
+              </li>
+              <li class="nav-item flex-fill bg-white">
+                <%= link_to 'Contact',  '/contact.html',  class: "align-middle" %>
+              </li>
+            
+        <!-- </div> -->
+    </ul>
+  </div>
 </nav>
 
