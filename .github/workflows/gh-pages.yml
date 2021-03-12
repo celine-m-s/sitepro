@@ -1,4 +1,5 @@
-# ./github/workflows/deploy.yml
+# Thanks!
+# https://dev.to/pmallol/deploy-middleman-with-github-actions-fen
 
 name: Deploy Middleman to GH Pages
 
