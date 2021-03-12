@@ -1,0 +1,83 @@
+<!doctype html> <!--[if lt IE 7 ]><html class="ie ie6" lang=fr><![endif]--> <!--[if IE 7 ]><html class="ie ie7" lang=fr><![endif]--> <!--[if IE 8 ]><html class="ie ie8" lang=fr><![endif]--> <!--[if (gte IE 9)|!(IE)]><!--><html lang=fr> <!--<![endif]--> <html> <head> <meta charset=utf-8> <meta http-equiv=x-ua-compatible content="ie=edge"> <meta name=viewport content="width=device-width, initial-scale=1, shrink-to-fit=no"> <html itemscope itemtype="http://schema.org/Article"> <title>Récupérer la valeur d'une clé ou créer cette dernière si elle n'existe pas</title> <meta name=description content=""> <meta itemprop=name content="Récupérer la valeur d'une clé ou créer cette dernière si elle n'existe pas"> <meta itemprop=description content=""> <meta name="twitter:title" content="Récupérer la valeur d'une clé ou créer cette dernière si elle n'existe pas"> <meta name="twitter:description" content=""> <meta name="twitter:creator" content="@celine_m_s"> <meta property="og:title" content="Récupérer la valeur d'une clé ou créer cette dernière si elle n'existe pas"/> <meta property="og:type" content=article /> <meta property="og:url" content="https://www.hello-birds.com/breves/2021-01-27-recuperer-la-valeur-d-une-cle-ou-creer-cette-derniere-si-elle-n-existe-pas.html"/> <meta property="og:description" content=""/> <meta property="og:site_name" content="Hello Birds"/> <meta property="article:published_time" content=2021-01-27 /> <meta property="article:section" content=breves /> <meta property="article:tag" content=Python /> <link rel=stylesheet href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin=anonymous> <link rel=stylesheet href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/> <link href="/stylesheets/rouge-a7a497f1.css" rel=stylesheet /> <link href="/stylesheets/style-d09da798.css" rel=stylesheet /> <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]--> <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin=anonymous></script> <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" integrity="sha256-0rguYS0qgS6L4qVzANq4kjxPLtvnp5nn2nB5G1lWRv4=" crossorigin=anonymous></script> <link href='https://fonts.googleapis.com/css?family=Lato:100,300,400,700' rel=stylesheet> <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/solid.js" integrity="sha384-+Ga2s7YBbhOD6nie0DzrZpJes+b2K1xkpKxTFFcx59QmVPaSA8c7pycsNaFwUK6l" crossorigin=anonymous></script> <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/brands.js" integrity="sha384-sCI3dTBIJuqT6AwL++zH7qL8ZdKaHpxU43dDt9SyOzimtQ9eyRhkG3B7KMl6AO19" crossorigin=anonymous></script> <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/fontawesome.js" integrity="sha384-7ox8Q2yzO/uWircfojVuCQOZl+ZZBg2D2J5nkpLqzH1HY0C1dHlTKIbpRz/LG23c" crossorigin=anonymous></script> </head> <body id=top class="breves breves_2021 breves_2021_01 breves_2021_01_27 breves_2021_01_27_recuperer-la-valeur-d-une-cle-ou-creer-cette-derniere-si-elle-n-existe-pas breves_2021_01_27_recuperer-la-valeur-d-une-cle-ou-creer-cette-derniere-si-elle-n-existe-pas_index single"> <header class=""> <div class=overlay> <article style="transform: translate3d(0px, -27px, 0px); opacity: 1;"> <a href="/"> <h1 class=border-0>Hello Birds</h1> </a> <h2>Développement web · Formation</h2> </article> </div> </header> <nav class="navbar sticky-top navbar-expand-sm navbar-light bg-white"> <button class=navbar-toggler type=button data-toggle=collapse data-target="#navbarNav" aria-controls=navbarNav aria-expanded=false aria-label="Toggle navigation"> <span class=navbar-toggler-icon></span> </button> <div class="collapse navbar-collapse" id=navbarNav> <ul id=top-menu class="navbar-nav d-flex justify-content-center-sm align-content-between w-100"> <li class="nav-item flex-fill bg-white"> <a href="/" class="border-right align-middle">Accueil</a><span class=sr-only>(current)</span> </li> <li class="nav-item flex-fill bg-white"> <a href="/categories/breves/" class="border-right align-middle">Brèves</a> </li> <li class="nav-item flex-fill bg-white"> <a href="/a-propos/" class="border-right align-middle">Projets réalisés</a> </li> <li class="nav-item flex-fill bg-white"> <a href="/contact/" class=align-middle>Contact</a> </li> </ul> </div> </nav> <section class="p-5 bg-turquoise"> <div class="container bg-transparent"> <div class="moved-category-title "> <h1 class="title bg-white pt-4 pb-2"> Récupérer la valeur d'une clé ou créer cette dernière si elle n'existe pas </h1> <h2 class=meta> <span><i class="fa fa-user mr-2"></i><a href="/a-propos/">Céline Martinet Sanchez</a></span> <span><i class="fa fa-calendar mr-2"></i>27/01/2021</span> <span><i class="fa fa-folder-open mr-2"></i><a href="/categories/breves/">Breves</a></span> </h2> </div> </div> </section> <section class="pt-5 bg-white"> <div class=container> <div class=row> <div class="col-8 offset-2 category-description"> </div> </div> </div> </section> <section class="bg-white pt-5"> <div class="container article_page pt-4"> <p>Dans le cas de dictionnaires profonds, on peut vouloir récupérer la valeur d&#39;une clé inexistante. Prenons l&#39;exemple d&#39;un dictionnaire qui servirait à répertorier des fruits en fonction de leur famille.</p> <div class=highlight><pre class="highlight python"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td><td class=rouge-code><pre><span class="n">fruits</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s">"berries"</span><span class="p">:</span> <span class="p">[</span><span class="s">"strawberries"</span><span class="p">,</span> <span class="s">"raspberries"</span><span class="p">,</span> <span class="s">"blueberries"</span><span class="p">,</span> <span class="s">"kiwifruit"</span><span class="p">],</span>
+    <span class="s">"melons"</span><span class="p">:</span> <span class="p">[</span><span class="s">"watermelons"</span><span class="p">,</span> <span class="s">"rockmelons"</span><span class="p">,</span> <span class="s">"honeydew melons"</span><span class="p">],</span>
+<span class="p">}</span>
+</pre></td></tr></tbody></table></code></pre></div> <p>Imaginons que nous voulons ajouter une orange. La clé &ldquo;citrus&rdquo; n&#39;existant pas, il nous faut vérifier qu&#39;ellpyte existe avant de continuer.</p> <div class=highlight><pre class="highlight python"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class=rouge-code><pre><span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="n">fruits</span><span class="p">[</span><span class="s">"citrus"</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s">"orange"</span><span class="p">]</span>
+<span class="o">-</span> <span class="o">--------------------------------------------------------------------------</span>
+<span class="nb">KeyError</span><span class="p">:</span> <span class="s">'citrus'</span>
+</pre></td></tr></tbody></table></code></pre></div> <p>Le premier réflexe est alors d&#39;écrire une fonction qui ressemblerait à ceci :</p> <div class=highlight><pre class="highlight python"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre></td><td class=rouge-code><pre><span class="k">def</span> <span class="nf">add_key_if_not_exists</span><span class="p">(</span><span class="n">key</span><span class="p">):</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">fruits</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="n">key</span><span class="p">):</span>
+            <span class="n">fruits</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="n">add_key_if_not_exists</span><span class="p">(</span><span class="s">"citrus"</span><span class="p">)</span>
+<span class="n">fruits</span><span class="p">[</span><span class="s">"citrus"</span><span class="p">].</span><span class="n">append</span><span class="p">(</span><span class="s">"orange"</span><span class="p">)</span>
+</pre></td></tr></tbody></table></code></pre></div> <p>Un peu pénible, non ?</p> <p>Le type <code>dict</code> de Python intègre par défaut la méthode <code>setdefault</code> (<a href="https://docs.python.org/3/library/stdtypes.html#dict.setdefault">lire la doc</a>) qui fait exactement ce que nous voulons en une seule ligne !</p> <div class=highlight><pre class="highlight python"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre></td><td class=rouge-code><pre><span class="n">fruits</span><span class="p">.</span><span class="n">setdefault</span><span class="p">(</span><span class="s">"citrus"</span><span class="p">,</span> <span class="p">[]).</span><span class="n">append</span><span class="p">(</span><span class="s">"lime"</span><span class="p">)</span>
+
+<span class="c1"># {'berries': ['strawberries', 'raspberries', 'blueberries', 'kiwifruit'],
+# 'melons': ['watermelons', 'rockmelons', 'honeydew melons'],
+# 'citrus': ['orange', 'lime']}
+</span>
+</pre></td></tr></tbody></table></code></pre></div> <p>Bien sûr, notre cas est très simple. Mais si vous jetez un coup d’œil à <a href="https://github.com/betagouv/itou/pull/444/commits/561f1ac98f32991f97443b923ed4a81a3ee4d681">ce commit</a>, vous comprendrez pourquoi cette petite méthode est bien utile.</p> <p>⚠️ J&#39;ai fait l&#39;erreur suivante avant de me rendre compte que ça ne pouvait pas fonctionner ! A votre avis, pourquoi ?</p> <div class=highlight><pre class="highlight python"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+</pre></td><td class=rouge-code><pre><span class="n">fruits</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="c1"># Add "lime" to {"citrus": []} and create key if it does not exist.
+</span><span class="n">fruits</span><span class="p">.</span><span class="n">setdefault</span><span class="p">(</span><span class="s">"citrus"</span><span class="p">,</span> <span class="p">[</span><span class="s">"lime"</span><span class="p">])</span>
+<span class="c1"># =&gt; OK, "lime" is in the list.
+</span>
+<span class="c1"># Add "bergamot" to {"citrus": []} and create key if it does not exist.
+</span><span class="n">fruits</span><span class="p">.</span><span class="n">setdefault</span><span class="p">(</span><span class="s">"citrus"</span><span class="p">,</span> <span class="p">[</span><span class="s">"bergamot"</span><span class="p">])</span>
+<span class="c1"># WRONG! fruits["citrus"] only contains "lime"!
+</span>
+</pre></td></tr></tbody></table></code></pre></div> <ul class="list-unstyled pt-4"> <span><i class="fa fa-tags mr-2"></i></span> <span class=h4><a href="/etiquettes/python/" class="badge badge-secondary">Python</a></span> </ul> </div> </section> <section class=p-5> <div class=container> <div class="row d-flex align-items-top"> <div class="col-sm-3 offset-sm-3 col-md-2"> <img src="/images/celine-martinet-sanchez-9392704d.jpg" class="img-fluid rounded-circle px-5 p-sm-0" alt=""/> </div> <div class="col-sm-5 col-md-5 pt-3 pt-sm-0 text-center"> <p class="text-sm-left mb-2"><b>Céline Martinet Sanchez</b></p> <p class=text-sm-left> Freelance depuis 2014, je suis développeuse web et formatrice. Au travers de ce site, je parle de Python, de startups et de code en général. </p> <p class=text-sm-left> <a href="/a-propos/" class="btn btn-info btn-sm ">Découvrir mes projets</a> </p> </div> </div> </div> </section> <footer class=footer-copyright> <div class=container> <div class="row d-flex justify-content-center"> <ul class="social-networks list-inline text-center"> <li class=list-inline-item><a href="http://fr.linkedin.com/in/celinemartinet1/" target=_blank data-type=icon><i class="fab fa-linkedin"></i></a></li> <li class=list-inline-item><a href="https://github.com/celine-m-s" target=_blank data-type=icon><i class="fab fa-github-square"></i></a> </li> <li class=list-inline-item><a href="https://twitter.com/celine_m_s" target=_blank data-type=icon><i class="fab fa-twitter-square"></i></a></li> <li class=list-inline-item><a href="/contact" data-type=icon><i class="fa fa-envelope-square"></i></a></li> </ul> </div> </div> </footer> <div id=preloader><div id=status><div class=spinner></div></div></div> <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-46442344-2', 'auto');
+        ga('send', 'pageview');
+
+        // If a click is made, send its link as an event.
+        function handleOutboundLinkClicks(link) {
+          ga('send', 'event', {
+            eventCategory: link.dataset.type,
+            eventAction: 'click',
+            eventLabel: link.href,
+            transport: 'beacon'
+          });
+        }
+
+        $('a').click(function(){
+          handleOutboundLinkClicks(this);
+        });
+
+
+      </script> <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script> <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity=sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns crossorigin=anonymous></script> <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script> <script src="/javascripts/libraries-1b258993.js"></script> <script src="/javascripts/site-fb22b6ff.js"></script> </body> </html>
