@@ -1,0 +1,12 @@
+---
+layout: base
+---
+
+<% content_for(:page_title, "Céline Martinet Sanchez - Développeuse web et formatrice") %>
+
+<section id="projects">
+    <%= partial 'partials/projects_grid', :locals => {
+      :global_title => "Projets réalisés",
+      :projects => data.projects
+      } %>
+</section>

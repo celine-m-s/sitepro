@@ -523,16 +523,17 @@ header.walking {
 /* ==========================================================================
    Slider
    ========================================================================== */
+$slider_size: 200px;
 
 .slider {
-    height: 400px;
+    height: $slider_size;
     margin: 0;
     overflow: hidden;
     width: 100%;
 }
 
 .slider .carousel {
-    height: 400px;
+    height: $slider_size;
     overflow: hidden;
     width: 100%;
     font-weight: normal;
@@ -747,7 +748,8 @@ nav .row [class*="col-"] {
 
 section {
     display: block;
-    padding: 100px 0;
+    // padding: 100px 0;
+    padding: 1.5rem;
 }
 
 #whoiam,
@@ -2177,7 +2179,7 @@ ul.map-menu li:last-child {
 
 .single header {
     height: 100px;
-    background: #666 url('../images/bg/words.png') no-repeat center center;
+    background-color: #666;
 }
 
 .single header article h1 {

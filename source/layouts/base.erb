@@ -5,37 +5,28 @@
 <!--[if (gte IE 9)|!(IE)]><!--><html lang="fr"> <!--<![endif]-->
 <html>
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title><%= yield_content(:page_title) || t(:index_title) %></title>
+    <%= partial "partials/head_meta_tags", locals: {
+        title: yield_content(:title),
+        description: yield_content(:description),
+        category: yield_content(:category),
+        published_at: yield_content(:published_at),
+        tags: yield_content(:tags)
+    } %>
 
-    <!-- if you're lost -->
-    <%# if current_page.url == "/404.html" %>
-      <!-- <meta http-equiv="refresh" content="5; url=/"> -->
-    <%# end %>
-
-    <!-- Favicon rocks! -->
     <% favicon_tag 'favicon.png' %>
 
     <%# feed_tag :atom, "#{I18n.locale.to_s}/feed.xml", title: "Atom Feed" %>
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+    <%= stylesheet_link_tag "rouge" %>
     <%= stylesheet_link_tag "style" %>
 
-    <!-- Why are you still using IE ? -->
     <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
-    <!-- For preloads -->
-<script
-  src="https://code.jquery.com/jquery-3.3.1.min.js"
-  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-  crossorigin="anonymous"></script>
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" integrity="sha256-0rguYS0qgS6L4qVzANq4kjxPLtvnp5nn2nB5G1lWRv4=" crossorigin="anonymous"></script>
 
     <!-- Fonts -->
@@ -46,87 +37,56 @@
     <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/fontawesome.js" integrity="sha384-7ox8Q2yzO/uWircfojVuCQOZl+ZZBg2D2J5nkpLqzH1HY0C1dHlTKIbpRz/LG23c" crossorigin="anonymous"></script>
 
 
-  </head>
+</head>
 
-  <body id="top" class="<%= page_classes %>">
-
-    <header class="slider">
-        <div class="carousel slide carousel-fade">
-            <!-- Le Carousel-->
-            <div id="slider">
-                <div class="active item">
-                    <%= image_tag("bg/cover/cover-1.jpg", class: "slider-photo-1", resize_to: "1500") %>
-                </div>
-                <div class="item">
-                <%= image_tag("bg/cover/cover-13.jpg", class: "slider-photo-2", resize_to: "1500") %>
-                </div>
-                <div class="item">
-                    <%= image_tag("bg/cover/cover-8.jpg", class: "slider-photo-3", resize_to: "1500") %>
-                </div>
-            </div>
-        </div>
+<body id="top" class="<%= page_classes %> single">
+    <header class="">
         <div class="overlay">
-<p id="languages"><a href="/en" data-type="link">English</a>  ||  <a href="/" data-type="link">Français</a></p>
-            <article>
-              <div class="top-logo-wrapper">
-                <a href="/" data-type="link"><%= image_tag 'logo-cms-white.svg', alt: 'Logo Céline Martinet Sanchez', class: 'top-logo' %></a>
-              </div>
-            <% if current_page.url == '/' || current_page.url == '/en' %>
-                <h1 class="header-name">Céline MS</h1>
-            <% else %>
-                <h2 class="header-name">Céline MS</h2>
-
-            <% end %>
-                <h2><%= t :index_subtitle %></h2>
+            <article style="transform: translate3d(0px, -27px, 0px); opacity: 1;">
+                <a href="/">
+                    <h1 class="border-0">Hello Birds</h1>
+                </a>
+                <h2>Développement web · Formation</h2>
             </article>
         </div>
     </header>
+    
+    <%= partial "partials/navbar" %>
 
     <%= yield %>
 
-    <footer class="footer-wrapper hidden-xs" id="footer">
-        </div>
-        <div class="footer-links container">
-            <div class="row">
-                <div class="col-sm-4 offset-md-2">
-                    <h4><%= t :follow_me %></h4>
-                       <a class="twitter-timeline" href="https://twitter.com/celine_m_s?ref_src=twsrc%5Etfw" data-height="220" data-theme="dark" data-link-color="#09A298"><%= t :tweets_from %> @CelineMartinetS</a>
-                       <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    <section class="p-5">
+        <div class="container">
+            <!-- <h2 class="text-center pb-3">Qui suis-je ?</h2> -->
+            <div class="row d-flex align-items-top">
+                <div class="col-sm-3 offset-sm-3 col-md-2">
+                    <%= image_tag("celine-martinet-sanchez.jpg", class: "img-fluid rounded-circle px-5 p-sm-0") %>
                 </div>
-
-                <div class="col-sm-4">
-                    <h4><%= t :contact_me %></h4>
-                    <form action="#" id="contactForm">
-                      <!-- the redirect_to is optional, the form will redirect to the referrer on submission -->
-                      <input type='hidden' name='redirect_to' value='<the complete return url e.g. http://fooey.com/thank-you.html>' />
-                      <input type='text' name='name' required placeholder="Cylia Chamade"/>
-                      <input type='mail' name='email' required placeholder="cylia.chamade@cats-eye.com"/>
-                      <textarea type='textarea' name='message' required placeholder="<%= t :form_placeholder %>"></textarea>
-                      <input type='submit' value='<%= t :form_send %>' class="sendButton" onClick="_gaq.push(['_trackEvent', 'Contact_footer', 'Send', 'fr']);"/>
-                    </form>
+                <div class="col-sm-5 col-md-5 pt-3 pt-sm-0 text-center">
+                  <p class="text-sm-left mb-2"><b>Céline Martinet Sanchez</b></p>
+                  <p class="text-sm-left">
+                    Freelance depuis 2014, je suis développeuse web et formatrice. Au travers de ce site, je parle de Python, de startups et de code en général.
+                  </p>
+                  <p class="text-sm-left">  
+                    <%= link_to 'Découvrir mes projets', '/a-propos.html', class: "btn btn-info btn-sm " %>
+                  </p>
                 </div>
             </div>
-            <ul class="social-networks list-inline text-center">
-              <li class="list-inline-item"><a href="http://fr.linkedin.com/in/celinemartinet1/" target="_blank" data-type="icon"><i class="fab fa-linkedin"></i></a></li>
-              <li class="list-inline-item"><a href="https://github.com/celine-m-s" target="_blank" data-type="icon"><i class="fab fa-github-square"></i></a> </li>
-              <li class="list-inline-item"><a href="https://twitter.com/celine_m_s" target="_blank" data-type="icon"><i class="fab fa-twitter-square"></i></a></li>
-            </ul>
+        </div>    
+    </section>
+
+    <footer class="footer-copyright">
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <ul class="social-networks list-inline text-center">
+                  <li class="list-inline-item"><a href="http://fr.linkedin.com/in/celinemartinet1/" target="_blank" data-type="icon"><i class="fab fa-linkedin"></i></a></li>
+                  <li class="list-inline-item"><a href="https://github.com/celine-m-s" target="_blank" data-type="icon"><i class="fab fa-github-square"></i></a> </li>
+                  <li class="list-inline-item"><a href="https://twitter.com/celine_m_s" target="_blank" data-type="icon"><i class="fab fa-twitter-square"></i></a></li>
+                  <li class="list-inline-item"><a href="/contact" data-type="icon"><i class="fa fa-envelope-square"></i></a></li>
+                </ul>
+            </div>
         </div>
     </footer>
-
-    <div class="footer-copyright">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-6 text-center">
-                    &copy; Céline Martinet Sanchez. <%= t :footer_copyright %>
-                </div>
-                <div class="col-sm-6 text-center mobile-center">
-                         <a href="celine@hello-birds.com" data-type="link"><i class="fa fa-envelope" style="margin-right: 5px;"></i><%= t :footer_send_message %></a>
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <div id="preloader"><div id="status"><div class="spinner"></div></div></div>
 
@@ -160,9 +120,9 @@
 
 
         <!-- Scripts -->
-<!--         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> -->
+<!--         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script> -->
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
         <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
         <%= javascript_include_tag 'libraries' %>
         <%= javascript_include_tag 'site' %>

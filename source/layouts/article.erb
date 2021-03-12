@@ -1,0 +1,34 @@
+<% wrap_layout :base do %>
+
+  <% content_for(:title, current_article.title) %>
+  <% content_for(:category, current_article.data.category) %>
+  <% content_for(:published_at, current_article.date.strftime('%F')) %>
+  <% content_for(:tags, current_article.tags.join(', ')) %>
+
+  <% bg_color = data.categories[current_article.data.category.to_sym].color %>
+  <% date = current_article.date.strftime('%d/%m/%Y') %>
+
+  <%= partial 'partials/blog_header', locals: {
+      title: current_article.title,
+      description: "",
+      bg_color: bg_color,
+      date: date,
+      category_name: current_article.data.category,
+      category_url: category_path(current_article.data.category),
+      display_meta: true
+  } %>
+
+  <section class="bg-white pt-5">
+      <div class="container article_page pt-4">
+          <%= yield %>
+
+          <ul class="list-unstyled pt-4">
+            <span><i class="fa fa-tags mr-2"></i></span>
+            <% current_article.tags.each do |tag| %>
+                  <span class="h4"><a href="<%= tag_path(tag) %>" class="badge badge-secondary"><%= tag %></a></span>
+            <% end %>
+          </ul>
+      </div>
+  </section>
+
+<% end %>

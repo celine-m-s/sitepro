@@ -1,9 +1,9 @@
 # Activate and configure extensions
 # https://middlemanapp.com/advanced/configuration/#configuring-extensions
 
-activate :autoprefixer do |prefix|
-  prefix.browsers = "last 2 versions"
-end
+# activate :autoprefixer do |prefix|
+#   prefix.browsers = "last 2 versions"
+# end
 
 activate :directory_indexes
 
@@ -17,6 +17,31 @@ page '/*.txt', layout: false
 
 # With alternative layout
 # page '/path/to/file.html', layout: 'other_layout'
+
+activate :blog do |blog|
+  # https://middlemanapp.com/basics/blogging/
+  # Put your article sources at cats/2013-11-12-best-cats.html and they will be written out to cats/2013/11/12/best-cats.html 
+  # without you having to specify a category in frontmatter. 
+  # You can also access the category extracted from the source
+  # path via current_article.metadata[:page]['category'].
+  blog.sources = "{category}/{year}-{month}-{day}-{title}.html"
+  blog.permalink = "{category}/{year}/{month}/{day}/{title}.html"
+  blog.taglink = "etiquettes/{tag}.html"
+  blog.tag_template = "tag.html"
+  blog.paginate = true
+  blog.layout = "article"
+
+  blog.custom_collections = {
+    category: {
+      link: '/categories/{category}.html',
+      template: '/category.html'
+    }
+  }
+end
+
+activate :syntax, :line_numbers => true
+set :markdown_engine, :redcarpet
+set :markdown, :fenced_code_blocks => true, :smartypants => true, :wrap_code => true
 
 # Proxy pages
 # https://middlemanapp.com/advanced/dynamic-pages/
@@ -56,7 +81,7 @@ configure :build do
 end
 
 # https://middlemanapp.com/advanced/localization/
-activate :i18n, :mount_at_root => :fr
+# activate :i18n, :mount_at_root => :fr
 
 # Categories
 # https://middlemanapp.com/advanced/sitemap/#using-the-sitemap-in-config-rb
