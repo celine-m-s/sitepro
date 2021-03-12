@@ -40,33 +40,35 @@
 </head>
 
 <body id="top" class="<%= page_classes %> single">
-
-    <%= partial "partials/navbar" %>
-
-    <header class="mt-5">
+    <header class="">
         <div class="overlay">
             <article style="transform: translate3d(0px, -27px, 0px); opacity: 1;">
-                <h1 class="border-0">Hello Birds</h1>
+                <a href="/">
+                    <h1 class="border-0">Hello Birds</h1>
+                </a>
                 <h2>Développement web · Formation</h2>
             </article>
         </div>
     </header>
+    
+    <%= partial "partials/navbar" %>
 
     <%= yield %>
 
     <section class="p-5">
         <div class="container">
-            <h2 class="text-center pb-3">Qui suis-je ?</h2>
+            <!-- <h2 class="text-center pb-3">Qui suis-je ?</h2> -->
             <div class="row d-flex align-items-top">
                 <div class="col-sm-3 offset-sm-3 col-md-2">
                     <%= image_tag("celine-martinet-sanchez.jpg", class: "img-fluid rounded-circle px-5 p-sm-0") %>
                 </div>
                 <div class="col-sm-5 col-md-5 pt-3 pt-sm-0 text-center">
-                  <p class=" text-sm-left">
-                    Freelance depuis 2014, je suis développeuse web et formatrice. Ici je parle de Python, de startups et de code en général.
+                  <p class="text-sm-left mb-2"><b>Céline Martinet Sanchez</b></p>
+                  <p class="text-sm-left">
+                    Freelance depuis 2014, je suis développeuse web et formatrice. Au travers de ce site, je parle de Python, de startups et de code en général.
                   </p>
                   <p class="text-sm-left">  
-                    <%= link_to 'En savoir plus', '/a-propos.html', class: "btn btn-info btn-sm " %>
+                    <%= link_to 'Découvrir mes projets', '/a-propos.html', class: "btn btn-info btn-sm " %>
                   </p>
                 </div>
             </div>

@@ -13,6 +13,7 @@ layout: articles_list
 						<h5 class="card-title"><%= article.title %></h5>
 					</a>
 					<p class="card-text"><%= article.summary %></p>
+					<a href="<%= article.url %>" class="">Lire la suite...</a>
 				</div>
 				<div class="card-footer">
 				  <span class="mr-3"><i class="fa fa-calendar mr-1"></i> <%= article.date.strftime('%d/%m/%Y') %></span>

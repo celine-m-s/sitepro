@@ -1,7 +1,6 @@
 <% wrap_layout :base do %>
 
   <% content_for(:title, current_article.title) %>
-  <% content_for(:description, current_article.summary ) %>
   <% content_for(:category, current_article.data.category) %>
   <% content_for(:published_at, current_article.date.strftime('%F')) %>
   <% content_for(:tags, current_article.tags.join(', ')) %>
@@ -20,14 +19,10 @@
   } %>
 
   <section class="bg-white pt-5">
-      <div class="container">
+      <div class="container article_page pt-4">
           <%= yield %>
-      </div>
-  </section>
 
-  <section class="bg-white pb-5 pt-0">
-      <div class="container">
-          <ul class="list-unstyled">
+          <ul class="list-unstyled pt-4">
             <span><i class="fa fa-tags mr-2"></i></span>
             <% current_article.tags.each do |tag| %>
                   <span class="h4"><a href="<%= tag_path(tag) %>" class="badge badge-secondary"><%= tag %></a></span>
@@ -35,6 +30,5 @@
           </ul>
       </div>
   </section>
-
 
 <% end %>

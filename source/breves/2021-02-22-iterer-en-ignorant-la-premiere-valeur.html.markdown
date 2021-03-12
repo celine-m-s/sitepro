@@ -1,14 +1,10 @@
 ---
 
 title: Itérer en ignorant la première valeur
-date: 2021-03-03 20:47 UTC
+date: 2021-02-22 20:47 UTC
 tags: Python
 
 ---
-
-Blabla
-
-READMORE
 
 ```python
 
