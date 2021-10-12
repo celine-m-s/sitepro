@@ -9,10 +9,6 @@ $(window).on('load', function(){ // makes sure the whole site is loaded
     $('body').delay(350).css({'overflow':'visible'});
 })
 
-$(document).ready(function(){
-  $('#isotope').masonry()
-})
-
 /* ==========================================================================
    Widget Toggle
    ========================================================================== */
@@ -481,5 +477,10 @@ $('.filter-button-group').on( 'click', 'button', function() {
 });
 
 
-
+$(document).ready(function(){
+  var $grid = $('#isotope');
+  var timeId = setTimeout(function() {
+      $grid.masonry();
+  }, 100);
+})
 
