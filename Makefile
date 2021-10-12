@@ -1,5 +1,5 @@
 deploy:
-	docker-compose run site bash -c "middleman build"
+	docker-compose run site bash -c "bundle exec middleman build"
 
 	# move SSH configuration to secrets
 	rm -rf secrets/*
@@ -10,7 +10,7 @@ deploy:
 	docker-compose run site bash -c 'cp secrets/* ~/.ssh/ && \
 	git config --global user.email "celine.martinet.sanchez@gmail.com" && \
 	git config --global user.name "Docker" && \
-	middleman deploy'
+	bundle exec middleman deploy'
 
 	rm -rf secrets/*
 
@@ -21,6 +21,6 @@ bundle:
 	docker-compose run site bash -c "bundle install"
 
 article:
-	docker-compose run site bash -c 'middleman article "$(TITLE)"'
+	docker-compose run site bash -c 'bundle exec middleman article "$(TITLE)"'
 	mkdir -p source/$(CATEGORY)
 	mv source/*.html.markdown source/$(CATEGORY)/

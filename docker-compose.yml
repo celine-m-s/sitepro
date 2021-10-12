@@ -8,7 +8,7 @@ services:
     ports: 
       - "4567:4567"
     command: >
-      bash -c "middleman build --verbose && 
-               middleman server"
+      bash -c "bundle exec middleman build --verbose && 
+               bundle exec middleman server"
     volumes:
       - ./:/code
