@@ -12,3 +12,4 @@ gem 'middleman-deploy', '~> 2.0.0.pre.alpha'
 gem 'nokogiri'
 gem "middleman-syntax"
 gem "redcarpet"
+gem "builder" # Required for feed.xml.builder
