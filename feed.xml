@@ -1,24 +1,399 @@
-xml.instruct!
-xml.feed "xmlns" => "http://www.w3.org/2005/Atom" do
-  site_url = data.site.french.url
-  xml.title data.site.french.title
-  xml.subtitle data.site.french.description
-  xml.id URI.join(site_url, '/fr')
-  xml.link "href" => URI.join(site_url, '/fr')
-  xml.link "href" => URI.join(site_url, current_page.path), "rel" => "self"
-  xml.updated(blog.local_articles('fr').first.date.to_time.iso8601) unless blog.local_articles('fr').empty?
-  xml.author { xml.name "Céline Martinet Sanchez" }
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Céline MS</title>
+  <subtitle>Hello Birds</subtitle>
+  <id>http://www.hello-birds.com/</id>
+  <link href="http://www.hello-birds.com/"/>
+  <link href="http://www.hello-birds.com/feed.xml" rel="self"/>
+  <updated>2021-03-08T20:45:00+00:00</updated>
+  <author>
+    <name>Céline Martinet Sanchez</name>
+  </author>
+  <entry>
+    <title>Quitter VIM avec un code d'erreur</title>
+    <subtitle>Hello Birds</subtitle>
+    <category>breves</category>
+    <source>http://www.hello-birds.com/</source>
+    <link rel="alternate" href="http://www.hello-birds.com/breves/2021/03/08/quitter-vim-avec-code-erreur/"/>
+    <id>http://www.hello-birds.com/breves/2021/03/08/quitter-vim-avec-code-erreur/</id>
+    <published>2021-03-08T20:45:00+00:00</published>
+    <updated>2021-10-12T15:42:05+00:00</updated>
+    <author>
+      <name>Céline Martinet Sanchez</name>
+    </author>
+    <summary type="html">&lt;p&gt;👉  &lt;code&gt;:cq&lt;/code&gt;&lt;/p&gt;
 
-  blog.local_articles('fr')[0..5].each do |article|
-    xml.entry do
-      xml.title article.title
-      xml.link "rel" => "alternate", "href" => URI.join(site_url, article.url)
-      xml.id URI.join(site_url, article.url)
-      xml.published article.date.to_time.iso8601
-      xml.updated File.mtime(article.source_file).iso8601
-      xml.author { xml.name "Céline Martinet Sanchez" }
-      xml.summary article.data.summary, "type" => "html"
-      xml.content article.body, "type" => "html"
-    end
-  end
-end
+&lt;p&gt;Imaginons que je lance un &lt;code&gt;git merge master&lt;/code&gt; avant de me rendre compte, avec une évidente panique, que je ne peux pas mener à bien la fusion pour une raison quelconque. Je veux &lt;strong&gt;interrompre&lt;/strong&gt; la fusion.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</summary>
+    <content type="html">&lt;p&gt;👉  &lt;code&gt;:cq&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Imaginons que je lance un &lt;code&gt;git merge master&lt;/code&gt; avant de me rendre compte, avec une évidente panique, que je ne peux pas mener à bien la fusion pour une raison quelconque. Je veux &lt;strong&gt;interrompre&lt;/strong&gt; la fusion.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;p&gt;Il suffit d&amp;#39;entrer &lt;code&gt;:cq&lt;/code&gt; . MAGIQUE.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre class="highlight shell"&gt;&lt;code&gt;&lt;table class="rouge-table"&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class="rouge-gutter gl"&gt;&lt;pre class="lineno"&gt;1
+2
+3
+4
+5
+&lt;/pre&gt;&lt;/td&gt;&lt;td class="rouge-code"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;git merge master
+&lt;span class="c"&gt;# :cq&lt;/span&gt;
+suggestion : en attente de la fermeture &lt;span class="nb"&gt;du &lt;/span&gt;fichier par votre éditeur de texte… error: There was a problem with the editor &lt;span class="s1"&gt;'vim'&lt;/span&gt;&lt;span class="nb"&gt;.&lt;/span&gt;
+Pas de validation de la fusion &lt;span class="p"&gt;;&lt;/span&gt; utilisez &lt;span class="s1"&gt;'git commit'&lt;/span&gt; pour terminer la fusion.
+&lt;span class="nv"&gt;$ &lt;/span&gt;git merge &lt;span class="nt"&gt;--abort&lt;/span&gt;
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content>
+  </entry>
+  <entry>
+    <title>Compter le temps d'exécution d'une méthode en Python</title>
+    <subtitle>Hello Birds</subtitle>
+    <category>breves</category>
+    <source>http://www.hello-birds.com/</source>
+    <link rel="alternate" href="http://www.hello-birds.com/breves/2021/03/03/compter-temps-execution-methode-python/"/>
+    <id>http://www.hello-birds.com/breves/2021/03/03/compter-temps-execution-methode-python/</id>
+    <published>2021-03-03T19:17:00+00:00</published>
+    <updated>2021-10-12T15:42:05+00:00</updated>
+    <author>
+      <name>Céline Martinet Sanchez</name>
+    </author>
+    <summary type="html">&lt;div class="highlight"&gt;&lt;pre class="highlight python"&gt;&lt;code&gt;&lt;table class="rouge-table"&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class="rouge-gutter gl"&gt;&lt;pre class="lineno"&gt;1
+2
+3
+4
+5
+6
+7
+&lt;/pre&gt;&lt;/td&gt;&lt;td class="rouge-code"&gt;&lt;pre&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;time&lt;/span&gt;
+
+&lt;span class="n"&gt;tic&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;time&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;perf_counter&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="c1"&gt;# Do something...
+&lt;/span&gt;&lt;span class="n"&gt;toc&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;time&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;perf_counter&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+
+&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sa"&gt;f&lt;/span&gt;&lt;span class="s"&gt;"Updated in &lt;/span&gt;&lt;span class="si"&gt;{&lt;/span&gt;&lt;span class="n"&gt;toc&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;tic&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mf"&gt;0.4&lt;/span&gt;&lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s"&gt; seconds"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</summary>
+    <content type="html">&lt;div class="highlight"&gt;&lt;pre class="highlight python"&gt;&lt;code&gt;&lt;table class="rouge-table"&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class="rouge-gutter gl"&gt;&lt;pre class="lineno"&gt;1
+2
+3
+4
+5
+6
+7
+&lt;/pre&gt;&lt;/td&gt;&lt;td class="rouge-code"&gt;&lt;pre&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;time&lt;/span&gt;
+
+&lt;span class="n"&gt;tic&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;time&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;perf_counter&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="c1"&gt;# Do something...
+&lt;/span&gt;&lt;span class="n"&gt;toc&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;time&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;perf_counter&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+
+&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sa"&gt;f&lt;/span&gt;&lt;span class="s"&gt;"Updated in &lt;/span&gt;&lt;span class="si"&gt;{&lt;/span&gt;&lt;span class="n"&gt;toc&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;tic&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mf"&gt;0.4&lt;/span&gt;&lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s"&gt; seconds"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content>
+  </entry>
+  <entry>
+    <title>Ignorer une apostrophe dans une chaîne SQL</title>
+    <subtitle>Hello Birds</subtitle>
+    <category>breves</category>
+    <source>http://www.hello-birds.com/</source>
+    <link rel="alternate" href="http://www.hello-birds.com/breves/2021/02/23/ignorer-une-apostrophe-dans-une-chaine-sql/"/>
+    <id>http://www.hello-birds.com/breves/2021/02/23/ignorer-une-apostrophe-dans-une-chaine-sql/</id>
+    <published>2021-02-23T20:48:00+00:00</published>
+    <updated>2021-10-12T15:42:05+00:00</updated>
+    <author>
+      <name>Céline Martinet Sanchez</name>
+    </author>
+    <summary type="html">&lt;p&gt;Il est possible d'échapper des apostrophes en les doublant ! Pas très intuitif mais efficace.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</summary>
+    <content type="html">&lt;p&gt;Il est possible d&amp;#39;échapper des apostrophes en les doublant ! Pas très intuitif mais efficace.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre class="highlight sql"&gt;&lt;code&gt;&lt;table class="rouge-table"&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class="rouge-gutter gl"&gt;&lt;pre class="lineno"&gt;1
+2
+3
+4
+5
+6
+7
+&lt;/pre&gt;&lt;/td&gt;&lt;td class="rouge-code"&gt;&lt;pre&gt;&lt;span class="k"&gt;DECLARE&lt;/span&gt; &lt;span class="o"&gt;@&lt;/span&gt;&lt;span class="n"&gt;my_table&lt;/span&gt; &lt;span class="k"&gt;TABLE&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;
+    &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;value&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="nb"&gt;VARCHAR&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;200&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="k"&gt;INSERT&lt;/span&gt; &lt;span class="k"&gt;INTO&lt;/span&gt; &lt;span class="o"&gt;@&lt;/span&gt;&lt;span class="n"&gt;my_table&lt;/span&gt; &lt;span class="k"&gt;VALUES&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'hi, my name&lt;/span&gt;&lt;span class="se"&gt;''&lt;/span&gt;&lt;span class="s1"&gt;s tim.'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="k"&gt;SELECT&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="k"&gt;FROM&lt;/span&gt; &lt;span class="o"&gt;@&lt;/span&gt;&lt;span class="n"&gt;my_table&lt;/span&gt;
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Résultat&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre class="highlight sql"&gt;&lt;code&gt;&lt;table class="rouge-table"&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class="rouge-gutter gl"&gt;&lt;pre class="lineno"&gt;1
+2
+3
+4
+5
+&lt;/pre&gt;&lt;/td&gt;&lt;td class="rouge-code"&gt;&lt;pre&gt;
+&lt;span class="n"&gt;value&lt;/span&gt;
+&lt;span class="o"&gt;==================&lt;/span&gt;
+&lt;span class="n"&gt;hi&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;my&lt;/span&gt; &lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="s1"&gt;'s tim.
+
+&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Merci https://stackoverflow.com/a/1586588/3086625&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>Itérer en ignorant la première valeur</title>
+    <subtitle>Hello Birds</subtitle>
+    <category>breves</category>
+    <source>http://www.hello-birds.com/</source>
+    <link rel="alternate" href="http://www.hello-birds.com/breves/2021/02/22/iterer-en-ignorant-la-premiere-valeur/"/>
+    <id>http://www.hello-birds.com/breves/2021/02/22/iterer-en-ignorant-la-premiere-valeur/</id>
+    <published>2021-02-22T20:47:00+00:00</published>
+    <updated>2021-10-12T15:42:05+00:00</updated>
+    <author>
+      <name>Céline Martinet Sanchez</name>
+    </author>
+    <summary type="html">&lt;div class="highlight"&gt;&lt;pre class="highlight python"&gt;&lt;code&gt;&lt;table class="rouge-table"&gt;&lt;tbody&gt;&lt;tr&gt;
+&lt;td class="rouge-gutter gl"&gt;&lt;pre class="lineno"&gt;1
+2
+3
+4
+5
+6
+7
+8
+9
+&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="rouge-code"&gt;&lt;pre&gt;
+&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;approval&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;enumerate&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;merged_approvals&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;:],&lt;/span&gt; &lt;span class="n"&gt;start&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;
+        &lt;span class="n"&gt;approval&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;originates_from_itou&lt;/span&gt;
+        &lt;span class="ow"&gt;and&lt;/span&gt; &lt;span class="ow"&gt;not&lt;/span&gt; &lt;span class="n"&gt;merged_approvals&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;].&lt;/span&gt;&lt;span class="n"&gt;originates_from_itou&lt;/span&gt;
+        &lt;span class="ow"&gt;and&lt;/span&gt; &lt;span class="n"&gt;approval&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;is_valid&lt;/span&gt;
+    &lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="n"&gt;merged_approvals&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</summary>
+    <content type="html">&lt;div class="highlight"&gt;&lt;pre class="highlight python"&gt;&lt;code&gt;&lt;table class="rouge-table"&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class="rouge-gutter gl"&gt;&lt;pre class="lineno"&gt;1
+2
+3
+4
+5
+6
+7
+8
+9
+&lt;/pre&gt;&lt;/td&gt;&lt;td class="rouge-code"&gt;&lt;pre&gt;
+&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;approval&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;enumerate&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;merged_approvals&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;:],&lt;/span&gt; &lt;span class="n"&gt;start&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;
+        &lt;span class="n"&gt;approval&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;originates_from_itou&lt;/span&gt;
+        &lt;span class="ow"&gt;and&lt;/span&gt; &lt;span class="ow"&gt;not&lt;/span&gt; &lt;span class="n"&gt;merged_approvals&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;].&lt;/span&gt;&lt;span class="n"&gt;originates_from_itou&lt;/span&gt;
+        &lt;span class="ow"&gt;and&lt;/span&gt; &lt;span class="n"&gt;approval&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;is_valid&lt;/span&gt;
+    &lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="n"&gt;merged_approvals&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;insert&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;merged_approvals&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;pop&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+        &lt;span class="k"&gt;break&lt;/span&gt;
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Déplacer un élément en premier dans la liste : 
+&lt;code&gt;python
+my_list.insert(0, my_list.pop(i))
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;https://docs.python.org/fr/3.9/library/functions.html#enumerate&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>Introduction aux annotations de type (Type Hints)</title>
+    <subtitle>Hello Birds</subtitle>
+    <category>breves</category>
+    <source>http://www.hello-birds.com/</source>
+    <link rel="alternate" href="http://www.hello-birds.com/breves/2021/01/28/introduction-aux-annotations-de-type-type-hints/"/>
+    <id>http://www.hello-birds.com/breves/2021/01/28/introduction-aux-annotations-de-type-type-hints/</id>
+    <published>2021-01-28T19:26:00+00:00</published>
+    <updated>2021-10-12T15:42:05+00:00</updated>
+    <author>
+      <name>Céline Martinet Sanchez</name>
+    </author>
+    <summary type="html">&lt;p&gt;Python est un langage dynamique, c'est à dire que le type d'une variable peut être changé a posteriori. &lt;/p&gt;
+
+&lt;p&gt;Concrètement, cela permet d'écrire ceci :&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre class="highlight python"&gt;&lt;code&gt;&lt;table class="rouge-table"&gt;&lt;tbody&gt;&lt;tr&gt;
+&lt;td class="rouge-gutter gl"&gt;&lt;pre class="lineno"&gt;1
+2
+&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="rouge-code"&gt;&lt;pre&gt;&lt;span class="n"&gt;festival&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;"Les vieilles charues"&lt;/span&gt; &lt;span class="c1"&gt;# festival refers to a string
+&lt;/span&gt;&lt;span class="n"&gt;festival&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;44190&lt;/span&gt; &lt;span class="c1"&gt;# now it refers...&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</summary>
+    <content type="html">&lt;p&gt;Python est un langage dynamique, c&amp;#39;est à dire que le type d&amp;#39;une variable peut être changé a posteriori. &lt;/p&gt;
+
+&lt;p&gt;Concrètement, cela permet d&amp;#39;écrire ceci :&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre class="highlight python"&gt;&lt;code&gt;&lt;table class="rouge-table"&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class="rouge-gutter gl"&gt;&lt;pre class="lineno"&gt;1
+2
+&lt;/pre&gt;&lt;/td&gt;&lt;td class="rouge-code"&gt;&lt;pre&gt;&lt;span class="n"&gt;festival&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;"Les vieilles charues"&lt;/span&gt; &lt;span class="c1"&gt;# festival refers to a string
+&lt;/span&gt;&lt;span class="n"&gt;festival&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;44190&lt;/span&gt; &lt;span class="c1"&gt;# now it refers to an integer
+&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Pourquoi voudrait-on changer cela ? Afin d&amp;#39;être plus explicite sur le type attendu d&amp;#39;une variable dans le cadre d&amp;#39;une fonction, par exemple. Préciser le type attendu permet au premier coup d’œil de connaître le type d&amp;#39;objet qu&amp;#39;il est possible de passer en paramètre.&lt;/p&gt;
+
+&lt;p&gt;Cela améliore la lisibilité du code et évite donc les erreurs.&lt;/p&gt;
+
+&lt;p&gt;Considérons la fonction suivante :&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre class="highlight python"&gt;&lt;code&gt;&lt;table class="rouge-table"&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class="rouge-gutter gl"&gt;&lt;pre class="lineno"&gt;1
+2
+3
+4
+5
+6
+&lt;/pre&gt;&lt;/td&gt;&lt;td class="rouge-code"&gt;&lt;pre&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;count_candies&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;candies&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="nb"&gt;len&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;candies&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;     
+
+&lt;span class="n"&gt;count_candies&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="s"&gt;"Dragibus"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;"Regal'ad"&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+&lt;span class="c1"&gt;# 2
+&lt;/span&gt;
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Il est tout à fait possible de ne pas passer une liste à notre fonction du moment que la méthode &lt;code&gt;len&lt;/code&gt; l&amp;#39;autorise. Mais la fonction ne fera alors pas du tout ce pourquoi elle a été créée&amp;hellip;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre class="highlight python"&gt;&lt;code&gt;&lt;table class="rouge-table"&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class="rouge-gutter gl"&gt;&lt;pre class="lineno"&gt;1
+2
+&lt;/pre&gt;&lt;/td&gt;&lt;td class="rouge-code"&gt;&lt;pre&gt;&lt;span class="n"&gt;count_candies&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"Mi-cho-ko"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="c1"&gt;# 9
+&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Comment s&amp;#39;assurer que le développeur qui utilisera &lt;code&gt;count_candies&lt;/code&gt; passe bien une liste en paramètre ? Appelons les annotations de type, &lt;code&gt;Type Hints&lt;/code&gt; en anglais, à la rescousse !&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre class="highlight python"&gt;&lt;code&gt;&lt;table class="rouge-table"&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class="rouge-gutter gl"&gt;&lt;pre class="lineno"&gt;1
+2
+3
+4
+5
+&lt;/pre&gt;&lt;/td&gt;&lt;td class="rouge-code"&gt;&lt;pre&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;count_candies&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;candies&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nb"&gt;list&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="nb"&gt;len&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;candies&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="c1"&gt;# def my_function(argument_name: argument_type) -&amp;gt; return_type:
+#    pass
+&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Et voilà ! Magique !&lt;/p&gt;
+
+&lt;p&gt;Nous pourrions nous attendre à ce que ces annotations soient contraignantes, c&amp;#39;est-à-dire qu&amp;#39;elles lèvent une erreur si un type incorrect est utilisé. Nous aurions tort car cela contreviendrait à l&amp;#39;essence même du langage : son côté dynamique.&lt;/p&gt;
+
+&lt;p&gt;Les annotations portent bien leur nom : ce sont des indications dont l&amp;#39;objet est d&amp;#39;améliorer la compréhension du code.&lt;/p&gt;
+
+&lt;p&gt;Rappelons également que chaque fonction est une API exposant une interface plus ou moins complexe. Bien sûr, dans le cadre de notre exemple, elle est très simple. Mais il arrive fréquemment que des méthodes acceptent beaucoup d&amp;#39;arguments et fassent plus de vingt lignes. Cela permet de savoir exactement ce qui est attendu en entrée et ce qui est renvoyé en sortie sans avoir à en disséquer les entrailles.&lt;/p&gt;
+
+&lt;p&gt;Puisque ces annotations sont des indications qui améliorent la qualité d&amp;#39;un projet, il est logique qu&amp;#39;elles aient leur place dans un environnement de test ou une CI aux côtés de &lt;em&gt;linters&lt;/em&gt; et de tests automatiques. &lt;a href="https://mypy.readthedocs.io/en/stable/"&gt;La librairie mypy&lt;/a&gt; semble être la plus utilisée à cet effet mais je n&amp;#39;ai pas encore eu l&amp;#39;occasion de jouer avec.&lt;/p&gt;
+
+&lt;p&gt;Nous avons utilisé des annotations dans le cadre d&amp;#39;un système de notifications personnalisé dans une app Django. Cela vous titille de savoir ce qui nous a amené à cette solution ? &lt;a href="https://github.com/betagouv/itou/pull/444/files#diff-8126313c598b34f7657bec54fd01935f9abb2ef7b21bd273ff60f8a889042574R35"&gt;Lire notre échange sur GitHub&lt;/a&gt;.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre class="highlight python"&gt;&lt;code&gt;&lt;table class="rouge-table"&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class="rouge-gutter gl"&gt;&lt;pre class="lineno"&gt;1
+2
+3
+4
+5
+6
+7
+8
+&lt;/pre&gt;&lt;/td&gt;&lt;td class="rouge-code"&gt;&lt;pre&gt;&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;NotificationBase&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;__init__&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;recipients_qs&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;SiaeMembershipQuerySet&lt;/span&gt;&lt;span class="p"&gt;,]):&lt;/span&gt;
+        &lt;span class="s"&gt;"""
+        `recipients_qs`: Django QuerySet leading to this notification recipients.
+        We should be able to perform a `filter()` with it.
+        """&lt;/span&gt;
+        &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;recipients_qs&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;recipients_qs&lt;/span&gt;
+        &lt;span class="c1"&gt;# ...
+&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Je n&amp;#39;ai pas testé, car nous n&amp;#39;avons pas encore ajouté &lt;code&gt;mypy&lt;/code&gt; au projet, mais je suppose très fortement qu&amp;#39;aucune erreur ne serait levée si nous passions en paramètre un objet d&amp;#39;un autre type que &lt;code&gt;SiaeMembershipQuerySet&lt;/code&gt; , donc ne vous basez pas sur cet exemple. Pourquoi cette solution nous convient-elle alors ? Car elle a le mérite d&amp;#39;être très explicite, tout simplement.&lt;/p&gt;
+
+&lt;p&gt;Les annotations de type sont un concept bien plus vaste. Pour creuser le sujet, je conseille de lire attentivement les pages suivantes :&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://realpython.com/python-type-checking/"&gt;Python Type Checking (Guide&lt;/a&gt;) (sur Real Python)&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.python.org/dev/peps/pep-0483/"&gt;PEP 483 &amp;ndash; The Theory of Type Hints&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.python.org/dev/peps/pep-0484/"&gt;PEP 484 &amp;ndash; Type Hints&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://docs.python.org/fr/3/library/typing.html"&gt;La doc du module typing&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+  </entry>
+  <entry>
+    <title>Récupérer la valeur d'une clé ou créer cette dernière si elle n'existe pas</title>
+    <subtitle>Hello Birds</subtitle>
+    <category>breves</category>
+    <source>http://www.hello-birds.com/</source>
+    <link rel="alternate" href="http://www.hello-birds.com/breves/2021/01/27/recuperer-la-valeur-d-une-cle-ou-creer-cette-derniere-si-elle-n-existe-pas/"/>
+    <id>http://www.hello-birds.com/breves/2021/01/27/recuperer-la-valeur-d-une-cle-ou-creer-cette-derniere-si-elle-n-existe-pas/</id>
+    <published>2021-01-27T19:36:00+00:00</published>
+    <updated>2021-10-12T15:42:05+00:00</updated>
+    <author>
+      <name>Céline Martinet Sanchez</name>
+    </author>
+    <summary type="html">&lt;p&gt;Dans le cas de dictionnaires profonds, on peut vouloir récupérer la valeur d'une clé inexistante. Prenons l'exemple d'un dictionnaire qui servirait à répertorier des fruits en fonction de leur famille.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre class="highlight python"&gt;&lt;code&gt;&lt;table class="rouge-table"&gt;&lt;tbody&gt;&lt;tr&gt;
+&lt;td class="rouge-gutter gl"&gt;&lt;pre class="lineno"&gt;1
+2
+3
+4
+&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="rouge-code"&gt;&lt;pre&gt;&lt;span class="n"&gt;fruits&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="s"&gt;"berries"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s"&gt;"strawberries...&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</summary>
+    <content type="html">&lt;p&gt;Dans le cas de dictionnaires profonds, on peut vouloir récupérer la valeur d&amp;#39;une clé inexistante. Prenons l&amp;#39;exemple d&amp;#39;un dictionnaire qui servirait à répertorier des fruits en fonction de leur famille.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre class="highlight python"&gt;&lt;code&gt;&lt;table class="rouge-table"&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class="rouge-gutter gl"&gt;&lt;pre class="lineno"&gt;1
+2
+3
+4
+&lt;/pre&gt;&lt;/td&gt;&lt;td class="rouge-code"&gt;&lt;pre&gt;&lt;span class="n"&gt;fruits&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="s"&gt;"berries"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s"&gt;"strawberries"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;"raspberries"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;"blueberries"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;"kiwifruit"&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;
+    &lt;span class="s"&gt;"melons"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s"&gt;"watermelons"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;"rockmelons"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;"honeydew melons"&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Imaginons que nous voulons ajouter une orange. La clé &amp;ldquo;citrus&amp;rdquo; n&amp;#39;existant pas, il nous faut vérifier qu&amp;#39;ellpyte existe avant de continuer.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre class="highlight python"&gt;&lt;code&gt;&lt;table class="rouge-table"&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class="rouge-gutter gl"&gt;&lt;pre class="lineno"&gt;1
+2
+3
+&lt;/pre&gt;&lt;/td&gt;&lt;td class="rouge-code"&gt;&lt;pre&gt;&lt;span class="n"&gt;In&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;]:&lt;/span&gt; &lt;span class="n"&gt;fruits&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s"&gt;"citrus"&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s"&gt;"orange"&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="o"&gt;--------------------------------------------------------------------------&lt;/span&gt;
+&lt;span class="nb"&gt;KeyError&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s"&gt;'citrus'&lt;/span&gt;
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Le premier réflexe est alors d&amp;#39;écrire une fonction qui ressemblerait à ceci :&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre class="highlight python"&gt;&lt;code&gt;&lt;table class="rouge-table"&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class="rouge-gutter gl"&gt;&lt;pre class="lineno"&gt;1
+2
+3
+4
+5
+6
+&lt;/pre&gt;&lt;/td&gt;&lt;td class="rouge-code"&gt;&lt;pre&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;add_key_if_not_exists&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;key&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="ow"&gt;not&lt;/span&gt; &lt;span class="n"&gt;fruits&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;key&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+            &lt;span class="n"&gt;fruits&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;key&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[]&lt;/span&gt;
+
+&lt;span class="n"&gt;add_key_if_not_exists&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"citrus"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;fruits&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s"&gt;"citrus"&lt;/span&gt;&lt;span class="p"&gt;].&lt;/span&gt;&lt;span class="n"&gt;append&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"orange"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Un peu pénible, non ?&lt;/p&gt;
+
+&lt;p&gt;Le type &lt;code&gt;dict&lt;/code&gt; de Python intègre par défaut la méthode &lt;code&gt;setdefault&lt;/code&gt; (&lt;a href="https://docs.python.org/3/library/stdtypes.html#dict.setdefault"&gt;lire la doc&lt;/a&gt;) qui fait exactement ce que nous voulons en une seule ligne !&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre class="highlight python"&gt;&lt;code&gt;&lt;table class="rouge-table"&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class="rouge-gutter gl"&gt;&lt;pre class="lineno"&gt;1
+2
+3
+4
+5
+6
+&lt;/pre&gt;&lt;/td&gt;&lt;td class="rouge-code"&gt;&lt;pre&gt;&lt;span class="n"&gt;fruits&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;setdefault&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"citrus"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;[]).&lt;/span&gt;&lt;span class="n"&gt;append&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"lime"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="c1"&gt;# {'berries': ['strawberries', 'raspberries', 'blueberries', 'kiwifruit'],
+# 'melons': ['watermelons', 'rockmelons', 'honeydew melons'],
+# 'citrus': ['orange', 'lime']}
+&lt;/span&gt;
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Bien sûr, notre cas est très simple. Mais si vous jetez un coup d’œil à &lt;a href="https://github.com/betagouv/itou/pull/444/commits/561f1ac98f32991f97443b923ed4a81a3ee4d681"&gt;ce commit&lt;/a&gt;, vous comprendrez pourquoi cette petite méthode est bien utile.&lt;/p&gt;
+
+&lt;p&gt;⚠️ J&amp;#39;ai fait l&amp;#39;erreur suivante avant de me rendre compte que ça ne pouvait pas fonctionner ! A votre avis, pourquoi ?&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre class="highlight python"&gt;&lt;code&gt;&lt;table class="rouge-table"&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class="rouge-gutter gl"&gt;&lt;pre class="lineno"&gt;1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+&lt;/pre&gt;&lt;/td&gt;&lt;td class="rouge-code"&gt;&lt;pre&gt;&lt;span class="n"&gt;fruits&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[]&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Add "lime" to {"citrus": []} and create key if it does not exist.
+&lt;/span&gt;&lt;span class="n"&gt;fruits&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;setdefault&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"citrus"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s"&gt;"lime"&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+&lt;span class="c1"&gt;# =&amp;gt; OK, "lime" is in the list.
+&lt;/span&gt;
+&lt;span class="c1"&gt;# Add "bergamot" to {"citrus": []} and create key if it does not exist.
+&lt;/span&gt;&lt;span class="n"&gt;fruits&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;setdefault&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"citrus"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s"&gt;"bergamot"&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+&lt;span class="c1"&gt;# WRONG! fruits["citrus"] only contains "lime"!
+&lt;/span&gt;
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content>
+  </entry>
+</feed>
