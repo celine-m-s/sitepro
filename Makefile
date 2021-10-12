@@ -20,7 +20,11 @@ run:
 bundle:
 	docker-compose run site bash -c "bundle install"
 
+# Default category
+# not working with bash aliases.
+CATEGORY = breves
+
 article:
-	docker-compose run site bash -c 'bundle exec middleman article "$(TITLE)"'
-	mkdir -p source/$(CATEGORY)
-	mv source/*.html.markdown source/$(CATEGORY)/
+	docker-compose run -u app site bash -c 'bundle exec middleman article "$(TITLE)"'
+	mkdir -p source/breves
+	mv source/*.html.markdown source/breves/

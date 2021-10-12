@@ -7,8 +7,9 @@ services:
       dockerfile: ./Dockerfile
     ports: 
       - "4567:4567"
+    user: root
     command: >
       bash -c "bundle exec middleman build --verbose && 
                bundle exec middleman server"
     volumes:
-      - ./:/code
+      - ./:/app
